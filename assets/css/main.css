@@ -230,103 +230,61 @@ a:hover {
     transition: var(--transition);
 }
 
-/* Hero Section - Broad Institute Style */
+/* Hero Section */
 .hero {
-    position: relative;
-    height: 500px;
+    padding: var(--space-24) 0 var(--space-20);
     margin-top: 5rem;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-}
-
-.hero-background {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    padding-right: 4rem;
-}
-
-.hero-logo-placeholder {
+    background: linear-gradient(135deg, var(--gray-50) 0%, var(--white) 100%);
     text-align: center;
-    color: rgba(255, 255, 255, 0.3);
-}
-
-.hero-logo-placeholder .logo-text {
-    font-size: 8rem;
-    font-weight: 300;
-    margin-bottom: 1rem;
-}
-
-.hero-logo-placeholder .hero-subtitle {
-    font-size: 1.5rem;
-    font-weight: 300;
-    letter-spacing: 2px;
-}
-
-.hero-overlay {
-    position: relative;
-    z-index: 2;
-    background: rgba(0, 102, 204, 0.9);
-    color: var(--white);
-    padding: 3rem;
-    max-width: 600px;
-    margin-left: 2rem;
-}
-
-.hero-content {
-    text-align: left;
-}
-
-.hero-tagline {
-    font-size: 1.5rem;
-    font-weight: 300;
-    margin-bottom: 0.5rem;
-    color: rgba(255, 255, 255, 0.9);
 }
 
 .hero-title {
-    font-size: 3rem;
+    font-size: 4rem;
     font-weight: 300;
+    margin-bottom: var(--space-6);
+    color: var(--gray-900);
     line-height: 1.1;
-    margin-bottom: 1.5rem;
-    color: var(--white);
 }
 
-.hero-description {
-    font-size: 1.125rem;
+.hero-subtitle {
+    font-size: 1.25rem;
+    color: var(--gray-600);
+    max-width: 800px;
+    margin: 0 auto var(--space-12);
     line-height: 1.6;
-    margin-bottom: 2rem;
-    color: rgba(255, 255, 255, 0.95);
 }
 
-.hero-btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.75rem;
-    background: var(--white);
+.hero-stats {
+    display: flex;
+    justify-content: center;
+    gap: var(--space-16);
+    margin-bottom: var(--space-12);
+}
+
+.stat {
+    text-align: center;
+}
+
+.stat-number {
+    display: block;
+    font-size: 3rem;
+    font-weight: 700;
     color: var(--primary-color);
-    padding: 1rem 1.5rem;
-    text-decoration: none;
-    font-weight: 600;
+    line-height: 1;
+}
+
+.stat-label {
     font-size: 0.875rem;
-    letter-spacing: 1px;
-    transition: var(--transition);
+    color: var(--gray-600);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-weight: 500;
 }
 
-.hero-btn:hover {
-    background: var(--gray-100);
-    color: var(--primary-color);
-}
-
-.btn-icon {
-    font-size: 0.75rem;
+.hero-actions {
+    display: flex;
+    justify-content: center;
+    gap: var(--space-4);
 }
 
 /* Latest News Section */
@@ -843,13 +801,12 @@ a:hover {
 
 /* Responsive Design */
 @media (max-width: 1024px) {
-    .hero-overlay {
-        margin-left: 1rem;
-        max-width: 500px;
+    .hero-title {
+        font-size: 3rem;
     }
     
-    .hero-background {
-        padding-right: 2rem;
+    .hero-stats {
+        gap: var(--space-8);
     }
     
     .news-layout {
@@ -891,32 +848,22 @@ a:hover {
     }
     
     .hero {
-        height: 400px;
+        padding: var(--space-16) 0;
         margin-top: 4rem;
-    }
-    
-    .hero-background {
-        justify-content: center;
-        padding-right: 0;
-    }
-    
-    .hero-logo-placeholder .logo-text {
-        font-size: 6rem;
-    }
-    
-    .hero-overlay {
-        margin-left: 0;
-        max-width: 90%;
-        padding: 2rem;
-        text-align: center;
     }
     
     .hero-title {
         font-size: 2.5rem;
     }
     
-    .hero-tagline {
-        font-size: 1.25rem;
+    .hero-stats {
+        flex-direction: column;
+        gap: var(--space-4);
+    }
+    
+    .hero-actions {
+        flex-direction: column;
+        align-items: center;
     }
     
     .section {
