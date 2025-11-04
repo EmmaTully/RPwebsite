@@ -326,11 +326,13 @@
         }
         
         .team-member img {
-            width: 100%;
-            max-width: 180px;
-            height: auto;
+            width: 180px;
+            height: 240px;
+            object-fit: cover;
+            object-position: center top;
             display: block;
             margin-bottom: 0.5rem;
+            border-radius: var(--border-radius);
         }
         
         .team-member h3 {
@@ -496,9 +498,21 @@
             }
         }
         
+        @media (max-width: 768px) {
+            .team-member img {
+                width: 150px;
+                height: 200px;
+            }
+        }
+        
         @media (max-width: 480px) {
             .team-grid {
                 grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .team-member img {
+                width: 120px;
+                height: 160px;
             }
         }
     </style>
