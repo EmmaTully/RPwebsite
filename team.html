@@ -53,29 +53,53 @@
                 <p>Institute Members have their primary research focus in Recognition Physics principles and applications, conducting research that bridges fundamental physics with practical implementations in energy, computation, and consciousness studies.</p>
             </div>
             
-            <div class="team-grid">
+            <div class="team-list">
                 <div class="team-member">
-                    <img src="assets/Elshad.jpg" alt="Dr. Elshad Allahyarov">
-                    <h3><a href="#">Dr. Elshad Allahyarov</a></h3>
-                    <p>Chief Scientist, Institute Director</p>
+                    <div class="member-photo">
+                        <img src="assets/Elshad.jpg" alt="Dr. Elshad Allahyarov">
+                    </div>
+                    <div class="member-info">
+                        <h3><a href="#">Dr. Elshad Allahyarov</a></h3>
+                        <p class="member-title">Chief Scientist, Institute Director</p>
+                        <p class="member-education">Dr. Sci. Physics & Mathematics, General Physics Institute RAS & Heinrich-Heine University Düsseldorf</p>
+                        <p class="member-bio">Dr. Allahyarov leads the Recognition Physics Institute's theoretical research programs, bringing decades of expertise in many-body systems, plasma physics, and advanced materials science. Since 1988, he has served as a Senior Scientific Researcher at the Joint Institute for High Temperatures of the Russian Academy of Sciences, while maintaining positions as Visiting Professor at Case Western Reserve University and Staff Scientist at Heinrich-Heine University Düsseldorf.</p>
+                    </div>
                 </div>
                 
                 <div class="team-member">
-                    <img src="assets/Sebas.jpg" alt="Sebastian Pardo Guerra">
-                    <h3><a href="#">Sebastian Pardo Guerra</a></h3>
-                    <p>Research Scientist</p>
+                    <div class="member-photo">
+                        <img src="assets/Sebas.jpg" alt="Sebastian Pardo Guerra">
+                    </div>
+                    <div class="member-info">
+                        <h3><a href="#">Sebastian Pardo Guerra</a></h3>
+                        <p class="member-title">Research Scientist</p>
+                        <p class="member-education">Ph.D. Pure Mathematics, Universidad Nacional Autónoma de México (UNAM)</p>
+                        <p class="member-bio">Sebastian leads mathematical research bridging abstract theoretical frameworks with Recognition Physics principles. His expertise in Category Theory and Graph Theory provides essential foundations for understanding information flow and emergent behavior in recognition systems. He completed postdoctoral work at UC San Diego, expanding his research into applied mathematics with emphasis on bioengineering and theoretical neuroscience.</p>
+                    </div>
                 </div>
                 
                 <div class="team-member">
-                    <img src="assets/Megan.jpg" alt="Dr. Megan Simons">
-                    <h3><a href="#">Dr. Megan Simons</a></h3>
-                    <p>Research Scientist</p>
+                    <div class="member-photo">
+                        <img src="assets/Megan.jpg" alt="Dr. Megan Simons">
+                    </div>
+                    <div class="member-info">
+                        <h3><a href="#">Dr. Megan Simons</a></h3>
+                        <p class="member-title">Research Scientist</p>
+                        <p class="member-education">Ph.D. Theoretical and Computational Chemistry, Southern Methodist University</p>
+                        <p class="member-bio">Dr. Simons applies Recognition Physics principles to molecular and chemical systems, integrating quantum chemistry with data-driven modeling techniques. Her work explores how recognition-theoretic frameworks can enhance understanding of complex molecular interactions and spectroscopic phenomena. She earned her B.S. in Mathematics and Chemistry from Rhodes College before completing postdoctoral work at the University of Memphis.</p>
+                    </div>
                 </div>
                 
                 <div class="team-member">
-                    <img src="assets/anil_pic.JPG" alt="Dr. Anil Thapa">
-                    <h3><a href="#">Dr. Anil Thapa</a></h3>
-                    <p>Research Scientist</p>
+                    <div class="member-photo">
+                        <img src="assets/anil_pic.JPG" alt="Dr. Anil Thapa">
+                    </div>
+                    <div class="member-info">
+                        <h3><a href="#">Dr. Anil Thapa</a></h3>
+                        <p class="member-title">Research Scientist</p>
+                        <p class="member-education">Ph.D. Theoretical Physics</p>
+                        <p class="member-bio">Dr. Thapa investigates the frontiers of particle physics through Recognition Physics frameworks, exploring connections between neutrino physics, dark matter, and beyond-Standard-Model phenomena. His research integrates effective field theory with Recognition Physics principles to develop new approaches to fundamental particle interactions and unified theories, with particular focus on model building and grand unified theories.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -313,46 +337,66 @@
             margin-bottom: 1rem;
         }
         
-        .team-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 2rem;
+        .team-list {
             max-width: 1000px;
             margin: 0 auto;
         }
         
         .team-member {
-            text-align: left;
+            display: grid;
+            grid-template-columns: 200px 1fr;
+            gap: 2rem;
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid var(--gray-200);
         }
         
-        .team-member img {
+        .team-member:last-child {
+            border-bottom: none;
+        }
+        
+        .member-photo img {
             width: 180px;
             height: 240px;
             object-fit: cover;
             object-position: center top;
             display: block;
-            margin-bottom: 0.5rem;
             border-radius: var(--border-radius);
         }
         
-        .team-member h3 {
-            font-size: 1.125rem;
-            font-weight: 500;
-            margin-bottom: 0.25rem;
+        .member-info h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
         }
         
-        .team-member h3 a {
+        .member-info h3 a {
             color: var(--secondary-color);
             text-decoration: none;
         }
         
-        .team-member h3 a:hover {
+        .member-info h3 a:hover {
             text-decoration: underline;
         }
         
-        .team-member p {
+        .member-title {
+            font-size: 1rem;
+            font-weight: 500;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+        
+        .member-education {
             font-size: 0.875rem;
+            font-style: italic;
             color: var(--gray-600);
+            margin-bottom: 1rem;
+        }
+        
+        .member-bio {
+            font-size: 0.95rem;
+            line-height: 1.6;
+            color: var(--gray-700);
             margin: 0;
         }
         
@@ -484,9 +528,15 @@
                 font-size: 2rem;
             }
             
-            .team-grid {
-                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            .team-member {
+                grid-template-columns: 150px 1fr;
                 gap: 1.5rem;
+                margin-bottom: 2rem;
+            }
+            
+            .member-photo img {
+                width: 150px;
+                height: 200px;
             }
             
             .research-areas-grid {
@@ -498,21 +548,21 @@
             }
         }
         
-        @media (max-width: 768px) {
-            .team-member img {
-                width: 150px;
-                height: 200px;
-            }
-        }
-        
         @media (max-width: 480px) {
-            .team-grid {
-                grid-template-columns: repeat(2, 1fr);
+            .team-member {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+                text-align: center;
             }
             
-            .team-member img {
-                width: 120px;
-                height: 160px;
+            .member-photo img {
+                width: 160px;
+                height: 213px;
+                margin: 0 auto;
+            }
+            
+            .member-info {
+                text-align: left;
             }
         }
     </style>
