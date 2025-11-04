@@ -38,62 +38,48 @@
         </nav>
     </header>
 
-    <!-- Team Hero -->
-    <section class="team-hero">
+    <!-- Team Page Content -->
+    <div class="team-page">
         <div class="container">
-            <div class="team-hero-content">
-                <h1 class="team-hero-title">Institute Members</h1>
-                <p class="team-hero-subtitle">The Recognition Physics Institute's faculty members are leading experts in theoretical physics, mathematics, chemistry, and computational science. They are engaged in advancing the fundamental understanding of reality through Recognition Physics principles.</p>
+            <div class="breadcrumb">
+                <a href="index.html">HOME</a> | <span>PEOPLE</span>
             </div>
-        </div>
-    </section>
-
-    <!-- Team Members Grid -->
-    <section class="section team-members-section">
-        <div class="container">
-            <div class="team-members-grid">
-                <div class="team-member-card">
-                    <div class="member-photo">
-                        <img src="https://via.placeholder.com/200x200/1a365d/ffffff?text=EA" alt="Dr. Elshad Allahyarov" class="member-image">
-                    </div>
-                    <div class="member-details">
-                        <h3 class="member-name">Dr. Elshad Allahyarov</h3>
-                        <p class="member-role">Chief Scientist, Institute Director</p>
-                    </div>
+            
+            <h1>Institute Members</h1>
+            
+            <div class="team-description">
+                <p>The Recognition Physics Institute's faculty members are leading experts in theoretical physics, mathematics, chemistry, and computational science. They are deeply engaged in the intellectual life of Recognition Physics and are responsible for setting its scientific direction.</p>
+                
+                <p>Institute Members have their primary research focus in Recognition Physics principles and applications, conducting research that bridges fundamental physics with practical implementations in energy, computation, and consciousness studies.</p>
+            </div>
+            
+            <div class="team-grid">
+                <div class="team-member">
+                    <img src="https://via.placeholder.com/180x240/f0f0f0/333333?text=Photo" alt="Dr. Elshad Allahyarov">
+                    <h3><a href="#">Dr. Elshad Allahyarov</a></h3>
+                    <p>Chief Scientist, Institute Director</p>
                 </div>
-
-                <div class="team-member-card">
-                    <div class="member-photo">
-                        <img src="https://via.placeholder.com/200x200/2563eb/ffffff?text=SP" alt="Sebastian Pardo Guerra" class="member-image">
-                    </div>
-                    <div class="member-details">
-                        <h3 class="member-name">Sebastian Pardo Guerra</h3>
-                        <p class="member-role">Senior Research Scientist</p>
-                    </div>
+                
+                <div class="team-member">
+                    <img src="https://via.placeholder.com/180x240/f0f0f0/333333?text=Photo" alt="Sebastian Pardo Guerra">
+                    <h3><a href="#">Sebastian Pardo Guerra</a></h3>
+                    <p>Senior Research Scientist</p>
                 </div>
-
-                <div class="team-member-card">
-                    <div class="member-photo">
-                        <img src="https://via.placeholder.com/200x200/059669/ffffff?text=MS" alt="Dr. Megan Simons" class="member-image">
-                    </div>
-                    <div class="member-details">
-                        <h3 class="member-name">Dr. Megan Simons</h3>
-                        <p class="member-role">Research Scientist</p>
-                    </div>
+                
+                <div class="team-member">
+                    <img src="https://via.placeholder.com/180x240/f0f0f0/333333?text=Photo" alt="Dr. Megan Simons">
+                    <h3><a href="#">Dr. Megan Simons</a></h3>
+                    <p>Research Scientist</p>
                 </div>
-
-                <div class="team-member-card">
-                    <div class="member-photo">
-                        <img src="https://via.placeholder.com/200x200/dc2626/ffffff?text=AT" alt="Dr. Anil Thapa" class="member-image">
-                    </div>
-                    <div class="member-details">
-                        <h3 class="member-name">Dr. Anil Thapa</h3>
-                        <p class="member-role">Research Scientist</p>
-                    </div>
+                
+                <div class="team-member">
+                    <img src="https://via.placeholder.com/180x240/f0f0f0/333333?text=Photo" alt="Dr. Anil Thapa">
+                    <h3><a href="#">Dr. Anil Thapa</a></h3>
+                    <p>Research Scientist</p>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
 
     <!-- Research Areas by Team -->
     <section class="section research-areas-section">
@@ -290,83 +276,82 @@
     
     <!-- Team page specific styles -->
     <style>
-        .team-hero {
-            padding: 6rem 0 3rem;
-            margin-top: 5rem;
-            background: var(--white);
-            text-align: center;
-            border-bottom: 1px solid var(--gray-200);
+        .team-page {
+            padding-top: 6rem;
+            padding-bottom: 2rem;
+            font-family: var(--font-sans);
         }
         
-        .team-hero-title {
-            font-size: 2.5rem;
+        .breadcrumb {
+            font-size: 0.875rem;
+            color: var(--gray-600);
+            margin-bottom: 1rem;
+        }
+        
+        .breadcrumb a {
+            color: var(--secondary-color);
+            text-decoration: none;
+        }
+        
+        .team-page h1 {
+            font-size: 2.25rem;
             font-weight: 400;
             color: var(--gray-900);
-            margin-bottom: var(--space-4);
+            margin-bottom: 2rem;
+            text-align: center;
         }
         
-        .team-hero-subtitle {
-            font-size: 1.125rem;
-            color: var(--gray-600);
+        .team-description {
             max-width: 800px;
-            margin: 0 auto;
+            margin: 0 auto 3rem auto;
+            font-size: 1rem;
             line-height: 1.6;
+            color: var(--gray-700);
         }
         
-        .team-members-section {
-            padding: var(--space-16) 0;
+        .team-description p {
+            margin-bottom: 1rem;
         }
         
-        .team-members-grid {
+        .team-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: var(--space-8);
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
             max-width: 1000px;
             margin: 0 auto;
         }
         
-        .team-member-card {
-            text-align: center;
-            transition: var(--transition);
+        .team-member {
+            text-align: left;
         }
         
-        .team-member-card:hover {
-            transform: translateY(-2px);
+        .team-member img {
+            width: 100%;
+            max-width: 180px;
+            height: auto;
+            display: block;
+            margin-bottom: 0.5rem;
         }
         
-        .member-photo {
-            margin-bottom: var(--space-4);
+        .team-member h3 {
+            font-size: 1.125rem;
+            font-weight: 500;
+            margin-bottom: 0.25rem;
         }
         
-        .member-image {
-            width: 200px;
-            height: 200px;
-            border-radius: var(--border-radius-lg);
-            object-fit: cover;
-            border: 1px solid var(--gray-200);
-            box-shadow: var(--shadow-sm);
-            transition: var(--transition);
+        .team-member h3 a {
+            color: var(--secondary-color);
+            text-decoration: none;
         }
         
-        .team-member-card:hover .member-image {
-            box-shadow: var(--shadow-md);
+        .team-member h3 a:hover {
+            text-decoration: underline;
         }
         
-        .member-details {
-            padding: 0 var(--space-4);
-        }
-        
-        .member-name {
-            font-size: 1.25rem;
-            font-weight: 600;
-            color: var(--gray-900);
-            margin-bottom: var(--space-2);
-        }
-        
-        .member-role {
-            font-size: 1rem;
+        .team-member p {
+            font-size: 0.875rem;
             color: var(--gray-600);
-            line-height: 1.4;
+            margin: 0;
         }
         
         .research-areas-section {
@@ -489,22 +474,17 @@
         
         /* Responsive */
         @media (max-width: 768px) {
-            .team-hero {
-                padding: 4rem 0 2rem;
+            .team-page {
+                padding-top: 5rem;
             }
             
-            .team-hero-title {
+            .team-page h1 {
                 font-size: 2rem;
             }
             
-            .team-members-grid {
-                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-                gap: var(--space-6);
-            }
-            
-            .member-image {
-                width: 150px;
-                height: 150px;
+            .team-grid {
+                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+                gap: 1.5rem;
             }
             
             .research-areas-grid {
@@ -513,18 +493,12 @@
             
             .collaboration-content {
                 grid-template-columns: 1fr;
-                gap: var(--space-8);
             }
         }
         
         @media (max-width: 480px) {
-            .team-members-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .member-image {
-                width: 180px;
-                height: 180px;
+            .team-grid {
+                grid-template-columns: repeat(2, 1fr);
             }
         }
     </style>
