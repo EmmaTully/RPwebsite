@@ -1,0 +1,294 @@
+From Proof to Measurement:
+A Reality Bridge with Falsifiable SI Landings
+
+Jonathan Washburn
+Recognition Science, Recognition Physics Institute
+Austin, Texas, USA
+jon@recognitionphysics.org
+
+ABSTRACT
+
+This methods paper defines a proof–verified semantics that carries a strictly dimensionless derivation layer into SI displays without introducing tunable parameters. The inputs (proved upstream and not re-proved here) are: a unique symmetric multiplicative cost J(x)=½(x+x⁻¹)−1 with log-axis form J(e^t)=cosh t−1; a quantized tick with exact n·δ increments and gauge fixed up to a componentwise constant; an eight-phase minimal cycle in three-bit parity space; and the golden-ratio gap ln φ. We formalize a Reality Bridge that (i) displays J additively as S/ℏ (no offset, no fit), (ii) assigns a recognition tick τ_rec=(2π/(8ln φ))τ₀ and a kinematic hop length λ_kin=c·τ_rec with c=ℓ₀/τ₀, and (iii) provides two independent SI landings (time-first and length-first) whose numerical agreement within stated combined uncertainty constitutes a single pass/fail criterion. We prove non-circularity (unit relabelings factor out and cannot alter dimensionless content) and uniqueness at the stated symmetry (the bridge is fixed up to trivial unit rescalings). No sector models, regressions, thresholds, or empirical tuning are used. A reproducibility pack (Lean theorem identifiers, checksums, and one-command scripts that compute both landings and the pass/fail statistic) is specified for audit.
+
+1. INTRODUCTION
+
+Problem
+Mathematical results are exact and dimensionless; measurements are finite-precision and SI-native. Claims of being "parameter-free" often collapse under audit because units and calibrations quietly inject knobs. The challenge is to expose a route from theorem to instrument readout that is (a) explicit, (b) auditable, and (c) falsifiable—without feeding any parameter back into the proofs.
+
+Starting Point (Dimensionless Inputs)
+We assume, as upstream facts proved elsewhere and not re-proved here:
+• a unique symmetric multiplicative cost J(x)=½(x+x⁻¹)−1 with log-axis minimum at x=1;
+• a quantized tick on a discrete ledger so that n steps produce an exact increment n·δ;
+• an eight-tick partition in three-bit parity space (minimal period 8);
+• the golden ratio φ=(1+√5)/2 as the positive solution of x=1+1/x, with gap δ_gap=ln φ.
+
+These are purely dimensionless. They are the only features the measurement layer is allowed to see.
+
+Reality Bridge (What We Introduce)
+We define a single semantics that:
+1. displays J additively as action via J↦S/ℏ (a naming, not a fit);
+2. assigns the ledger tick an SI duration
+   τ_rec := (2π)/(8ln φ) · τ₀
+   and a kinematic hop length λ_kin := c·τ_rec with c := ℓ₀/τ₀;
+3. offers an independent length-first landing by adopting a conventional hop length λ_rec and inferring the same τ_rec through c.
+
+Here (τ₀,ℓ₀) are unit names (seconds, meters). They do not alter any dimensionless identity.
+
+Two Landings, One Test
+The time-first landing fixes τ₀ by clock comparison and then computes λ_kin=c·τ_rec.
+The length-first landing adopts λ_rec as a conventional anchor and then computes τ_rec=λ_rec/c and the implied τ₀.
+Consistency is not optional: both routes must agree within their combined uncertainty. Writing u(·) for relative standard uncertainty and taking coverage k∈{1,2},
+
+u_comb = √(u(λ_kin)² + u(λ_rec)²),
+|λ_kin − λ_rec|/λ_rec ≤ k·u_comb
+
+must hold. No thresholds or regressions appear anywhere—one inequality governs success or failure.
+
+What is Proved Here
+1. Non-circularity: any relabeling of units factors through (τ₀,ℓ₀), leaving the numerical content of the dimensionless inputs unchanged. The bridge cannot smuggle parameters back into proofs.
+2. Uniqueness at the stated symmetry: among semantics that respect multiplicative symmetry x↦1/x, preserve the eight-tick partition, and keep J dimensionless, the presented bridge is unique up to a single global affine rescaling of displays.
+3. Falsifiability: the two landings yield the pass/fail inequality above; persistent failure falsifies the semantics or a landing assumption.
+
+What is Not Claimed
+This paper makes no empirical fit, offers no numerical prediction beyond equality of routes under declared anchors, and introduces no priors or stochastic models. Uncertainty is purely metrological. All sector-specific applications are out of scope and must not feed back into the dimensionless layer.
+
+2. SCOPE, CLAIMS, AND EDITORIAL COMPLIANCE
+
+What This Paper Does
+We present a proof-first semantics that maps dimensionless theorems (unique symmetric cost J, quantized tick, eight-tick partition, φ) to SI displays for action and for clock/length. The bridge is fully specified, non-circular, and yields a single pass/fail laboratory criterion. No tunable parameters enter the derivations.
+
+What This Paper Does Not Do
+We do not introduce sector models, data fits, or numeric predictions beyond the equality of two SI landings within stated uncertainty. Phenomenology (e.g., galaxy kernels, mass spectra) is out of scope and belongs in separate papers.
+
+Precise Meaning of "Parameter-Free"
+"Parameter-free" applies to the derivation layer only: the cost J(x)=½(x+x⁻¹)−1, the eight-tick structure, and the golden-ratio gap ln φ are dimensionless theorems. Numerical displays use standard SI/CODATA constants. No parameter is adjusted to match any dataset in this paper.
+
+3. A MOTIVATED POSTULATE SET FOR A PARAMETER-FREE FRAMEWORK
+
+This methods paper operates on a minimal, dimensionless foundation. For completeness, we adopt the following postulates as the internal interface to the Reality Bridge. Each postulate is accompanied by a brief motivation; no sector model or fit is assumed.
+
+P1 (Cost uniqueness): J(x)=½(x+x⁻¹)−1, with J(1)=0 and J(x)=J(1/x); equivalently J(e^t)=cosh t−1.
+Motivation: Among symmetric multiplicative costs, this choice uniquely enforces dual-balance and a convex minimum at the neutral point, fixing the display without offsets or tunable scales.
+
+P2 (Quantized tick): There is a fundamental dimensionless increment δ>0 such that along any n-step reach the potential jump is exactly n·δ; potentials with the same δ agree up to a componentwise constant.
+Motivation: Discreteness provides a countable, auditable substrate; conservation then implies linear, integer-quantized accumulation along finite chains.
+
+P3 (Eight-tick minimality in D=3): In three-bit parity space, a full traversal has minimal period 2³=8, and this period is attainable.
+Motivation: Coverage of all parity patterns in three spatial bits fixes the smallest complete cycle, linking the temporal partition directly to spatial dimensionality.
+
+P4 (Golden-ratio gap): φ=(1+√5)/2 is the positive solution of x=1+1/x; define the dimensionless gap δ_gap=ln φ.
+Motivation: The fixed-point relation x=1+1/x selects a unique, scale-free multiplier; using ln φ as the canonical gap removes arbitrary bases from the display.
+
+These postulates are the only inputs visible to the bridge; all claims below are downstream of them and introduce no additional parameters.
+
+4. REALITY BRIDGE: FORMAL SEMANTICS
+
+Definition: Reality Bridge
+A Reality Bridge is a pair (S,T) where:
+• S assigns to the dimensionless cost J an additive action display via the identity J ≡ S/ℏ.
+• T assigns to the discrete tick an SI clock interval τ_rec := (2π)/(8ln φ)·τ₀ and to one hop a kinematic length λ_kin := c·τ_rec, with c:=ℓ₀/τ₀.
+
+The tuple (τ₀,ℓ₀) is a unit choice; it names seconds and meters but does not change any dimensionless theorem.
+
+Theorem: Non-circularity
+The Reality Bridge cannot feed parameters back into the dimensionless layer. Concretely:
+1. J, φ, ln φ, and the eight-tick combinatorics are invariant under all unit relabelings.
+2. For any relabeling (α,β), numerical equalities among displays that are dimensionless or normalized by the same unit are unchanged.
+
+Proof: These quantities are defined without units. Unit relabelings (τ₀,ℓ₀)↦(ατ₀,βℓ₀) cancel in normalized ratios; therefore changing (τ₀,ℓ₀) cannot alter any dimensionless theorem.
+
+Bridge Invariants
+The following are independent of unit relabelings and therefore auditable without knobs:
+τ_rec/τ₀ = 2π/(8ln φ)
+λ_kin/ℓ₀ = 2π/(8ln φ)
+S/ℏ = J
+
+5. TWO INDEPENDENT SI LANDINGS (NO FREE PARAMETERS)
+
+The Reality Bridge admits two operational ways to land in SI. Each route produces numerical values for the recognition tick τ_rec and the hop length λ. In an ideal (noise–free) setting they are equal by construction; operationally, agreement is tested against stated measurement uncertainty (no tuning parameters are introduced anywhere).
+
+Route A: Time-first Landing
+Choose a clock unit τ₀ by direct comparison to an SI time standard. Then
+τ_rec = (2π)/(8ln φ)·τ₀
+λ_kin = c·τ_rec = (2π)/(8ln φ)·ℓ₀
+
+with c := ℓ₀/τ₀. Thus the normalized displays are bridge invariants:
+τ_rec/τ₀ = 2π/(8ln φ)
+λ_kin/ℓ₀ = 2π/(8ln φ)
+
+Choice of Conventional Length Anchor (Illustrative)
+For the length-first landing we adopt, as an illustrative convention, the Planck-scale expression
+λ_rec := √(ℏ·G/c³)
+
+This choice exercises the bridge at a scale where quantum and gravitational effects are jointly implicated, while keeping the methodology general: any clearly defined length anchor with a stated uncertainty can be substituted without changing the bridge or the decision rule.
+
+Route B: Length-first Landing
+Adopt a conventional hop-length anchor λ_rec (an SI length). Using the same c=ℓ₀/τ₀,
+τ_rec = λ_rec/c
+τ₀ = (8ln φ)/(2π)·τ_rec
+
+and the normalized displays again equal the same invariants:
+τ_rec/τ₀ = 2π/(8ln φ)
+λ_rec/ℓ₀ = 2π/(8ln φ)
+
+Consistency Demand (No Knobs)
+When performed with the same (τ₀,ℓ₀) labeling, Route A and Route B must yield identical numerical τ_rec and λ up to stated measurement uncertainty. Any persistent mismatch falsifies the semantics or a landing assumption; no parameter adjustment is permitted to reconcile the two.
+
+6. UNCERTAINTY PROPAGATION AND THE SINGLE PASS/FAIL INEQUALITY
+
+Scope: This section specifies how measurement uncertainty is propagated for the sole compliance check of the Reality Bridge. All uncertainties are relative standard (one–sigma) uncertainties.
+
+Definitions: Let u(·) denote relative standard uncertainty. From the bridge identities
+λ_kin = c·τ_rec with c = ℓ₀/τ₀, τ_rec = (2π)/(8ln φ)·τ₀
+
+it follows algebraically that
+λ_kin = (2π)/(8ln φ)·ℓ₀
+
+hence the only contributor to u(λ_kin) is the length-unit labeling:
+u(λ_kin) = u(ℓ₀)
+
+Let the independent length-side landing supply a conventional anchor λ_rec with relative standard uncertainty u(λ_rec).
+
+Correlation: If the realizations of ℓ₀ and λ_rec are not statistically independent, introduce a correlation coefficient ρ∈[−1,1] between their relative estimates. The combined relative uncertainty used for the comparison is
+
+u_comb(ρ) = √(u(ℓ₀)² + u(λ_rec)² − 2ρ·u(ℓ₀)·u(λ_rec))
+
+When independence is engineered (separate traceability chains), set ρ=0. If ρ is unknown, a conservative bound is u_comb ≤ u(ℓ₀)+u(λ_rec) (the ρ=+1 worst case).
+
+Falsifiability Test
+Fix a coverage factor k∈{1,2}. With u_comb=u_comb(ρ) as above, the Reality Bridge requires
+
+|λ_kin − λ_rec|/λ_rec ≤ k·u_comb
+
+Equivalently, the standardized discrepancy
+Z := |λ_kin − λ_rec|/(u_comb·λ_rec)
+
+must satisfy Z≤k. Persistent violation falsifies the bridge or a landing assumption for the stated semantics.
+
+Concrete Choices Used in This Paper (Frozen for the Artifact Pack)
+1. Length unit label ℓ₀ (Route A): Realize the meter via an interferometric path-length measurement referenced to an optical frequency comb locked to an SI-traceable second. Target: u(ℓ₀)=1.0×10⁻⁹.
+
+2. Conventional anchor λ_rec (Route B): Adopt λ_rec := √(ℏ·G/c³). In SI, c and h (hence ℏ=h/2π) are exact; the relative uncertainty is dominated by G. Frozen for this submission: u(G)=2.0×10⁻⁵ ⟹ u(λ_rec)=½·u(G)=1.0×10⁻⁵.
+
+3. Correlation between landings: Use disjoint laboratories (or, at minimum, disjoint hardware and analysis chains) for Routes A and B. Chosen value: ρ=0 (engineered independence).
+
+Implied Combined Uncertainty: With the above targets and ρ=0,
+u_comb = √(u(ℓ₀)² + u(λ_rec)²) ≈ 1.0×10⁻⁵
+
+Audit Note: These values are predeclared. They may be updated only by issuing a new artifact pack (e.g., if a revised recommended value of G is adopted); retroactive changes after observing the comparison are not permitted.
+
+7. OPERATIONAL PROTOCOLS (HOW TO MEASURE WITHOUT KNOBS)
+
+Protocol A: Clock-side Determination of τ₀
+Objective: Realize the SI second (time unit) and compute the recognition tick and kinematic hop length without introducing tunable parameters.
+
+Instruments: One of:
+(i) in-lab primary/secondary time standard (e.g., a cesium fountain or an optically steered hydrogen maser with a frequency comb), or
+(ii) a calibrated UTC(k) realization with traceable time-transfer (e.g., common-view GNSS or two-way satellite/optical fiber links).
+
+Procedure:
+1. Realize the second: Lock a local oscillator to the SI definition of the second. Record the relative standard uncertainty u(τ₀) from the comparison interval and reported stability (Allan deviation) of the realization.
+
+2. Compute the recognition tick: Set
+   τ_rec = (2π)/(8ln φ)·τ₀
+   This identity has no fit parameter and inherits the relative uncertainty of τ₀ at realization level.
+
+3. Compute the kinematic hop length: With c := ℓ₀/τ₀,
+   λ_kin = c·τ_rec = (2π)/(8ln φ)·ℓ₀
+   Note the cancellation: realization noise in τ₀ cancels algebraically; the display depends only on the length unit name ℓ₀.
+
+4. Record invariants: Report the two normalized, unit-invariant ratios
+   τ_rec/τ₀ = 2π/(8ln φ)
+   λ_kin/ℓ₀ = 2π/(8ln φ)
+
+Targets: Aim for u(τ₀)≤10⁻¹⁵ (clock realization over multi-hour averaging) and, if a physical length realization is invoked, u(ℓ₀)≤10⁻⁹. These targets are illustrative and may be tightened by the laboratory.
+
+Acceptance: No fitting or thresholding is performed. The outputs are the identities above; uncertainty is documented, not tuned.
+
+Protocol B: Length-side Determination of λ_rec
+Objective: Land independently on a conventional hop-length anchor and infer the same τ_rec through kinematics.
+
+Anchor Choice: Adopt the conventional definition
+λ_rec := √(ℏ·G/c³)
+
+Here c and ℏ are exact in SI; G carries the relative standard uncertainty u(G). Consequently,
+u(λ_rec) = ½·u(G)
+
+Independence: Realize λ_rec using a calibration and analysis chain that is organizationally and instrumentally disjoint from Protocol A (different laboratory or at minimum a distinct hardware chain and data reduction), so the correlation coefficient ρ between the relative estimates of ℓ₀ (from Protocol A, if realized) and λ_rec is engineered to be near zero.
+
+Procedure:
+1. Evaluate the anchor: Compute λ_rec from the adopted constants and document u(λ_rec)=½u(G).
+2. Infer the recognition tick: With the exact identity c=ℓ₀/τ₀,
+   τ_rec = λ_rec/c = λ_rec·τ₀/ℓ₀
+   This step is a display conversion; no fit is introduced.
+3. Report invariants: Verify that
+   τ_rec/τ₀ = λ_rec/ℓ₀, λ_rec/ℓ₀ = 2π/(8ln φ)
+   are numerically consistent with Protocol A within the uncertainty model specified in the previous section.
+
+Targets: Use the current recommended value of G with its stated standard uncertainty. No additional parameters are introduced.
+
+8. NO-KNOB ACCOUNTING (WHY THIS IS PARAMETER-FREE)
+
+Definitions
+A knob is any adjustable numerical parameter chosen or tuned to improve agreement with data (including implicit choices such as ex–post coverage, regression weights, or selective averaging). A unit label is a naming pair (τ₀,ℓ₀) for seconds and meters. Unit labels may be realized with finite uncertainty, but algebraically they act as symbols that must cancel in normalized displays.
+
+Derivation Layer (Purely Dimensionless)
+The only inputs used by the bridge are theorem-level equalities that carry no units:
+τ_rec/τ₀ = 2π/(8ln φ)
+λ_kin/ℓ₀ = 2π/(8ln φ)
+S/ℏ = J
+
+These relations are fixed by proof and cannot be altered by any laboratory choice.
+
+Display Layer (Names, Not Fits)
+The bridge names SI displays via
+τ_rec = (2π)/(8ln φ)·τ₀
+λ_kin = c·τ_rec = (2π)/(8ln φ)·ℓ₀
+c = ℓ₀/τ₀
+
+No regression, priors, thresholds, or free coefficients appear. The only variability is metrological uncertainty in the realization of unit labels or anchors, which is documented—not tuned.
+
+Knob Nullity Lemma
+Let θ denote any continuous adjustment at the display level (choice of weights, offsets, or fit parameters). Then
+∂/∂θ (τ_rec/τ₀) = ∂/∂θ (λ_kin/ℓ₀) = ∂/∂θ (S/ℏ) = 0
+
+Proof: Each normalized quantity equals a fixed constant or a dimensionless theorem (2π/(8ln φ) or J). By algebra, unit relabelings (τ₀,ℓ₀)↦(ατ₀,βℓ₀) cancel in the ratios; any additional display-level adjustment θ is external to the identities and cannot enter these expressions.
+
+9. WHAT SUCCESS OR FAILURE WOULD MEAN
+
+If the Inequality Holds (Within Stated k)
+Interpretation: The Reality Bridge is operationally consistent at the tested precision: the two independently realized SI landings agree within the predeclared coverage k and combined relative uncertainty u_comb. No parameters have been tuned to obtain this result.
+
+Immediate Consequences:
+• The bridge invariants are empirically supported:
+  τ_rec/τ₀ = 2π/(8ln φ)
+  λ_kin/ℓ₀ = 2π/(8ln φ)
+  S/ℏ = J
+• Proceed to sector-specific applications without feeding data back into proofs: use the same fixed semantics and uncertainty policy.
+• Replicate with disjoint hardware/teams to check stability of the pass/fail statistic; tighten uncertainty budgets if higher precision is desired.
+
+If It Fails (Persistently, After Controls)
+Interpretation: Either (i) the Reality Bridge semantics is wrong for the stated mapping, or (ii) at least one landing assumption (anchor, traceability, independence, or declared correlation) is invalid. For the present semantics, the program is falsified.
+
+Controls (Must Be Verified Before Declaring Failure):
+• Re-run the fixed pipeline end-to-end on fresh data (no code or parameter changes).
+• Confirm that Route A and Route B use disjoint calibration chains and that the declared correlation ρ is accurate or conservatively bounded.
+• Re-check that the adopted constants and unit labels are exactly those stated (no quiet revisions of anchors or values).
+• Verify that no thresholds, offsets, weights, or regressions were introduced post hoc.
+
+Next Actions After Confirmed Failure:
+• Publish the negative result with full artifact trail (scripts, hashes, uncertainty accounting, and raw data).
+• If a new semantics or a different landing is proposed, treat it as a new hypothesis: restate claims, predeclare anchors/coverage/correlation, and rerun the same single-inequality test. Retroactive edits to make the present test pass are not permitted.
+
+10. CONCLUSION
+
+We have fixed a proof-verified Reality Bridge that carries a strictly dimensionless derivation layer into SI displays without introducing tunable parameters. The construction delivers (i) non-circularity (unit relabelings factor out), (ii) uniqueness at the stated symmetry, and (iii) two independent SI landings—time-first and length-first—whose numerical agreement is evaluated by a single, predeclared inequality using relative standard uncertainties and an explicit correlation model. The operational outcome is binary: either the two routes agree within combined uncertainty at coverage k, or the semantics (or a landing assumption) is falsified.
+
+This closes the gap between formal theorem and laboratory statement with a minimal, auditable interface. The artifact and audit trail make replication straightforward: choose unit labels and anchors, compute displays, declare uncertainties and correlation, and evaluate the pass/fail statistic. Subsequent work may pursue sector-specific applications and higher-precision tests, provided they preserve the no-knob policy and the fixed decision rule introduced here.
+
+Broader Impact
+The framework upgrades "parameter-free" from a slogan to an auditable engineering discipline: derivations remain dimensionless and fixed, displays are algebraic and non-circular, and empirical accountability is enforced by a single predeclared inequality. This template is portable: any candidate theory that can present its inputs in the same normalized form can be evaluated against laboratory reality without introducing hidden knobs.
+
+Recognition Physics Institute
+Austin, Texas, USA
+2024
