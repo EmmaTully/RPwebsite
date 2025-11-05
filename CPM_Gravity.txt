@@ -1,0 +1,16 @@
+The Coercive Projection Law of Gravity
+Jonathan Washburn
+Recognition Physics
+
+SUMMARY
+A single universal law governs gravitational inference under finite information: the coercive projection law. Raw baryonic sources are mapped to an effective source by a fixed, scale- and time-aware kernel; the gravitational field is the unique minimizer of a classical energy with that effective source. Information‑Limited Gravity (ILG) is the gravitational instantiation in the pressure formulation.
+
+ABSTRACT (from TeX)
+Kernel (pressure formulation): w(k,a) = 1 + C (a/(k τ0))^α. The effective pressure p sources the standard Poisson equation ∇^2 Φ = 4π G a^2 p. A coercivity inequality with explicit constants guarantees existence/uniqueness and stability of the projected solution, certifies positivity/monotonicity displays used in galaxies and cosmology, and yields cross‑probe falsifiers: rotation curves, tracer‑independent E_G, the low‑ℓ ISW sign, and the low‑L CMB‑lensing amplitude are simultaneously constrained by the same kernel and constants.
+
+CONSTANTS (Recognition Geometry)
+α = 1/2 (1 − φ^{-1})
+C = φ^{-3/2}
+
+OPERATIONAL ENGINE
+Each analysis emits certificates (energy, residual norm, positivity checks, convergence diagnostics). Minimal engine (grid FFT + disk Hankel): https://github.com/jonwashburn/CPM-Cosmology-Grid-Path
