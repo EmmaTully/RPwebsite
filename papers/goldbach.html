@@ -4,9 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Goldbach via a Mod-8 Kernel - Recognition Physics Institute</title>
+    <meta name="description" content="Goldbach via a mod-8 periodic kernel: density-one and short-interval positivity with classical circle method.">
     <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>
+        window.MathJax = { tex: { inlineMath: [['$', '$'], ['\\(', '\\)']], displayMath: [['$$', '$$'], ['\\[', '\\]']], processEscapes: true } };
+    </script>
 </head>
 <body>
+    <!-- Header -->
     <header class="site-header">
         <nav class="navbar">
             <div class="nav-container">
@@ -19,7 +29,7 @@
                 <div class="nav-menu">
                     <a href="../index.html" class="nav-link">Home</a>
                     <a href="../research.html" class="nav-link">Research</a>
-                    <a href="../publications.html" class="nav-link active">Publications</a>
+                    <a href="../publications.html" class="nav-link">Publications</a>
                     <a href="../team.html" class="nav-link">Team</a>
                     <a href="../contact.html" class="nav-link">Contact</a>
                 </div>
@@ -32,52 +42,125 @@
         </nav>
     </header>
 
-    <main class="paper-page">
+    <!-- Paper Page -->
+    <div class="paper-page">
         <div class="container">
             <div class="breadcrumb">
-                <a href="../index.html">HOME</a> | <a href="../publications.html">PUBLICATIONS</a> | <span>PAPER</span>
+                <a href="../index.html">HOME</a> | <a href="../publications.html">PUBLICATIONS</a> | <span>GOLDBACH (MOD‑8)</span>
             </div>
+            
+            <article class="paper-article">
+                <header class="paper-header">
+                    <div class="paper-meta">
+                        <span class="paper-status preprint">Research Paper</span>
+                    </div>
+                    <h1 class="paper-title">Goldbach via a Mod-8 Kernel: Density-One and Short-Interval Positivity</h1>
+                    <p class="paper-authors">Jonathan Washburn</p>
+                    <p class="paper-affiliation">Recognition Physics Institute</p>
+                </header>
+                
+                <div class="paper-content">
+                    <div class="paper-abstract">
+                        <h3>Abstract</h3>
+                        <p>
+                            We present a classical circle-method framework for Goldbach based on a mod-8 periodic kernel \(K_8\). On major arcs we obtain a positive main term given by a 2-adic gate \(c_8(2m)\in\{1,\tfrac12\}\) times the Hardy–Littlewood singular series \(\mathfrak S(2m)\). On minor arcs we prove unconditional density-one positivity via mean-square bounds and convert fourth-moment control into pointwise positivity in every short interval, giving bounded gaps between exceptional even integers. A quantified medium-arc dispersion lemma yields a small saving that lowers the short-interval exponent. We also record a Chen/Selberg variant (prime + almost-prime), explicit constants, a smoothed-to-sharp transfer, and a reproducible computational protocol; an optional GRH template is included for comparison.
+                        </p>
+                    </div>
 
-            <div class="paper-meta">
-                <span class="paper-status preprint">Research Paper</span>
-            </div>
-
-            <h1 class="paper-title">Goldbach via a Mod-8 Kernel: Density-One and Short-Interval Positivity</h1>
-            <p class="paper-authors">Jonathan Washburn</p>
-            <p class="paper-affiliation">Recognition Physics Institute</p>
-
-            <section class="paper-section">
-                <h2>Abstract</h2>
-                <p>
-                    We present a classical circle-method framework for Goldbach based on a mod-8 periodic kernel \(K_8\). On major arcs we obtain a positive main term given by a 2-adic gate \(c_8(2m)\in\{1,\tfrac12\}\) times the Hardy–Littlewood singular series \(\mathfrak S(2m)\). On minor arcs we prove unconditional density-one positivity via mean-square bounds and convert fourth-moment control into pointwise positivity in every short interval, giving bounded gaps between exceptional even integers. A quantified medium-arc dispersion lemma yields a small saving that lowers the short-interval exponent. We also record a Chen/Selberg variant (prime + almost-prime), explicit constants, a smoothed-to-sharp transfer, and a reproducible computational protocol; an optional GRH template is included for comparison.
-                </p>
-            </section>
-
-            <section class="paper-section">
-                <h2>Key Contributions</h2>
-                <ul>
-                    <li>Mod-8 kernel producing a 2-adic gate on major arcs with \(\mathfrak S(2m)\).</li>
-                    <li>Unconditional density-one positivity; bounded gaps between exceptions via short-interval control.</li>
-                    <li>Medium-arc dispersion savings (quantified) improving the short-interval exponent.</li>
-                    <li>Chen/Selberg variant (prime + almost-prime) with explicit protocol.</li>
-                    <li>Reproducible constants ledger, smoothed-to-sharp transfer, and computational closure plan.</li>
-                </ul>
-            </section>
-
-            <div class="paper-actions">
-                <a href="../Paperss/goldbach_rs.pdf" class="btn btn-primary" target="_blank">Download PDF</a>
-                <a href="../Paperss/goldbach_rs.txt" class="btn btn-secondary" target="_blank">Download TXT</a>
-                <a href="../publications.html" class="btn btn-secondary">Back to Publications</a>
-            </div>
+                    <div class="paper-key-findings">
+                        <h3>Key Contributions</h3>
+                        <ul>
+                            <li>Mod-8 kernel producing a 2-adic gate on major arcs with \(\mathfrak S(2m)\).</li>
+                            <li>Unconditional density-one positivity; bounded gaps between exceptions via short-interval control.</li>
+                            <li>Medium-arc dispersion savings (quantified) improving the short-interval exponent.</li>
+                            <li>Chen/Selberg variant (prime + almost-prime) with explicit protocol.</li>
+                            <li>Reproducible constants ledger, smoothed-to-sharp transfer, and computational closure plan.</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="paper-actions">
+                    <a href="../Paperss/goldbach_rs.pdf" class="btn btn-primary" target="_blank">Download PDF</a>
+                    <a href="../Paperss/goldbach_rs.txt" class="btn btn-secondary" target="_blank">Download TXT</a>
+                    <a href="../publications.html" class="btn btn-secondary">Back to Publications</a>
+                </div>
+            </article>
         </div>
-    </main>
+    </div>
 
+    <!-- Footer -->
     <footer class="site-footer">
         <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-brand">
+                        <span class="brand-icon">⚛</span>
+                        <span class="brand-text">Recognition Physics Institute</span>
+                    </div>
+                    <p class="footer-description">Advancing the science of reality through parameter-free theoretical physics and consciousness research.</p>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-title">Research Areas</h4>
+                    <ul class="footer-links">
+                        <li><a href="../research.html#foundations">Eight Foundations</a></li>
+                        <li><a href="../research.html#consciousness">Consciousness Theory</a></li>
+                        <li><a href="../research.html#predictions">Parameter-Free Predictions</a></li>
+                        <li><a href="../research.html#applications">Research Applications</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-title">Resources</h4>
+                    <ul class="footer-links">
+                        <li><a href="../publications.html">Publications</a></li>
+                        <li><a href="../research.html">Research</a></li>
+                        <li><a href="../team.html">Team</a></li>
+                        <li><a href="../contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-title">Connect</h4>
+                    <ul class="footer-links">
+                        <li><a href="mailto:research@recognitionphysics.org">research@recognitionphysics.org</a></li>
+                        <li><a href="https://github.com/jonwashburn/ledger-foundation">GitHub</a></li>
+                        <li><a href="https://arxiv.org/search/?query=recognition+physics">arXiv</a></li>
+                    </ul>
+                </div>
+            </div>
             <div class="footer-bottom">
                 <p>&copy; 2024 Recognition Physics Institute. All rights reserved.</p>
+                <p>Research conducted under the principles of open science and reproducible results.</p>
             </div>
         </div>
     </footer>
+
+    <script src="../assets/js/main.js"></script>
+    
+    <!-- Paper page specific styles -->
+    <style>
+        .paper-page { padding-top: 6rem; padding-bottom: 4rem; font-family: var(--font-sans); }
+        .breadcrumb { font-size: 0.875rem; color: var(--gray-600); margin-bottom: 2rem; }
+        .breadcrumb a { color: var(--secondary-color); text-decoration: none; }
+        .paper-article { max-width: 900px; margin: 0 auto; }
+        .paper-header { text-align: center; margin-bottom: 3rem; padding-bottom: 2rem; border-bottom: 1px solid var(--gray-200); }
+        .paper-meta { display: flex; justify-content: center; gap: 1rem; margin-bottom: 1.5rem; }
+        .paper-status, .paper-date, .paper-venue { font-size: 0.75rem; padding: 0.25rem 0.5rem; border-radius: var(--border-radius); font-weight: 500; text-transform: uppercase; letter-spacing: 0.05em; }
+        .paper-title { font-size: 2.5rem; font-weight: 400; color: var(--gray-900); margin-bottom: 1rem; line-height: 1.3; }
+        .paper-authors { font-size: 1.125rem; color: var(--gray-600); font-weight: 500; margin-bottom: 0.5rem; }
+        .paper-affiliation { font-size: 0.875rem; color: var(--gray-500); font-style: italic; }
+        .paper-content { line-height: 1.7; font-size: 1rem; color: var(--gray-700); }
+        .paper-content h2 { font-size: 1.75rem; color: var(--primary-color); margin-top: 2.5rem; margin-bottom: 1rem; }
+        .paper-content h3 { font-size: 1.25rem; color: var(--gray-900); margin-top: 2rem; margin-bottom: 0.75rem; }
+        .paper-content p { margin-bottom: 1.5rem; }
+        .paper-content ul { margin-bottom: 1.5rem; padding-left: 1.5rem; }
+        .paper-content li { margin-bottom: 0.75rem; line-height: 1.6; }
+        .paper-actions { display: flex; justify-content: center; gap: 1rem; margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--gray-200); }
+        .MathJax { font-size: 1.1em !important; }
+        @media (max-width: 768px) {
+            .paper-page { padding-top: 5rem; }
+            .paper-title { font-size: 2rem; }
+            .paper-meta { flex-direction: column; align-items: center; gap: 0.5rem; }
+            .paper-actions { flex-direction: column; align-items: center; }
+        }
+    </style>
 </body>
 </html>
