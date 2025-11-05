@@ -1,0 +1,16 @@
+THE COERCIVE PROJECTION METHOD (CPM): Axioms, Theorems, and Applications
+Jonathan Washburn
+Recognition Science, Recognition Physics Institute, Austin, Texas, USA
+
+SUMMARY
+CPM is a reusable proof template that converts quantitative distance‑to‑structure control into global positivity or existence statements. We formalize CPM with axioms, prove general coercivity theorems with explicit constants, and instantiate it in four domains: Hodge, Goldbach, Riemann Hypothesis, and Navier–Stokes.
+
+ABSTRACT (from TeX)
+The same projection/dispersion/aggregation pattern solves all four domains with structurally identical ingredients: a convex structured cone, a finite covering net, a rank‑one/Hermitian projection bound, and domain‑specific dispersion estimates. A reverse‑lift CPM <-> RS (Recognition Science) shows CPM’s structured sets coincide with RS‑optimal recognition modes; RS predicts dyadic/φ‑tier schedules, while classical results validate RS by converging to a unique zero‑parameter attractor.
+
+KEY ELEMENTS
+- Structured set S and defect D (distance‑to‑structure)
+- Coercivity inequality: E(α) − E(α0) ≥ c·D(α) with explicit constants
+- Finite ε‑net + rank‑one/Hermitian projection bound
+- Structured/dispersion split; bound dispersion with domain tools
+- Aggregate to global positivity/existence
