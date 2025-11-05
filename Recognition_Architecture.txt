@@ -1,0 +1,9 @@
+Title: Recognition Architecture (Integrated): From Dimensionless Proof to a Single Empirical Test
+Author: Jonathan Washburn
+Affiliation: Recognition Science, Recognition Physics Institute, Austin, Texas, USA
+
+Abstract:
+This paper presents a complete, parameter-free recognition architecture whose proof layer is strictly dimensionless and whose empirical layer is reduced to a small set of layered falsifiability gates. The proof layer fixes the unique symmetric multiplicative cost J(x)=1/2 (x + x^{-1}) − 1 with log-axis form J(e^{t}) = cosh t − 1, the golden‑ratio fixed point φ from x = 1 + 1/x (gap ln φ), and the minimal eight‑tick cycle induced by three spatial parities. Word length and ledger cost are linearly isomorphic, yielding rigid, knobless invariants used downstream.
+
+A Reality Bridge maps these invariants to SI without introducing offsets or fits: J → S/ħ (identity display), the recognition tick τ_rec = (2π / (8 ln φ)) τ_0, and the kinematic hop length λ_kin = c τ_rec with c = ℓ_0/τ_0. Two independent SI landings—time‑first and length‑first—are audited by layered gates: (P) a Planck‑side comparison of λ_kin vs. λ_rec = sqrt(ħ G/(π c^3)); (IR) a coherence gate ħ ?= E_coh τ_0 confined to the IR layer; and (C) a dimensionless identity (c^3 λ_rec^2)/(ħ G) = 1/π. Each gate is evaluated within its layer; cross‑layer mixing is disallowed. No sector models, priors, regressions, thresholds, or hidden calibration knobs are permitted. The manuscript specifies the invariants, the bridge, the uncertainty and correlation policy, and the artifact requirements for audit so a referee can reproduce the pass/fail number from first principles.
+
