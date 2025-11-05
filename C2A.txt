@@ -1,0 +1,37 @@
+C=2A: Unifying Quantum Measurement, Gravitational Collapse, and Consciousness
+Jonathan Washburn
+Recognition Physics Institute, Austin, Texas
+
+SUMMARY
+This paper proposes and substantiates an exact, parameter-free identity C=2A between a recognition path action C and a residual (gravitational) rate action A. The identity fixes measurement probabilities, aligns the Born rule with a local geodesic rate model, and provides a single shared threshold for quantum collapse, gravity-related reduction, and the onset of definite conscious experience. The framework is local, auditable, and makes crisp falsifiable predictions in the nanogram–second regime.
+
+ABSTRACT
+Problem: A unified account of measurement weights, collapse onset, and definite experience should be local, predictive, and parameter-free. Bridge: Using the unique convex cost J(x)=1/2(x+1/x)−1, we define C=∫J(r(t))dt and show an exact differential J(r)dt = d(2A_b) for two-branch geodesics with amplitudes a1=cosθ, a2=sinθ. Integration yields C=2A and thus P=e^{-C}=e^{-2A}, |A|=e^{-C/2}=e^{-A}. Triple unification: measurement, gravity, and consciousness share a single threshold: C≥1 ⇔ A≥1.
+
+KEY CONTRIBUTIONS
+- Exact identity: C=2A proved for two-branch geodesics; branchwise softmax P_I=e^{-2A_I}/Σ_J e^{-2A_J}
+- Amplitude bridge: |𝓐|=e^{-C/2}=e^{-A} ⇒ P=|𝓐|^2=e^{-2A}
+- Shared threshold: collapse/definite experience at A≥1 (equivalently C≥2)
+- Predictions: parameter-free scaling τ·m·|Φ12|∼1 (ng–s); modest observer-coupled modulation via mutual information
+- Falsifiers: threshold mismatch; absent mass scaling; null observer effect
+
+MATHEMATICAL FRAMEWORK
+- Recognition side: J(x)=1/2(x+1/x)−1 (J(1)=0, J''(1)=1, J(x)=J(1/x)); C=∫J(r(t))dt, w=e^{-C}, |𝓐|=e^{-C/2}
+- Residual side: two-branch geodesic; rate action A=−ln|a_b(θ)| with a1=cosθ, a2=sinθ
+- Constructive kernel: J(r)dt = d(2A_b) = −2 d ln|a_b(θ)| ⇒ C_b=2A_b
+- Born weights: e^{-2A_b}; probabilities match residual route exactly
+
+IMPLICATIONS
+One local mechanism governs quantum measurement, gravity-related reduction, and definite experience. The framework is maximally falsifiable (no tunable parameters) with crisp thresholds and near-term tests.
+
+PREDICTIONS
+- Mesoscopic scaling: τ_dec ∝ 1/(m|Φ12|)
+- Attention/observer coupling: modest change in decoherence via I(Ag;Env)
+
+FALSIFIERS
+- Threshold mismatch: collapse observed at C≠1 or A≠1
+- Absent mass scaling: τ_dec not following 1/(m|Φ12|)
+- Null observer effect under powered, blinded protocols
+
+CONTACT
+Lean 4 formalization and reports: https://github.com/jonwashburn/reality
