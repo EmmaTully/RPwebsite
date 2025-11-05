@@ -3,98 +3,199 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>From Local Height Diagonalization to Birch-Swinnerton-Dyer - Recognition Physics</title>
+    <title>From Local Height Diagonalization to Birch-Swinnerton-Dyer - Recognition Physics Institute</title>
+    <meta name="description" content="Unconditional proof of the Birch–Swinnerton–Dyer conjecture for every modular elliptic curve over ℚ using classical methods.">
     <link rel="stylesheet" href="../assets/css/main.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']],
+                processEscapes: true
+            }
+        };
+    </script>
 </head>
 <body>
-    <main class="section">
-        <div class="container">
-            <!-- Breadcrumb -->
-            <div style="margin-bottom: 2rem; color: var(--gray-600); font-size: 0.9rem;">
-                <a href="../index.html" style="text-decoration: none; color: var(--primary-color);">HOME</a> | 
-                <a href="../publications.html" style="text-decoration: none; color: var(--primary-color);">PUBLICATIONS</a> | 
-                <span>BSD CONJECTURE</span>
+    <!-- Header -->
+    <header class="site-header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-brand">
+                    <a href="../index.html">
+                        <span class="brand-icon">⚛</span>
+                        <span class="brand-text">Recognition Physics Institute</span>
+                    </a>
+                </div>
+                <div class="nav-menu">
+                    <a href="../index.html" class="nav-link">Home</a>
+                    <a href="../research.html" class="nav-link">Research</a>
+                    <a href="../publications.html" class="nav-link">Publications</a>
+                    <a href="../team.html" class="nav-link">Team</a>
+                    <a href="../contact.html" class="nav-link">Contact</a>
+                </div>
+                <div class="nav-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
             </div>
+        </nav>
+    </header>
 
-            <article>
-                <!-- Header -->
-                <header style="margin-bottom: 3rem; text-align: left;">
-                    <div style="background: var(--accent-color); color: white; display: inline-block; padding: 0.5rem 1rem; border-radius: 4px; font-size: 0.8rem; font-weight: 600; margin-bottom: 1rem;">
-                        Research Paper
+    <!-- Paper Page -->
+    <div class="paper-page">
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="../index.html">HOME</a> | <a href="../publications.html">PUBLICATIONS</a> | <span>BSD CONJECTURE</span>
+            </div>
+            
+            <article class="paper-article">
+                <header class="paper-header">
+                    <div class="paper-meta">
+                        <span class="paper-status preprint">Research Paper</span>
                     </div>
-                    <h1 style="font-size: 2.2rem; font-weight: 700; color: var(--primary-color); margin: 1rem 0; line-height: 1.2;">
-                        From Local Height Diagonalization to Birch–Swinnerton–Dyer: Unconditional μ=0 and Cyclotomic IMC Equality
-                    </h1>
-                    <p style="font-size: 1.1rem; color: var(--gray-700); margin: 0.5rem 0;">Jonathan Washburn</p>
-                    <p style="color: var(--gray-600); margin: 0.5rem 0;">Recognition Science, Recognition Physics Institute, Austin, Texas, USA</p>
-                    <p style="color: var(--gray-600);"><strong>Email:</strong> jon@recognitionphysics.org</p>
+                    <h1 class="paper-title">From Local Height Diagonalization to Birch–Swinnerton–Dyer: Unconditional μ=0 and Cyclotomic IMC Equality</h1>
+                    <p class="paper-authors">Jonathan Washburn</p>
+                    <p class="paper-affiliation">Recognition Science, Recognition Physics Institute, Austin, Texas, USA</p>
+                    <p class="paper-contact"><strong>Email:</strong> jon@recognitionphysics.org</p>
                 </header>
-
-                <!-- Abstract -->
-                <section style="margin-bottom: 3rem;">
-                    <h2 style="color: var(--primary-color); font-size: 1.5rem; margin-bottom: 1rem;">Abstract</h2>
-                    <p style="line-height: 1.6; margin-bottom: 1rem;">
-                        We prove the <strong>Birch–Swinnerton–Dyer conjecture unconditionally</strong> for every modular elliptic curve over <em>ℚ</em> by a classical, prime-wise route that converts local <em>p</em>-adic height information into global consequences and closes the cyclotomic Iwasawa Main Conjecture at <em>all</em> primes.
-                    </p>
-                    <p style="line-height: 1.6;">
-                        The core mechanism is a reduction-order <strong>separation criterion</strong> that upper-triangularizes the cyclotomic <em>p</em>-adic height Gram matrix modulo <em>p</em>, together with a per-prime diagonal unit test. We prove a <em>Λ</em>-adic positivity package (ordinary and signed) that yields reverse divisibility without invoking IMC, and a <em>T=0</em> reverse-divisibility theorem forcing <em>μₚ(E)=0</em> at primes passing the triangularization test.
-                    </p>
-                </section>
-
-                <!-- Key Contributions -->
-                <section style="margin-bottom: 3rem;">
-                    <h2 style="color: var(--primary-color); font-size: 1.5rem; margin-bottom: 1rem;">Key Contributions</h2>
-                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 1.5rem;">
-                        <div style="background: var(--gray-50); padding: 1.5rem; border-radius: 8px; border: 1px solid var(--gray-200);">
-                            <h3 style="color: var(--primary-color); margin-bottom: 0.5rem; font-size: 1.1rem;">Separation Criterion</h3>
-                            <p style="margin: 0; line-height: 1.5;">A reduction-order separation criterion that upper-triangularizes the cyclotomic <em>p</em>-adic height Gram matrix modulo <em>p</em>, enabling systematic analysis of height-unit primes.</p>
-                        </div>
-
-                        <div style="background: var(--gray-50); padding: 1.5rem; border-radius: 8px; border: 1px solid var(--gray-200);">
-                            <h3 style="color: var(--primary-color); margin-bottom: 0.5rem; font-size: 1.1rem;">Unconditional μ=0</h3>
-                            <p style="margin: 0; line-height: 1.5;">Proves <em>μₚ(E)=0</em> unconditionally for every prime <em>p</em> via a <em>p</em>-adic boundary wedge certificate on cyclotomic character layers.</p>
-                        </div>
-
-                        <div style="background: var(--gray-50); padding: 1.5rem; border-radius: 8px; border: 1px solid var(--gray-200);">
-                            <h3 style="color: var(--primary-color); margin-bottom: 0.5rem; font-size: 1.1rem;">Algorithmic Implementation</h3>
-                            <p style="margin: 0; line-height: 1.5;">Converts abstract theory into concrete computational procedures with deterministic, portable, and auditable outputs.</p>
-                        </div>
-
-                        <div style="background: var(--gray-50); padding: 1.5rem; border-radius: 8px; border: 1px solid var(--gray-200);">
-                            <h3 style="color: var(--primary-color); margin-bottom: 0.5rem; font-size: 1.1rem;">Classical Methods</h3>
-                            <p style="margin: 0; line-height: 1.5;">Uses transparent, auditable techniques rather than deep modern machinery, making verification practical.</p>
-                        </div>
+                
+                <div class="paper-content">
+                    <div class="paper-summary">
+                        <h2>Summary</h2>
+                        <p>We prove the <strong>Birch–Swinnerton–Dyer conjecture unconditionally</strong> for every modular elliptic curve over $\mathbb{Q}$ by a classical, prime-wise route that converts local $p$-adic height information into global consequences. This represents a major breakthrough in number theory using transparent, auditable methods.</p>
                     </div>
-                </section>
-
-                <!-- Case Studies -->
-                <section style="margin-bottom: 3rem;">
-                    <h2 style="color: var(--primary-color); font-size: 1.5rem; margin-bottom: 1rem;">Case Studies</h2>
                     
-                    <div style="background: var(--gray-50); padding: 1.5rem; border-radius: 8px; margin-bottom: 1rem;">
-                        <h3 style="color: var(--primary-dark); margin-bottom: 0.5rem;">Rank One: E₀: y² + y = x³ - x</h3>
-                        <p style="margin: 0.5rem 0;"><strong>Generator:</strong> P = (0,0)</p>
-                        <p style="margin: 0;"><strong>Result:</strong> Scan up to p ≤ 4000 produces <strong>528 height-unit primes</strong></p>
+                    <div class="paper-abstract">
+                        <h3>Abstract</h3>
+                        <p>We prove the Birch–Swinnerton–Dyer conjecture unconditionally for every modular elliptic curve over $\mathbb{Q}$ by a classical, prime-wise route that converts local $p$-adic height information into global consequences and closes the cyclotomic Iwasawa Main Conjecture at all primes. The core mechanism is a reduction-order separation criterion that upper–triangularizes the cyclotomic $p$-adic height Gram matrix modulo $p$, together with a per–prime diagonal unit test.</p>
+                    </div>
+                    
+                    <div class="paper-key-findings">
+                        <h3>Key Contributions</h3>
+                        <ul>
+                            <li><strong>Separation Criterion:</strong> Reduction-order method that upper-triangularizes the $p$-adic height Gram matrix modulo $p$</li>
+                            <li><strong>Unconditional μ=0:</strong> Proves $\mu_p(E)=0$ for every prime $p$ via boundary wedge certificates</li>
+                            <li><strong>Λ-adic Reverse Divisibility:</strong> Establishes $(L_p) \mid \mathrm{char}_\Lambda X_p$ without invoking IMC</li>
+                            <li><strong>Finite-Slope IMC Equality:</strong> Upgrades reverse divisibility to equality on weight discs for all slopes</li>
+                            <li><strong>Algorithmic Implementation:</strong> Converts abstract theory into concrete computational procedures</li>
+                            <li><strong>Classical Methods:</strong> Uses transparent, auditable techniques rather than deep modern machinery</li>
+                        </ul>
                     </div>
 
-                    <div style="background: var(--gray-50); padding: 1.5rem; border-radius: 8px;">
-                        <h3 style="color: var(--primary-dark); margin-bottom: 0.5rem;">Two-Point: E: y² = x³ - 6x + 5</h3>
-                        <p style="margin: 0.5rem 0;"><strong>Points:</strong> P₁ = (1,0), P₂ = (5,10)</p>
-                        <p style="margin: 0;"><strong>Result:</strong> <strong>136 separated primes</strong> out of 188 ordinary primes up to p ≤ 1200</p>
-                    </div>
-                </section>
+                    <div class="paper-mathematical-framework">
+                        <h3>Mathematical Framework</h3>
+                        
+                        <h4>The Separation Criterion</h4>
+                        <p>For rational points $P_1, \ldots, P_r \in E(\mathbb{Q})$ projecting to a $\mathbb{Z}$-basis of $E(\mathbb{Q})/\mathrm{tors}$, a prime $p$ is <strong>separated</strong> if:</p>
+                        <p style="text-align: center; font-family: var(--font-mono); background: var(--gray-50); padding: 1rem; border-radius: 6px; margin: 1rem 0;">
+                            $\forall i \neq j, \quad o_j(p) \nmid o_i(p)$
+                        </p>
+                        <p>where $o_i(p) = \mathrm{ord}(P_i \bmod p) \in E(\mathbb{F}_p)$.</p>
 
-                <!-- Actions -->
-                <div style="display: flex; gap: 1rem; margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--gray-200);">
+                        <h4>Height-Unit Primes</h4>
+                        <p>At separated primes, the $p$-adic regulator becomes a $p$-adic unit:</p>
+                        <p style="text-align: center; font-family: var(--font-mono); background: var(--gray-50); padding: 1rem; border-radius: 6px; margin: 1rem 0;">
+                            $\mathrm{Reg}_p = \det\big(h_p(P_i,P_j)\big)_{1 \leq i,j \leq r} \in \mathbb{Z}_p^{\times}$
+                        </p>
+                    </div>
+
+                    <div class="paper-case-studies">
+                        <h3>Case Studies</h3>
+                        
+                        <h4>Rank One Testbed: $E_0: y^2 + y = x^3 - x$</h4>
+                        <ul>
+                            <li><strong>Weierstrass coefficients:</strong> $(a_1,a_2,a_3,a_4,a_6) = (1,0,1,-1,0)$</li>
+                            <li><strong>Generator:</strong> $P = (0,0)$</li>
+                            <li><strong>Result:</strong> Scan up to $p \leq 4000$ produces <strong>528 height-unit primes</strong></li>
+                        </ul>
+
+                        <h4>Two-Point Model: $E: y^2 = x^3 - 6x + 5$</h4>
+                        <ul>
+                            <li><strong>Weierstrass coefficients:</strong> $(a_1,\ldots,a_6) = (0,0,0,-6,5)$</li>
+                            <li><strong>Points:</strong> $P_1 = (1,0)$, $P_2 = (5,10)$</li>
+                            <li><strong>Result:</strong> <strong>136 separated primes</strong> out of 188 ordinary primes up to $p \leq 1200$</li>
+                        </ul>
+                    </div>
+
+                    <div class="paper-implications">
+                        <h3>Significance</h3>
+                        <p>This work represents a major advance in number theory by solving the Birch–Swinnerton–Dyer conjecture—one of mathematics' most challenging problems—using Recognition Science methodologies. The approach:</p>
+                        <ul>
+                            <li><strong>Scales systematically</strong> by adding primes rather than increasing complexity</li>
+                            <li><strong>Uses classical methods</strong> that are transparent and auditable</li>
+                            <li><strong>Provides algorithms</strong> that convert abstract theory into computational practice</li>
+                            <li><strong>Delivers concrete outputs</strong> with deterministic, portable results</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="paper-actions">
                     <a href="../BSD_Jon_Final.pdf" class="btn btn-primary" target="_blank">Download PDF</a>
                     <a href="../BSD-Jon-Final.txt" class="btn btn-secondary" target="_blank">Download TXT</a>
                     <a href="../publications.html" class="btn btn-secondary">Back to Publications</a>
                 </div>
             </article>
         </div>
-    </main>
+    </div>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-brand">
+                        <span class="brand-icon">⚛</span>
+                        <span class="brand-text">Recognition Physics Institute</span>
+                    </div>
+                    <p class="footer-description">
+                        Advancing the science of reality through parameter-free theoretical physics and consciousness research.
+                    </p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Research Areas</h4>
+                    <ul class="footer-links">
+                        <li><a href="../research.html">Eight Foundations</a></li>
+                        <li><a href="../research.html">Consciousness Theory</a></li>
+                        <li><a href="../research.html">Parameter-Free Predictions</a></li>
+                        <li><a href="../research.html">Research Applications</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul class="footer-links">
+                        <li><a href="../publications.html">Publications</a></li>
+                        <li><a href="../research.html">Research</a></li>
+                        <li><a href="../team.html">Team</a></li>
+                        <li><a href="../contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Connect</h4>
+                    <ul class="footer-links">
+                        <li><a href="mailto:research@recognitionphysics.org">research@recognitionphysics.org</a></li>
+                        <li><a href="https://github.com/jonwashburn/reality" target="_blank">GitHub</a></li>
+                        <li><a href="#" target="_blank">arXiv</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Recognition Physics Institute. All rights reserved.</p>
+                <p class="footer-tagline">Research conducted under the principles of open science and reproducible results.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../assets/js/main.js"></script>
 </body>
 </html>
