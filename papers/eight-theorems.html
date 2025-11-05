@@ -10,150 +10,135 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <main class="paper-content">
+    <main class="section">
         <div class="container">
-            <div class="breadcrumb">
-                <a href="../index.html">HOME</a> | <a href="../publications.html">PUBLICATIONS</a> | <span>EIGHT THEOREMS</span>
+            <!-- Breadcrumb -->
+            <div style="margin-bottom: 2rem; color: var(--gray-600); font-size: 0.9rem;">
+                <a href="../index.html" style="text-decoration: none; color: var(--primary-color);">HOME</a> | 
+                <a href="../publications.html" style="text-decoration: none; color: var(--primary-color);">PUBLICATIONS</a> | 
+                <span>EIGHT THEOREMS</span>
             </div>
 
-            <article class="paper-article">
-                <header class="paper-header">
-                    <div class="paper-meta">
-                        <span class="paper-status preprint">Research Paper</span>
+            <article>
+                <!-- Header -->
+                <header style="margin-bottom: 3rem; text-align: left;">
+                    <div style="background: var(--accent-color); color: white; display: inline-block; padding: 0.5rem 1rem; border-radius: 4px; font-size: 0.8rem; font-weight: 600; margin-bottom: 1rem;">
+                        Research Paper
                     </div>
-                    <h1 class="paper-title">From a Logical Tautology to Eight Forced Theorems: The Recognition Science Derivation of Reality's Core Structure</h1>
-                    <p class="paper-authors">Recognition Physics Institute</p>
-                    <p class="paper-affiliation">Machine-Verified • Zero Parameters • Falsifiable</p>
-                    <p class="paper-repository"><strong>Lean 4 artifact:</strong> <a href="https://github.com/jonwashburn/reality" target="_blank">https://github.com/jonwashburn/reality</a></p>
+                    <h1 style="font-size: 2.5rem; font-weight: 700; color: var(--primary-color); margin: 1rem 0; line-height: 1.2;">
+                        From a Logical Tautology to Eight Forced Theorems: The Recognition Science Derivation of Reality's Core Structure
+                    </h1>
+                    <p style="font-size: 1.1rem; color: var(--gray-700); margin: 0.5rem 0;">Recognition Physics Institute</p>
+                    <p style="color: var(--gray-600); margin: 0.5rem 0;">Machine-Verified • Zero Parameters • Falsifiable</p>
+                    <p style="color: var(--gray-600);">
+                        <strong>Lean 4 artifact:</strong> 
+                        <a href="https://github.com/jonwashburn/reality" target="_blank" style="color: var(--secondary-color);">https://github.com/jonwashburn/reality</a>
+                    </p>
                 </header>
 
-                <section class="paper-section">
-                    <h2>Abstract</h2>
-                    <p>We show that a single logical tautology—the <strong>Meta-Principle (MP)</strong>, "nothing cannot recognize itself"—forces eight core theorems (T1–T8) that pin down the recognition ledger, the unique convex symmetric cost <em>J(x)=½(x+x⁻¹)-1</em> (with fixed local scale), the golden ratio fixed point <em>φ</em> via <em>φ²=φ+1</em>, an eight-tick minimal update cycle (<em>2³</em>), coverage lower bounds, and integer <em>δ</em>-units (<em>ℤ</em>).</p>
-
-                    <p>Formalized in <strong>Lean 4</strong>, these results constitute a machine-verifiable spine which, combined with bridge factorization through units and the exclusivity/inevitability certificates, yields a <strong>parameter-free derivation chain</strong>: <em>MP → φ → (α, C<sub>lag</sub>) → gravity w(r)</em> with zero tunable constants.</p>
+                <!-- Abstract -->
+                <section style="margin-bottom: 3rem;">
+                    <h2 style="color: var(--primary-color); font-size: 1.5rem; margin-bottom: 1rem;">Abstract</h2>
+                    <p style="line-height: 1.6; margin-bottom: 1rem;">
+                        We show that a single logical tautology—the <strong>Meta-Principle (MP)</strong>, "nothing cannot recognize itself"—forces eight core theorems (T1–T8) that pin down the recognition ledger, the unique convex symmetric cost <em>J(x)=½(x+x⁻¹)-1</em> (with fixed local scale), the golden ratio fixed point <em>φ</em> via <em>φ²=φ+1</em>, an eight-tick minimal update cycle (<em>2³</em>), coverage lower bounds, and integer <em>δ</em>-units (<em>ℤ</em>).
+                    </p>
+                    <p style="line-height: 1.6;">
+                        Formalized in <strong>Lean 4</strong>, these results constitute a machine-verifiable spine which, combined with bridge factorization through units and the exclusivity/inevitability certificates, yields a <strong>parameter-free derivation chain</strong>: <em>MP → φ → (α, C<sub>lag</sub>) → gravity w(r)</em> with zero tunable constants.
+                    </p>
                 </section>
 
-                <section class="paper-section">
-                    <h2>The Eight Forced Theorems</h2>
-                    <div class="result-grid">
-                        <div class="result-item">
-                            <h3>T1: Meta-Principle</h3>
-                            <p><strong>Logical tautology:</strong> ¬∃r ∈ Recognition(∅,∅)</p>
-                            <p>The sole axiom: "nothing cannot recognize itself"</p>
+                <!-- The Eight Theorems -->
+                <section style="margin-bottom: 3rem;">
+                    <h2 style="color: var(--primary-color); font-size: 1.5rem; margin-bottom: 1rem;">The Eight Forced Theorems</h2>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-top: 2rem;">
+                        <div style="background: var(--gray-50); padding: 1.5rem; border-radius: 8px; border: 1px solid var(--gray-200);">
+                            <h3 style="color: var(--primary-color); margin-bottom: 0.5rem;">T1: Meta-Principle</h3>
+                            <p style="margin: 0.5rem 0; font-family: var(--font-mono);"><strong>¬∃r ∈ Recognition(∅,∅)</strong></p>
+                            <p style="margin: 0;">The sole axiom: "nothing cannot recognize itself"</p>
                         </div>
 
-                        <div class="result-item">
-                            <h3>T2: Atomic Tick</h3>
-                            <p><strong>No concurrency:</strong> Exactly one posting per tick</p>
-                            <p>Forces sequential, unambiguous ledger updates</p>
+                        <div style="background: var(--gray-50); padding: 1.5rem; border-radius: 8px; border: 1px solid var(--gray-200);">
+                            <h3 style="color: var(--primary-color); margin-bottom: 0.5rem;">T2: Atomic Tick</h3>
+                            <p style="margin: 0.5rem 0;"><strong>No concurrency:</strong> Exactly one posting per tick</p>
+                            <p style="margin: 0;">Forces sequential, unambiguous ledger updates</p>
                         </div>
 
-                        <div class="result-item">
-                            <h3>T3: Discrete Continuity</h3>
-                            <p><strong>Zero flux on cycles:</strong> Closed-chain flux is zero</p>
-                            <p>Double-entry accounting on recognition graph</p>
+                        <div style="background: var(--gray-50); padding: 1.5rem; border-radius: 8px; border: 1px solid var(--gray-200);">
+                            <h3 style="color: var(--primary-color); margin-bottom: 0.5rem;">T3: Discrete Continuity</h3>
+                            <p style="margin: 0.5rem 0;"><strong>Zero flux on cycles:</strong> Closed-chain flux is zero</p>
+                            <p style="margin: 0;">Double-entry accounting on recognition graph</p>
                         </div>
 
-                        <div class="result-item">
-                            <h3>T4: Potential Uniqueness</h3>
-                            <p><strong>Gauge freedom:</strong> Potentials unique up to constants</p>
-                            <p>Scalar potential on each connected component</p>
+                        <div style="background: var(--gray-50); padding: 1.5rem; border-radius: 8px; border: 1px solid var(--gray-200);">
+                            <h3 style="color: var(--primary-color); margin-bottom: 0.5rem;">T4: Potential Uniqueness</h3>
+                            <p style="margin: 0.5rem 0;"><strong>Gauge freedom:</strong> Potentials unique up to constants</p>
+                            <p style="margin: 0;">Scalar potential on each connected component</p>
                         </div>
 
-                        <div class="result-item">
-                            <h3>T5: Cost Uniqueness</h3>
-                            <p><strong>Unique cost function:</strong> J(x)=½(x+x⁻¹)-1</p>
-                            <p>Only function satisfying symmetry, convexity, normalization</p>
+                        <div style="background: var(--gray-50); padding: 1.5rem; border-radius: 8px; border: 1px solid var(--gray-200);">
+                            <h3 style="color: var(--primary-color); margin-bottom: 0.5rem;">T5: Cost Uniqueness</h3>
+                            <p style="margin: 0.5rem 0; font-family: var(--font-mono);"><strong>J(x)=½(x+x⁻¹)-1</strong></p>
+                            <p style="margin: 0;">Only function satisfying symmetry, convexity, normalization</p>
                         </div>
 
-                        <div class="result-item">
-                            <h3>T6: Eight-Tick Minimality</h3>
-                            <p><strong>Minimal period:</strong> T<sub>min</sub>=2³=8 for D=3</p>
-                            <p>Exact cover of all pattern classes without aliasing</p>
+                        <div style="background: var(--gray-50); padding: 1.5rem; border-radius: 8px; border: 1px solid var(--gray-200);">
+                            <h3 style="color: var(--primary-color); margin-bottom: 0.5rem;">T6: Eight-Tick Minimality</h3>
+                            <p style="margin: 0.5rem 0;"><strong>T<sub>min</sub>=2³=8</strong> for D=3</p>
+                            <p style="margin: 0;">Exact cover of all pattern classes without aliasing</p>
                         </div>
 
-                        <div class="result-item">
-                            <h3>T7: Coverage Bound</h3>
-                            <p><strong>Nyquist limit:</strong> T&lt;2³ cannot cover all classes</p>
-                            <p>Information-theoretic lower bound from counting</p>
+                        <div style="background: var(--gray-50); padding: 1.5rem; border-radius: 8px; border: 1px solid var(--gray-200);">
+                            <h3 style="color: var(--primary-color); margin-bottom: 0.5rem;">T7: Coverage Bound</h3>
+                            <p style="margin: 0.5rem 0;"><strong>Nyquist limit:</strong> T&lt;2³ cannot cover all classes</p>
+                            <p style="margin: 0;">Information-theoretic lower bound from counting</p>
                         </div>
 
-                        <div class="result-item">
-                            <h3>T8: δ-Units</h3>
-                            <p><strong>Integer quantization:</strong> Increments ≅ ℤ via n↦n·δ</p>
-                            <p>All ledger steps are integer multiples of base unit</p>
+                        <div style="background: var(--gray-50); padding: 1.5rem; border-radius: 8px; border: 1px solid var(--gray-200);">
+                            <h3 style="color: var(--primary-color); margin-bottom: 0.5rem;">T8: δ-Units</h3>
+                            <p style="margin: 0.5rem 0;"><strong>Increments ≅ ℤ</strong> via n↦n·δ</p>
+                            <p style="margin: 0;">All ledger steps are integer multiples of base unit</p>
                         </div>
                     </div>
                 </section>
 
-                <section class="paper-section">
-                    <h2>Key Mathematical Results</h2>
+                <!-- Key Results -->
+                <section style="margin-bottom: 3rem;">
+                    <h2 style="color: var(--primary-color); font-size: 1.5rem; margin-bottom: 1rem;">Key Mathematical Results</h2>
                     
-                    <h3>Golden Ratio Emergence</h3>
-                    <p>The golden ratio <strong>φ = (1+√5)/2 ≈ 1.618</strong> emerges as the unique scaling fixed point of the cost function J(x). This isn't an input—it's mathematically forced by the logical structure.</p>
+                    <h3 style="color: var(--primary-dark); margin: 2rem 0 1rem 0;">Golden Ratio Emergence</h3>
+                    <p style="line-height: 1.6; margin-bottom: 1rem;">
+                        The golden ratio <strong>φ = (1+√5)/2 ≈ 1.618</strong> emerges as the unique scaling fixed point of the cost function J(x). This isn't an input—it's mathematically forced by the logical structure.
+                    </p>
                     
-                    <div class="formula-box">
+                    <div style="background: var(--gray-50); padding: 1rem; border-radius: 6px; border-left: 4px solid var(--primary-color); margin: 1rem 0; font-family: var(--font-mono); text-align: center; font-weight: 600;">
                         φ² = φ + 1
                     </div>
 
-                    <h3>Zero-Parameter Physics</h3>
-                    <p>From the golden ratio, all physical parameters follow without tuning:</p>
-                    <ul>
+                    <h3 style="color: var(--primary-dark); margin: 2rem 0 1rem 0;">Zero-Parameter Physics</h3>
+                    <p style="line-height: 1.6; margin-bottom: 1rem;">From the golden ratio, all physical parameters follow without tuning:</p>
+                    <ul style="line-height: 1.6;">
                         <li><strong>Fine Structure Constant:</strong> α = (1-φ⁻¹)/2</li>
                         <li><strong>Lag Constant:</strong> C<sub>lag</sub> = φ⁻⁵</li>
                         <li><strong>Gravity Form:</strong> w(r) = 1 + C<sub>lag</sub>·α·(T<sub>dyn</sub>/τ₀)^α</li>
                     </ul>
-
-                    <h3>Bridge Identities</h3>
-                    <p>The bridge connects dimensionless mathematics to physical measurement through invariant relationships:</p>
-                    <ul>
-                        <li>c = ℓ₀/τ₀ (speed of light definition)</li>
-                        <li>ℏ = E<sub>coh</sub>·τ₀ (Planck constant relation)</li>
-                        <li>(c³λ<sub>rec</sub>²)/(ℏG) = 1/π (recognition length identity)</li>
-                        <li>K = τ<sub>rec</sub>/τ₀ = λ<sub>kin</sub>/ℓ₀ (route equality)</li>
-                    </ul>
                 </section>
 
-                <section class="paper-section">
-                    <h2>Machine Verification</h2>
-                    <p>Every theorem is <strong>formally verified in Lean 4</strong>, providing unprecedented rigor:</p>
+                <!-- Machine Verification -->
+                <section style="margin-bottom: 3rem;">
+                    <h2 style="color: var(--primary-color); font-size: 1.5rem; margin-bottom: 1rem;">Machine Verification</h2>
+                    <p style="line-height: 1.6; margin-bottom: 1rem;">Every theorem is <strong>formally verified in Lean 4</strong>, providing unprecedented rigor:</p>
                     
-                    <ul>
+                    <ul style="line-height: 1.6;">
                         <li><strong>Constructive proofs:</strong> No classical axioms needed</li>
                         <li><strong>Runnable verification:</strong> #eval endpoints for immediate checking</li>
                         <li><strong>Complete audit trail:</strong> Every step mechanically verified</li>
                         <li><strong>Reproducible:</strong> Open source with detailed documentation</li>
                         <li><strong>Falsifiable:</strong> Precise predictions with crisp decision rules</li>
                     </ul>
-
-                    <p>The repository provides immediate verification hooks: run <code>lake exe ok</code> for proof summaries, or use #eval reports for specific theorems and certificates.</p>
                 </section>
 
-                <section class="paper-section">
-                    <h2>Empirical Tests & Falsifiers</h2>
-                    
-                    <h3>Critical Tests</h3>
-                    <ul>
-                        <li><strong>α⁻¹ audit:</strong> Derive α=(1-φ⁻¹)/2 to full precision vs CODATA</li>
-                        <li><strong>Rotation curves:</strong> Test w(r) form against galaxy data (ILG vs ΛCDM)</li>
-                        <li><strong>Eight-tick signatures:</strong> Search for neutral window invariants in time-series</li>
-                        <li><strong>K-gate equality:</strong> Verify independent computational routes agree</li>
-                        <li><strong>Bridge identities:</strong> Test fundamental constants relationships</li>
-                    </ul>
-
-                    <h3>Falsification Criteria</h3>
-                    <p>With <strong>zero adjustable parameters</strong>, Recognition Science is maximally falsifiable:</p>
-                    <ul>
-                        <li>Parameter derivation errors beyond tolerance</li>
-                        <li>Bridge identity violations in admissible displays</li>
-                        <li>Route inequalities exceeding experimental bounds</li>
-                        <li>Neutrality failures in claimed regimes</li>
-                        <li>Scheduler coverage contradictions</li>
-                    </ul>
-                </section>
-
-                <div class="paper-actions">
+                <!-- Actions -->
+                <div style="display: flex; gap: 1rem; margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--gray-200);">
                     <a href="../8-theorems.pdf" class="btn btn-primary" target="_blank">Download PDF</a>
                     <a href="../Eight_Theorems.txt" class="btn btn-secondary" target="_blank">Download TXT</a>
                     <a href="../publications.html" class="btn btn-secondary">Back to Publications</a>
