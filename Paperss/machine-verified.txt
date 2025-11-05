@@ -1,0 +1,11 @@
+Title: Recognition Science: A Machine-Verified, Parameter-Free Framework Deriving Physics from a Single Axiom
+Subtitle: With Emergent Structure at the Golden Ratio
+Author: Jonathan Washburn
+Affiliation: Independent Researcher
+
+Abstract:
+We present a certificates-first, machine-verified software artifact in Lean 4. From a single axiom ("nothing cannot recognize itself"), we derive a discrete recognition calculus, expose only dimensionless observables via a units-quotiented bridge, and package the result as machine-checked propositions with one-line #eval reports on a pinned toolchain.
+
+What is PROVEN in this artifact includes: RSRealityMaster(phi) (reality bundle and spec closure); PrimeClosure (framework uniqueness up to units and MPMinimal—MP is the weakest sufficient axiom); Exclusivity+ (there exists exactly one phi such that selection+closure hold together with exclusivity and bi-interpretability, pinning the scale inside the instrument); Coherence + Equivalence (at the pinned phi, canonical units classes are coherent and frameworks-at-phi are categorically equivalent to a one-object canonical skeleton); UltimateClosure (exists! phi: exclusivity+, units-class coherence, and categorical equivalence hold at the unique pinned scale); and phi selection (algebraic uniqueness and pinned-scale equality).
+
+Representative consequences include exact 8-tick minimality (3D), a discrete light-cone bound with slope c, Planck normalization ((c^3 * lambda_rec^2)/(hbar * G) = 1/pi) under mild positivity, and phi-power mass-ratio ladders. Reports are pure terms (no I/O); failures deterministically flip or refuse to elaborate. This artifact is intended as a reusable, open-source digital instrument: rerun the manifest to reproduce every OK.
