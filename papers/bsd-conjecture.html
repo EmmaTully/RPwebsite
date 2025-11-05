@@ -69,12 +69,12 @@
                 <div class="paper-content">
                     <div class="paper-summary">
                         <h2>Summary</h2>
-                        <p>We prove the <strong>Birch–Swinnerton–Dyer conjecture unconditionally</strong> for every modular elliptic curve over $\mathbb{Q}$ by a classical, prime-wise route that converts local $p$-adic height information into global consequences. This represents a major breakthrough in number theory using transparent, auditable methods.</p>
+                        <p>We prove the <strong>Birch–Swinnerton–Dyer conjecture unconditionally</strong> for every modular elliptic curve over $\mathbb{Q}$ by a classical, prime-wise route that converts local $p$-adic height information into global consequences. This represents a major breakthrough in number theory using transparent, auditable methods developed within the Recognition Science framework.</p>
                     </div>
                     
                     <div class="paper-abstract">
                         <h3>Abstract</h3>
-                        <p>We prove the Birch–Swinnerton–Dyer conjecture unconditionally for every modular elliptic curve over $\mathbb{Q}$ by a classical, prime-wise route that converts local $p$-adic height information into global consequences and closes the cyclotomic Iwasawa Main Conjecture at all primes. The core mechanism is a reduction-order separation criterion that upper–triangularizes the cyclotomic $p$-adic height Gram matrix modulo $p$, together with a per–prime diagonal unit test.</p>
+                        <p>We prove the Birch–Swinnerton–Dyer conjecture unconditionally for every modular elliptic curve over $\mathbb{Q}$ by a classical, prime-wise route that converts local $p$-adic height information into global consequences and closes the cyclotomic Iwasawa Main Conjecture at all primes. The core mechanism is a reduction-order separation criterion that upper–triangularizes the cyclotomic $p$-adic height Gram matrix modulo $p$, together with a per–prime diagonal unit test. We prove a $\Lambda$–adic positivity package that yields reverse divisibility $(L_p) \mid \mathrm{char}_\Lambda X_p$ without invoking IMC, and a $T=0$ reverse–divisibility theorem forcing $\mu_p(E)=0$ at primes passing the triangularization test.</p>
                     </div>
                     
                     <div class="paper-key-findings">
@@ -94,13 +94,16 @@
                         
                         <h4>The Separation Criterion</h4>
                         <p>For rational points $P_1, \ldots, P_r \in E(\mathbb{Q})$ projecting to a $\mathbb{Z}$-basis of $E(\mathbb{Q})/\mathrm{tors}$, a prime $p$ is <strong>separated</strong> if:</p>
+                        
                         <p style="text-align: center; font-family: var(--font-mono); background: var(--gray-50); padding: 1rem; border-radius: 6px; margin: 1rem 0;">
                             $\forall i \neq j, \quad o_j(p) \nmid o_i(p)$
                         </p>
+                        
                         <p>where $o_i(p) = \mathrm{ord}(P_i \bmod p) \in E(\mathbb{F}_p)$.</p>
 
                         <h4>Height-Unit Primes</h4>
                         <p>At separated primes, the $p$-adic regulator becomes a $p$-adic unit:</p>
+                        
                         <p style="text-align: center; font-family: var(--font-mono); background: var(--gray-50); padding: 1rem; border-radius: 6px; margin: 1rem 0;">
                             $\mathrm{Reg}_p = \det\big(h_p(P_i,P_j)\big)_{1 \leq i,j \leq r} \in \mathbb{Z}_p^{\times}$
                         </p>
@@ -124,15 +127,23 @@
                         </ul>
                     </div>
 
+                    <div class="paper-algorithmic-implementation">
+                        <h3>Algorithmic Implementation</h3>
+                        <p>The paper presents an <strong>elementary algorithm</strong> that:</p>
+                        <ol>
+                            <li>Takes Weierstrass coefficients $(a_1,\ldots,a_6)$ and rational points</li>
+                            <li>Scans good ordinary primes systematically</li>
+                            <li>Computes $\#E(\mathbb{F}_p)$ and reduces points modulo $p$</li>
+                            <li>Extracts prime factors to obtain orders $o_i(p)$</li>
+                            <li>Flags separated primes as height-unit candidates</li>
+                            <li>Enables Coleman-height computation for final verification</li>
+                        </ol>
+                        <p>The process is <strong>deterministic, portable, and auditable</strong>, reducing complex conjectures to standard local computations.</p>
+                    </div>
+
                     <div class="paper-implications">
                         <h3>Significance</h3>
-                        <p>This work represents a major advance in number theory by solving the Birch–Swinnerton–Dyer conjecture—one of mathematics' most challenging problems—using Recognition Science methodologies. The approach:</p>
-                        <ul>
-                            <li><strong>Scales systematically</strong> by adding primes rather than increasing complexity</li>
-                            <li><strong>Uses classical methods</strong> that are transparent and auditable</li>
-                            <li><strong>Provides algorithms</strong> that convert abstract theory into computational practice</li>
-                            <li><strong>Delivers concrete outputs</strong> with deterministic, portable results</li>
-                        </ul>
+                        <p>This work represents a major advance in number theory by solving the Birch–Swinnerton–Dyer conjecture—one of mathematics' most challenging problems—using Recognition Science methodologies. The approach scales systematically by adding primes, uses classical methods that are transparent and auditable, and provides algorithms that convert abstract theory into computational practice with deterministic, portable results.</p>
                     </div>
                 </div>
                 
