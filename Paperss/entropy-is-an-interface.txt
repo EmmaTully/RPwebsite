@@ -1,0 +1,6 @@
+Entropy Is an Interface: Reversibility in the Substrate, Irreversibility at Commit
+Jonathan Washburn
+Recognition Physics Institute
+
+ABSTRACT
+Entropy is defined at the measurement interface as the optimal codelength at a declared channel. A channel is a coarse‑graining window W:X→Z and a noise/response kernel K(y|z), inducing an observable distribution pY(y)=∫K(y|W(x)) dμ(x). The interface entropy is S_{W,K}(μ)=L*(pY). Reversible micro‑evolution that leaves pY unchanged conserves S_{W,K}; commits (writes/binnings/erasures) increase it by data‑processing. Landauer’s work cost is W_min ≥ k_B T ln 2 · ΔS, where ΔS is measured directly as a codelength increment at commit. The interface view recovers textbook entropies (Gibbs/Boltzmann/Shannon), clarifies Maxwell‑demon accounting (irreversibility is paid at commit), and yields a methods‑first protocol: declare (W,K), compute S_{W,K} as codelength, and report entropy production as code‑length increments across commits. Archival demonstrations (blackbody spectra, atomic line lists, quasi‑static gas processes) illustrate the accounting. The framework is falsifiable: any reproducible decrease of S_{W,K} across a commit without exported negentropy would refute it.
