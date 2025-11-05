@@ -1,0 +1,11 @@
+Title: Global Co-Identity Constraint (GCIC): Unity as a Gauge of Recognition Geometry
+
+Author: 
+
+Affiliation: 
+
+Date: 
+
+Abstract:
+Defines the Global Co-Identity Constraint (GCIC): there exists a single global phase Θ ∈ [0,1) such that every pinned or steady recognition state satisfies x(ℓ) ≡ Θ (mod 1), with allowed lengths ℓ_k = L_0 φ^{k+Θ}. GCIC is a gauge condition (global co-identity), not a signal; it defines the steady-state manifold while local changes propagate at finite speed c. A minimal log-periodic cost C(ℓ;Θ) = C_* + κ[1 − cos(2π(x(ℓ) − Θ))] achieves stationary minima at the ladder with positive curvature, enforcing reciprocity ℓ(+n)ℓ(−n) = L_0^2 and yielding testable φ-band clustering, loop-quantization (ΣΔx ∈ ℤ), and unity under graph rewiring that preserves total loop phase.
+
