@@ -1,0 +1,7 @@
+Title: Goldbach via a Mod-8 Kernel: Density-One and Short-Interval Positivity
+Author: Jonathan Washburn
+Affiliation: Recognition Physics Institute
+Date: October 28, 2025
+
+Abstract:
+We present a purely classical framework for Goldbach's conjecture based on a mod-8 periodic kernel K_8 and the circle method. On major arcs we obtain a positive main term equal to a 2-adic gate c_8(2m) in {1, 1/2} times the Hardy–Littlewood singular series S(2m). On minor arcs we prove unconditional density-one positivity via mean-square bounds, and we convert fourth-moment control into pointwise positivity in every short interval, giving a bounded gap between exceptional even integers. A quantified medium-arc dispersion lemma (with an explicit small saving delta_med > 0) lowers the short-interval exponent from (log N)^8 to (log N)^(8 - delta_med). We also include an unconditional Chen/Selberg variant (prime + almost-prime), explicit constants and parameter choices, a smoothed-to-sharp transfer with numerical bounds, and a reproducible computational protocol. An optional GRH template is recorded for comparison.
