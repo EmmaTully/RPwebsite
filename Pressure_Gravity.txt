@@ -1,0 +1,8 @@
+Title: Gravity as Pressure in Information-Limited Gravity
+Subtitle: A kernel-to-source recasting with predictions, falsifiers, and implementation notes
+Author: Jonathan Washburn
+Affiliation: Recognition Science, Recognition Physics Institute; Austin, Texas, USA
+Date: November 3, 2025
+
+Abstract:
+We recast Information-Limited Gravity (ILG) as classical gravity sourced by an effective pressure field. The pressure is built directly from observed baryons filtered through the same scale- and time-aware kernel that defines ILG. This is a change of display, not a change of physics: the modified Poisson and growth equations of ILG are exactly equivalent to standard field equations with the pressure source. In the galaxy regime, the pressure profile multiplies baryonic contributions to yield flat rotation curves without per-galaxy tuning. In cosmology, the same pressure language preserves ILG's signatures in linear growth, lensing, and integrated Sachs–Wolfe trends while clarifying interpretation and implementation. We present the formal definition, an explicit equivalence theorem, a variational formulation, observational displays, and falsifiers—all using the same global constants and kernel rigidities that anchor ILG.
