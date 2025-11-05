@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>From Local Height Diagonalization to Birch-Swinnerton-Dyer - Recognition Physics</title>
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="stylesheet" href="../assets/css/paper.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <main class="paper-content">
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="../index.html">HOME</a> | <a href="../publications.html">PUBLICATIONS</a> | <span>BSD CONJECTURE</span>
+            </div>
+
+            <article class="paper-article">
+                <header class="paper-header">
+                    <div class="paper-meta">
+                        <span class="paper-status preprint">Research Paper</span>
+                    </div>
+                    <h1 class="paper-title">From Local Height Diagonalization to Birch–Swinnerton–Dyer: Unconditional μ=0 and Cyclotomic IMC Equality via p-adic Wedge and Rigid Schur-Pinch</h1>
+                    <p class="paper-authors">Jonathan Washburn</p>
+                    <p class="paper-affiliation">Recognition Science, Recognition Physics Institute, Austin, Texas, USA</p>
+                    <p class="paper-contact"><strong>Email:</strong> jon@recognitionphysics.org</p>
+                </header>
+
+                <section class="paper-section">
+                    <h2>Abstract</h2>
+                    <p>We prove the <strong>Birch–Swinnerton–Dyer conjecture unconditionally</strong> for every modular elliptic curve over <em>ℚ</em> by a classical, prime-wise route that converts local <em>p</em>-adic height information into global consequences and closes the cyclotomic Iwasawa Main Conjecture at <em>all</em> primes.</p>
+
+                    <p>The core mechanism is a reduction-order <strong>separation criterion</strong> that upper-triangularizes the cyclotomic <em>p</em>-adic height Gram matrix modulo <em>p</em>, together with a per-prime diagonal unit test. We prove a <em>Λ</em>-adic positivity package (ordinary and signed) that yields reverse divisibility without invoking IMC, and a <em>T=0</em> reverse-divisibility theorem forcing <em>μₚ(E)=0</em> at primes passing the triangularization test.</p>
+                </section>
+
+                <section class="paper-section">
+                    <h2>Key Contributions</h2>
+                    <div class="result-grid">
+                        <div class="result-item">
+                            <h3>Separation Criterion</h3>
+                            <p>A reduction-order separation criterion that upper-triangularizes the cyclotomic <em>p</em>-adic height Gram matrix modulo <em>p</em>, enabling systematic analysis of height-unit primes.</p>
+                        </div>
+
+                        <div class="result-item">
+                            <h3>Unconditional μ=0</h3>
+                            <p>Proves <em>μₚ(E)=0</em> unconditionally for every prime <em>p</em> via a <em>p</em>-adic boundary wedge certificate on cyclotomic character layers.</p>
+                        </div>
+
+                        <div class="result-item">
+                            <h3>Λ-adic Reverse Divisibility</h3>
+                            <p>Establishes <em>(Lₚ) | char_Λ Xₚ</em> prime-wise through operator models and Fredholm determinants, providing the foundation for BSD proofs.</p>
+                        </div>
+
+                        <div class="result-item">
+                            <h3>Finite-Slope IMC Equality</h3>
+                            <p>Upgrades reverse divisibility to IMC equality on weight discs via rigid wedge and Schur-pinch arguments, covering all slopes and all primes.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="paper-section">
+                    <h2>Mathematical Framework</h2>
+                    
+                    <h3>The Separation Criterion</h3>
+                    <p>For a set of rational points <em>P₁, ..., Pᵣ ∈ E(ℚ)</em> that project to a ℤ-basis of <em>E(ℚ)/tors</em>, we say that a good, ordinary prime <em>p</em> is <strong>separated</strong> for <em>{Pᵢ}</em> if:</p>
+                    
+                    <div class="formula-box">
+                        ∀i≠j, oⱼ(p) ∤ oᵢ(p)
+                    </div>
+
+                    <p>where <em>oᵢ(p) = ord(Pᵢ mod p) ∈ E(𝔽ₚ)</em>. At separated primes, one can choose integers <em>mᵢ</em> with specific congruence properties that force the Coleman-Gross cyclotomic height pairing Gram matrix to be upper triangular modulo <em>p</em>, with diagonal entries given by heights of formal-group points.</p>
+
+                    <h3>Height-Unit Primes</h3>
+                    <p>For ordinary primes <em>p</em> with no exceptional zero, these diagonal heights are <em>p</em>-adic units for all but finitely many <em>p</em>. This makes the <em>p</em>-adic regulator:</p>
+                    
+                    <div class="formula-box">
+                        Regₚ = det(hₚ(Pᵢ,Pⱼ))₁≤ᵢ,ⱼ≤ᵣ
+                    </div>
+
+                    <p>a <em>p</em>-adic unit for all but finitely many separated primes, which we call <strong>height-unit primes</strong>.</p>
+
+                    <h3>Two Structural Valves</h3>
+                    <p>The method employs two key "valves" that convert local height certificates into global structural information:</p>
+                    
+                    <ul>
+                        <li><strong>(V1) No Hidden Amplifier:</strong> <em>μ=0</em> in the cyclotomic tower</li>
+                        <li><strong>(V2) No Metastable Accumulation:</strong> Finiteness of the Tate-Shafarevich group <em>Sha</em></li>
+                    </ul>
+                </section>
+
+                <section class="paper-section">
+                    <h2>Case Studies</h2>
+                    
+                    <h3>Rank One Testbed: E₀: y² + y = x³ - x</h3>
+                    <p><strong>Weierstrass coefficients:</strong> <em>(a₁,a₂,a₃,a₄,a₆) = (1,0,1,-1,0)</em></p>
+                    <p><strong>Generator:</strong> <em>P = (0,0)</em></p>
+                    <p><strong>Result:</strong> Every good ordinary prime is a height-unit candidate (separation is vacuous in rank one). A scan up to <em>p ≤ 4000</em> produces <strong>528 height-unit primes</strong> ready for Coleman-height verification.</p>
+
+                    <h3>Two-Point Model: E: y² = x³ - 6x + 5</h3>
+                    <p><strong>Weierstrass coefficients:</strong> <em>(a₁,...,a₆) = (0,0,0,-6,5)</em></p>
+                    <p><strong>Points:</strong> <em>P₁ = (1,0)</em>, <em>P₂ = (5,10)</em></p>
+                    <p><strong>Result:</strong> Scan of primes up to <em>p ≤ 1200</em> yields 188 ordinary primes, of which <strong>136 are separated</strong>. Each separated prime provides a path to BSD<sub>p</sub> via unit p-adic regulator certification.</p>
+                </section>
+
+                <section class="paper-section">
+                    <h2>Algorithmic Implementation</h2>
+                    <p>The paper presents an <strong>elementary algorithm</strong> that:</p>
+                    <ol>
+                        <li>Takes Weierstrass coefficients <em>(a₁,...,a₆)</em> and a set of rational points</li>
+                        <li>Scans good ordinary primes systematically</li>
+                        <li>Computes <em>#E(𝔽ₚ)</em> and reduces points modulo <em>p</em></li>
+                        <li>Extracts prime factors to obtain orders <em>oᵢ(p)</em></li>
+                        <li>Flags separated primes as height-unit candidates</li>
+                        <li>Enables Coleman-height computation for final verification</li>
+                    </ol>
+
+                    <p>The process is <strong>deterministic, portable, and auditable</strong>, reducing complex conjectures to standard local computations and prime-by-prime applications of established results.</p>
+                </section>
+
+                <section class="paper-section">
+                    <h2>Significance and Impact</h2>
+                    <p>This work represents a major advance in number theory by:</p>
+                    
+                    <ul>
+                        <li><strong>Resolving BSD Unconditionally:</strong> Provides a complete proof of the Birch-Swinnerton-Dyer conjecture for all modular elliptic curves over ℚ</li>
+                        <li><strong>Classical Methods:</strong> Uses transparent, auditable techniques rather than deep modern machinery</li>
+                        <li><strong>Prime-wise Approach:</strong> Scales systematically by adding primes, making verification practical</li>
+                        <li><strong>Algorithmic Implementation:</strong> Converts abstract theory into concrete computational procedures</li>
+                        <li><strong>Universal Results:</strong> Establishes μ=0 and IMC equality at every prime simultaneously</li>
+                    </ul>
+
+                    <p>The approach transforms one of mathematics' most challenging problems into a systematic, verifiable process with explicit computational steps and checkable outputs.</p>
+                </section>
+
+                <div class="paper-actions">
+                    <a href="../BSD_Jon_Final.pdf" class="btn btn-primary" target="_blank">Download PDF</a>
+                    <a href="../BSD-Jon-Final.txt" class="btn btn-secondary" target="_blank">Download TXT</a>
+                    <a href="../publications.html" class="btn btn-secondary">Back to Publications</a>
+                </div>
+            </article>
+        </div>
+    </main>
+</body>
+</html>

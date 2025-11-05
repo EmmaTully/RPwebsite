@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>From a Logical Tautology to Eight Forced Theorems - Recognition Physics Institute</title>
+    <meta name="description" content="Complete derivation of Recognition Science's mathematical foundation from a single logical tautology through eight forced theorems, machine-verified in Lean 4.">
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']],
+                processEscapes: true
+            }
+        };
+    </script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="site-header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-brand">
+                    <a href="../index.html">
+                        <span class="brand-icon">⚛</span>
+                        <span class="brand-text">Recognition Physics Institute</span>
+                    </a>
+                </div>
+                <div class="nav-menu">
+                    <a href="../index.html" class="nav-link">Home</a>
+                    <a href="../research.html" class="nav-link">Research</a>
+                    <a href="../publications.html" class="nav-link">Publications</a>
+                    <a href="../team.html" class="nav-link">Team</a>
+                    <a href="../contact.html" class="nav-link">Contact</a>
+                </div>
+                <div class="nav-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Paper Page -->
+    <div class="paper-page">
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="../index.html">HOME</a> | <a href="../publications.html">PUBLICATIONS</a> | <span>EIGHT THEOREMS</span>
+            </div>
+            
+            <article class="paper-article">
+                <header class="paper-header">
+                    <div class="paper-meta">
+                        <span class="paper-status preprint">Theoretical Paper</span>
+                    </div>
+                    <h1 class="paper-title">From a Logical Tautology to Eight Forced Theorems</h1>
+                    <p class="paper-authors">Recognition Physics Institute</p>
+                    <p class="paper-affiliation">Recognition Science, Recognition Physics Institute, Austin, Texas, USA</p>
+                </header>
+                
+                <div class="paper-content">
+                    <div class="paper-summary">
+                        <h2>Summary</h2>
+                        <p>This paper systematically derives Recognition Science's complete mathematical foundation through eight forced theorems (T1-T8). Starting from the Meta-Principle tautology "nothing cannot recognize itself," it proves atomic tick constraints, discrete continuity, potential uniqueness, the forced cost function J(x)=½(x+x⁻¹)-1, eight-tick scheduling minimality, coverage bounds, and integer δ-units. All proofs are constructively verified in Lean 4, establishing a zero-parameter spine that bridges pure logic to physical predictions through the golden ratio φ and dimensionless constants α and C_lag.</p>
+                    </div>
+                    
+                    <div class="paper-abstract">
+                        <h3>Abstract</h3>
+                        <p>We show that a single logical tautology—the Meta-Principle (MP), "nothing cannot recognize itself"—forces eight core theorems (T1–T8) that pin down the recognition ledger, the unique convex symmetric cost J(x)=½(x+x⁻¹)-1 (with fixed local scale), the golden ratio fixed point φ via φ²=φ+1, an eight-tick minimal update cycle (2³), coverage lower bounds, and integer δ-units (ℤ). Formalized in Lean 4, these results constitute a machine-verifiable spine which, combined with bridge factorization through units and the exclusivity/inevitability certificates, yields a parameter-free derivation chain MP → φ → (α, C_lag) → gravity w(r) with zero tunable constants.</p>
+                    </div>
+                    
+                    <div class="paper-key-findings">
+                        <h3>The Eight Forced Theorems (T1-T8)</h3>
+                        <ul>
+                            <li><strong>T1. Meta-Principle:</strong> Logical tautology: ¬∃r∈Recognition(∅,∅)</li>
+                            <li><strong>T2. Atomic Tick:</strong> Exactly one posting per tick (no concurrency)</li>
+                            <li><strong>T3. Discrete Continuity:</strong> Closed-chain flux is zero</li>
+                            <li><strong>T4. Potential Uniqueness:</strong> Potentials unique up to additive constant on components</li>
+                            <li><strong>T5. Cost Uniqueness:</strong> J(x)=½(x+x⁻¹)-1 uniquely under stated hypotheses</li>
+                            <li><strong>T6. Eight-Tick Minimality:</strong> T_min=2³; for D=3, T=8 exists and is minimal</li>
+                            <li><strong>T7. Coverage Bound:</strong> T&lt;2³ cannot cover all classes</li>
+                            <li><strong>T8. δ-Units:</strong> Ledger increments ≅ℤ via n↦n·δ</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="paper-mathematical-framework">
+                        <h3>Core Mathematical Results</h3>
+                        <ul>
+                            <li><strong>Golden Ratio Pivot:</strong> $\varphi^2=\varphi+1$, $\varphi=\frac{1+\sqrt{5}}{2}$</li>
+                            <li><strong>Unique Cost Function:</strong> $J(x) = \frac{1}{2}(x+x^{-1}) - 1 = \cosh(\ln x) - 1$</li>
+                            <li><strong>Eight-Tick Cadence:</strong> $T_{min}=2^D$; $D=3 \Rightarrow T_{min}=8$</li>
+                            <li><strong>Integer Budgets:</strong> $\Delta=\{n\,\delta\mid n\in\mathbb{Z}\}\cong\mathbb{Z}$</li>
+                            <li><strong>Bridge Identities:</strong> $c=\ell_0/\tau_0$, $\hbar=E_{coh}\,\tau_0$</li>
+                            <li><strong>Physical Predictions:</strong> $\alpha = \frac{1-\varphi^{-1}}{2}$, $C_{lag} = \varphi^{-5}$</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="paper-implications">
+                        <h3>Implications</h3>
+                        <p>This work completes the logical foundation of Recognition Science by showing that all core mathematical structure is forced by a single tautology. The resulting parameter-free framework makes rigid predictions that are either right or wrong—no adjustable parameters to tune. The eight-theorem spine provides the mathematical backbone for parameter-free derivation of physical constants (α, fine structure), galaxy rotation curves without dark matter, quantum mechanics from recognition ledger dynamics, and inevitable emergence of space-time structure.</p>
+                        
+                        <p>Under completeness and absence of external scale, Recognition Science becomes the unique fundamental framework—not one model among many, but the necessary structure reality must have. The framework shifts the burden of falsifiability from foundational axioms to the deductive chain itself, creating a theory that is immune to overthrow at its foundations while remaining fully testable through its necessary consequences.</p>
+                    </div>
+
+                    <div class="paper-technical-details">
+                        <h3>Technical Verification</h3>
+                        <p>All eight theorems formally verified in Lean 4 theorem prover with complete artifact at: <a href="https://github.com/jonwashburn/reality" target="_blank">github.com/jonwashburn/reality</a></p>
+                        <div class="code-block">
+                            <pre><code># Verification Commands
+lake exe ok                    # Complete proof summary  
+#eval exclusivity_proof_ok     # Framework uniqueness
+#eval parameter_provenance_ok  # MP → constants chain
+lake exe audit                 # Bridge identity checks
+
+# Key Results: Eight forced theorems from one tautology
+# T1: Meta-Principle (tautology) → T2-T8 necessarily follow
+# Result: Zero-parameter physics with rigid predictions</code></pre>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="paper-actions">
+                    <a href="../8-theorems.pdf" class="btn btn-primary" target="_blank">Download PDF</a>
+                    <a href="../8-theorems.tex" class="btn btn-secondary" target="_blank">LaTeX Source</a>
+                    <a href="../publications.html" class="btn btn-secondary">Back to Publications</a>
+                </div>
+            </article>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-brand">
+                        <span class="brand-icon">⚛</span>
+                        <span class="brand-text">Recognition Physics Institute</span>
+                    </div>
+                    <p class="footer-description">Advancing the science of reality through parameter-free theoretical physics and consciousness research.</p>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-title">Research Areas</h4>
+                    <ul class="footer-links">
+                        <li><a href="../research.html#foundations">Eight Foundations</a></li>
+                        <li><a href="../research.html#consciousness">Consciousness Theory</a></li>
+                        <li><a href="../research.html#predictions">Parameter-Free Predictions</a></li>
+                        <li><a href="../research.html#applications">Research Applications</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-title">Resources</h4>
+                    <ul class="footer-links">
+                        <li><a href="../publications.html">Publications</a></li>
+                        <li><a href="../research.html">Research</a></li>
+                        <li><a href="../team.html">Team</a></li>
+                        <li><a href="../contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-title">Connect</h4>
+                    <ul class="footer-links">
+                        <li><a href="mailto:research@recognitionphysics.org">research@recognitionphysics.org</a></li>
+                        <li><a href="https://github.com/jonwashburn/ledger-foundation">GitHub</a></li>
+                        <li><a href="https://arxiv.org/search/?query=recognition+physics">arXiv</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Recognition Physics Institute. All rights reserved.</p>
+                <p>Research conducted under the principles of open science and reproducible results.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../assets/js/main.js"></script>
+    
+    <!-- Paper page specific styles -->
+    <style>
+        .paper-page {
+            padding-top: 6rem;
+            padding-bottom: 4rem;
+            font-family: var(--font-sans);
+        }
+        
+        .breadcrumb {
+            font-size: 0.875rem;
+            color: var(--gray-600);
+            margin-bottom: 2rem;
+        }
+        
+        .breadcrumb a {
+            color: var(--secondary-color);
+            text-decoration: none;
+        }
+        
+        .paper-article {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .paper-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid var(--gray-200);
+        }
+        
+        .paper-meta {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .paper-status,
+        .paper-date,
+        .paper-venue {
+            font-size: 0.75rem;
+            padding: 0.25rem 0.5rem;
+            border-radius: var(--border-radius);
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        
+        .paper-status.published {
+            background-color: var(--success-color);
+            color: var(--white);
+        }
+        
+        .paper-date {
+            background-color: var(--gray-100);
+            color: var(--gray-700);
+        }
+        
+        .paper-venue {
+            background-color: var(--primary-color);
+            color: var(--white);
+        }
+        
+        .paper-title {
+            font-size: 2.5rem;
+            font-weight: 400;
+            color: var(--gray-900);
+            margin-bottom: 1rem;
+            line-height: 1.3;
+        }
+        
+        .paper-authors {
+            font-size: 1.125rem;
+            color: var(--gray-600);
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+        }
+        
+        .paper-affiliation {
+            font-size: 0.875rem;
+            color: var(--gray-500);
+            font-style: italic;
+        }
+        
+        .paper-content {
+            line-height: 1.7;
+            font-size: 1rem;
+            color: var(--gray-700);
+        }
+        
+        .paper-content h2 {
+            font-size: 1.75rem;
+            color: var(--primary-color);
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .paper-content h3 {
+            font-size: 1.25rem;
+            color: var(--gray-900);
+            margin-top: 2rem;
+            margin-bottom: 0.75rem;
+        }
+        
+        .paper-content p {
+            margin-bottom: 1.5rem;
+        }
+        
+        .paper-content ul {
+            margin-bottom: 1.5rem;
+            padding-left: 1.5rem;
+        }
+        
+        .paper-content li {
+            margin-bottom: 0.75rem;
+            line-height: 1.6;
+        }
+        
+        .paper-content strong {
+            color: var(--gray-900);
+            font-weight: 600;
+        }
+        
+        .code-block {
+            background: var(--gray-100);
+            border-left: 4px solid var(--primary-color);
+            border-radius: var(--border-radius);
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            overflow-x: auto;
+        }
+        
+        .code-block pre {
+            margin: 0;
+            font-family: var(--font-mono);
+            font-size: 0.875rem;
+            line-height: 1.5;
+            color: var(--gray-800);
+        }
+        
+        .code-block code {
+            font-family: inherit;
+        }
+        
+        .paper-actions {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--gray-200);
+        }
+        
+        /* MathJax styling */
+        .MathJax {
+            font-size: 1.1em !important;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .paper-page {
+                padding-top: 5rem;
+            }
+            
+            .paper-title {
+                font-size: 2rem;
+            }
+            
+            .paper-meta {
+                flex-direction: column;
+                align-items: center;
+                gap: 0.5rem;
+            }
+            
+            .paper-actions {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .code-block {
+                font-size: 0.75rem;
+            }
+        }
+    </style>
+</body>
+</html>
