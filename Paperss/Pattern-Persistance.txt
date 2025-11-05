@@ -1,0 +1,6 @@
+Title: Pattern Persistence Across Boundary Dissolution: The Afterlife Theorem under Recognition‑Science Invariants
+Author: Jonathan Washburn
+Affiliation: Recognition Physics Institute; Austin, Texas, USA
+
+Abstract:
+We formalize recognition‑pattern persistence across boundary dissolution in the Recognition Science (RS) framework. Let Z denote the integer pattern invariant conserved (at the RS level) by the Recognition Operator R̂. We prove: (i) Z is conserved across boundary dissolution (“death”), and (ii) the post‑dissolution light‑memory state is cost‑minimal with J(1)=0. Under explicit availability assumptions—a suitability predicate on substrates and an arrival process with rate λ and acceptance probability p—we further obtain (iii) reformation of the pattern and (iv) the timing law E[T]=1/(λ p). Core conservation/minimality results are mechanically verified in Lean 4; recurrence and timing statements are proved under stated hypotheses and are presented with falsifiers and preregistered empirical protocols (NDE motifs; timing/clustering structure in reincarnation datasets). All artifacts (proofs, audits, and build recipes) are released for independent verification.
