@@ -63,7 +63,6 @@
                     <h1 class="paper-title">From a Logical Tautology to Eight Forced Theorems: The Recognition Science Derivation of Reality's Core Structure</h1>
                     <p class="paper-authors">Recognition Physics Institute</p>
                     <p class="paper-affiliation">Machine-Verified • Zero Parameters • Falsifiable</p>
-                    <p class="paper-repository"><strong>Lean 4 artifact:</strong> <a href="https://github.com/jonwashburn/reality" target="_blank">https://github.com/jonwashburn/reality</a></p>
                 </header>
                 
                 <div class="paper-content">
@@ -93,70 +92,64 @@
 
                     <div class="paper-mathematical-framework">
                         <h3>Mathematical Framework</h3>
+                        <p>The eight forced theorems operate on fundamental logical principles:</p>
+                        <ul>
+                            <li><strong>Logical Tautology:</strong> "Nothing cannot recognize itself" — $\neg\exists r\in \mathrm{Recognition}(\emptyset,\emptyset)$</li>
+                            <li><strong>Sequential Ledger:</strong> Atomic ticks with exact temporal ordering</li>
+                            <li><strong>Conservation Laws:</strong> Zero flux on cycles via double-entry accounting</li>
+                            <li><strong>Golden Ratio Scaling:</strong> $\varphi = \frac{1+\sqrt{5}}{2}$ as unique fixed point</li>
+                        </ul>
                         
-                        <h4>Golden Ratio Emergence</h4>
-                        <p>The golden ratio $\varphi = \frac{1+\sqrt{5}}{2} \approx 1.618$ emerges as the unique scaling fixed point of the cost function $J(x)$. This isn't an input—it's mathematically forced by the logical structure:</p>
-                        
-                        <p style="text-align: center; font-family: var(--font-mono); background: var(--gray-50); padding: 1rem; border-radius: 6px; margin: 1rem 0;">
-                            $\varphi^2 = \varphi + 1$
-                        </p>
-
-                        <h4>Zero-Parameter Physics</h4>
-                        <p>From the golden ratio, all physical parameters follow without tuning:</p>
+                        <p>These yield dimensionless parameters:</p>
                         <ul>
                             <li><strong>Fine Structure Constant:</strong> $\alpha = \frac{1-\varphi^{-1}}{2}$</li>
                             <li><strong>Lag Constant:</strong> $C_{\mathrm{lag}} = \varphi^{-5}$</li>
-                            <li><strong>Gravity Form:</strong> $w(r) = 1 + C_{\mathrm{lag}} \cdot \alpha \cdot \left(\frac{T_{\mathrm{dyn}}}{\tau_0}\right)^{\alpha}$</li>
+                            <li><strong>Cost Function:</strong> $J(x) = \frac{1}{2}(x+x^{-1}) - 1$ (unique)</li>
+                            <li><strong>Eight-Tick Period:</strong> $T_{\min} = 2^3 = 8$ ticks minimum</li>
                         </ul>
-
-                        <h4>Bridge Identities</h4>
-                        <p>The bridge connects dimensionless mathematics to physical measurement:</p>
-                        <ul>
-                            <li>$c = \frac{\ell_0}{\tau_0}$ (speed of light definition)</li>
-                            <li>$\hbar = E_{\mathrm{coh}} \cdot \tau_0$ (Planck constant relation)</li>
-                            <li>$\frac{c^3\lambda_{\mathrm{rec}}^2}{\hbar G} = \frac{1}{\pi}$ (recognition length identity)</li>
-                            <li>$K = \frac{\tau_{\mathrm{rec}}}{\tau_0} = \frac{\lambda_{\mathrm{kin}}}{\ell_0}$ (route equality)</li>
-                        </ul>
-                    </div>
-
-                    <div class="paper-experimental-validation">
-                        <h3>Machine Verification & Empirical Tests</h3>
-                        
-                        <h4>Lean 4 Verification</h4>
-                        <p>Every theorem is <strong>formally verified in Lean 4</strong>, providing unprecedented rigor:</p>
-                        <ul>
-                            <li><strong>Constructive proofs:</strong> No classical axioms needed</li>
-                            <li><strong>Runnable verification:</strong> #eval endpoints for immediate checking</li>
-                            <li><strong>Complete audit trail:</strong> Every step mechanically verified</li>
-                            <li><strong>Open source:</strong> Full repository at <a href="https://github.com/jonwashburn/reality" target="_blank">github.com/jonwashburn/reality</a></li>
-                        </ul>
-
-                        <h4>Empirical Falsifiers</h4>
-                        <p>With <strong>zero adjustable parameters</strong>, Recognition Science is maximally falsifiable:</p>
-                        <ul>
-                            <li><strong>$\alpha^{-1}$ audit:</strong> Derive $\alpha=(1-\varphi^{-1})/2$ to full precision vs CODATA</li>
-                            <li><strong>Rotation curves:</strong> Test $w(r)$ form against galaxy data (ILG vs $\Lambda$CDM)</li>
-                            <li><strong>Eight-tick signatures:</strong> Search for neutral window invariants in time-series</li>
-                            <li><strong>K-gate equality:</strong> Verify independent computational routes agree</li>
-                            <li><strong>Bridge identities:</strong> Test fundamental constants relationships</li>
-                        </ul>
-                    </div>
-
-                    <div class="paper-implications">
-                        <h3>Implications</h3>
-                        <p>This work establishes a <strong>parameter-free derivation chain</strong> from pure logic to physical predictions. Starting from the single tautology "nothing cannot recognize itself," eight theorems follow necessarily, determining the unique structure that any self-consistent reality must have.</p>
-                        
-                        <p>The mathematical chain is unbreakable: <em>MP → φ → (α, C<sub>lag</sub>) → gravity w(r)</em>. The empirical tests will determine whether our universe matches this logically forced structure. Unlike theories with adjustable parameters, there's no room for post-hoc tuning—the framework is either correct or falsified.</p>
                     </div>
                     
-                    <div class="paper-downloads">
-                        <h3>Audit and Reproducibility</h3>
-                        <p>The complete proof spine includes:</p>
+                    <div class="paper-experimental-method">
+                        <h3>Machine Verification</h3>
+                        <p>Every theorem is formally verified in Lean 4:</p>
+                        
+                        <h4>Constructive Proofs</h4>
                         <ul>
-                            <li><strong>Machine verification:</strong> All theorems verified in Lean 4 with #eval reports</li>
-                            <li><strong>Parameter derivation:</strong> Complete mathematical chain with zero free constants</li>
-                            <li><strong>Bridge audit:</strong> Identity checks connecting math to measurement</li>
-                            <li><strong>Falsification criteria:</strong> Crisp decision rules for experimental validation</li>
+                            <li>Meta-Principle uses only empty-type elimination (no classical axioms)</li>
+                            <li>All eight theorems follow constructively from MP</li>
+                            <li>Complete machine-checked proof spine with #eval reports</li>
+                        </ul>
+                        
+                        <h4>Lean 4 Repository</h4>
+                        <ul>
+                            <li>Full source code: <a href="https://github.com/jonwashburn/reality" target="_blank">github.com/jonwashburn/reality</a></li>
+                            <li>Runnable verification via <code>lake exe ok</code></li>
+                            <li>Individual theorem checks with #eval endpoints</li>
+                        </ul>
+                        
+                        <h4>Parameter-Free Derivation</h4>
+                        <p>The complete chain contains zero adjustable parameters:</p>
+                        <div class="equation">
+                            $$\text{MP} \;\Rightarrow\; \varphi \;\Rightarrow\; (\alpha, C_{\mathrm{lag}}) \;\Rightarrow\; w(r) = 1 + C_{\mathrm{lag}} \cdot \alpha \cdot \left(\frac{T_{\mathrm{dyn}}}{\tau_0}\right)^{\alpha}$$
+                        </div>
+                    </div>
+                    
+                    <div class="paper-implications">
+                        <h3>Implications</h3>
+                        <p>This work establishes Recognition Science as <strong>the unique complete framework</strong> under logical necessity. Starting from the single tautology "nothing cannot recognize itself," eight theorems follow necessarily, determining the unique structure that any self-consistent reality must have.</p>
+                        
+                        <p>The mathematical chain is unbreakable: from pure logic to physical predictions with zero free parameters. Unlike theories with adjustable constants, Recognition Science is maximally falsifiable—every prediction is either precisely correct or the entire framework fails. This vulnerability is a strength: survival of rigorous testing validates logical necessity, not empirical flexibility.</p>
+                    </div>
+
+                    <div class="paper-audit-framework">
+                        <h3>Empirical Tests & Falsification</h3>
+                        <p>With zero parameters, the framework provides crisp falsification criteria:</p>
+                        <ul>
+                            <li><strong>α⁻¹ Audit:</strong> Derive $\alpha=(1-\varphi^{-1})/2$ to full precision vs CODATA</li>
+                            <li><strong>Rotation Curves:</strong> Test $w(r)$ form against galaxy data (ILG vs $\Lambda$CDM)</li>
+                            <li><strong>Eight-Tick Signatures:</strong> Search for neutral window invariants in time-series</li>
+                            <li><strong>K-Gate Equality:</strong> Verify $K_A = K_B$ for independent computational routes</li>
+                            <li><strong>Bridge Identities:</strong> Test $c=\ell_0/\tau_0$, $\hbar=E_{\mathrm{coh}}\tau_0$, etc.</li>
                         </ul>
                     </div>
                 </div>
@@ -179,23 +172,19 @@
                         <span class="brand-icon">⚛</span>
                         <span class="brand-text">Recognition Physics Institute</span>
                     </div>
-                    <p class="footer-description">
-                        Advancing the science of reality through parameter-free theoretical physics and consciousness research.
-                    </p>
+                    <p class="footer-description">Advancing the science of reality through parameter-free theoretical physics and consciousness research.</p>
                 </div>
-                
                 <div class="footer-section">
-                    <h4>Research Areas</h4>
+                    <h4 class="footer-title">Research Areas</h4>
                     <ul class="footer-links">
-                        <li><a href="../research.html">Eight Foundations</a></li>
-                        <li><a href="../research.html">Consciousness Theory</a></li>
-                        <li><a href="../research.html">Parameter-Free Predictions</a></li>
-                        <li><a href="../research.html">Research Applications</a></li>
+                        <li><a href="../research.html#foundations">Eight Foundations</a></li>
+                        <li><a href="../research.html#consciousness">Consciousness Theory</a></li>
+                        <li><a href="../research.html#predictions">Parameter-Free Predictions</a></li>
+                        <li><a href="../research.html#applications">Research Applications</a></li>
                     </ul>
                 </div>
-                
                 <div class="footer-section">
-                    <h4>Resources</h4>
+                    <h4 class="footer-title">Resources</h4>
                     <ul class="footer-links">
                         <li><a href="../publications.html">Publications</a></li>
                         <li><a href="../research.html">Research</a></li>
@@ -203,24 +192,184 @@
                         <li><a href="../contact.html">Contact</a></li>
                     </ul>
                 </div>
-                
                 <div class="footer-section">
-                    <h4>Connect</h4>
+                    <h4 class="footer-title">Connect</h4>
                     <ul class="footer-links">
                         <li><a href="mailto:research@recognitionphysics.org">research@recognitionphysics.org</a></li>
-                        <li><a href="https://github.com/jonwashburn/reality" target="_blank">GitHub</a></li>
-                        <li><a href="#" target="_blank">arXiv</a></li>
+                        <li><a href="https://github.com/jonwashburn/ledger-foundation">GitHub</a></li>
+                        <li><a href="https://arxiv.org/search/?query=recognition+physics">arXiv</a></li>
                     </ul>
                 </div>
             </div>
-            
             <div class="footer-bottom">
                 <p>&copy; 2024 Recognition Physics Institute. All rights reserved.</p>
-                <p class="footer-tagline">Research conducted under the principles of open science and reproducible results.</p>
+                <p>Research conducted under the principles of open science and reproducible results.</p>
             </div>
         </div>
     </footer>
 
     <script src="../assets/js/main.js"></script>
+    
+    <!-- Paper page specific styles -->
+    <style>
+        .paper-page {
+            padding-top: 6rem;
+            padding-bottom: 4rem;
+            font-family: var(--font-sans);
+        }
+        
+        .breadcrumb {
+            font-size: 0.875rem;
+            color: var(--gray-600);
+            margin-bottom: 2rem;
+        }
+        
+        .breadcrumb a {
+            color: var(--secondary-color);
+            text-decoration: none;
+        }
+        
+        .paper-article {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .paper-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid var(--gray-200);
+        }
+        
+        .paper-meta {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .paper-status.preprint {
+            background-color: var(--gray-500);
+            color: var(--white);
+            font-size: 0.75rem;
+            padding: 0.25rem 0.5rem;
+            border-radius: var(--border-radius);
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        
+        .paper-title {
+            font-size: 2.25rem;
+            font-weight: 400;
+            color: var(--gray-900);
+            margin-bottom: 1rem;
+            line-height: 1.3;
+        }
+        
+        .paper-authors {
+            font-size: 1.125rem;
+            color: var(--gray-600);
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+        }
+        
+        .paper-affiliation {
+            font-size: 0.875rem;
+            color: var(--gray-500);
+            font-style: italic;
+        }
+        
+        .paper-content {
+            line-height: 1.7;
+            font-size: 1rem;
+            color: var(--gray-700);
+        }
+        
+        .paper-content h2 {
+            font-size: 1.75rem;
+            color: var(--primary-color);
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .paper-content h3 {
+            font-size: 1.25rem;
+            color: var(--gray-900);
+            margin-top: 2rem;
+            margin-bottom: 0.75rem;
+        }
+        
+        .paper-content h4 {
+            font-size: 1.1rem;
+            color: var(--primary-color);
+            margin-top: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .paper-content p {
+            margin-bottom: 1.5rem;
+        }
+        
+        .paper-content ul {
+            margin-bottom: 1.5rem;
+            padding-left: 1.5rem;
+        }
+        
+        .paper-content li {
+            margin-bottom: 0.75rem;
+            line-height: 1.6;
+        }
+        
+        .paper-content strong {
+            color: var(--gray-900);
+            font-weight: 600;
+        }
+        
+        .equation {
+            background: var(--gray-50);
+            border-left: 4px solid var(--secondary-color);
+            border-radius: var(--border-radius);
+            padding: 1rem;
+            margin: 1.5rem 0;
+            text-align: center;
+        }
+        
+        .paper-actions {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--gray-200);
+        }
+        
+        /* MathJax styling */
+        .MathJax {
+            font-size: 1.1em !important;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .paper-page {
+                padding-top: 5rem;
+            }
+            
+            .paper-title {
+                font-size: 1.75rem;
+            }
+            
+            .paper-meta {
+                flex-direction: column;
+                align-items: center;
+                gap: 0.5rem;
+            }
+            
+            .paper-actions {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
 </body>
 </html>
