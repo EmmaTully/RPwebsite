@@ -1,0 +1,7 @@
+Title: Neutrino Sector No–Go under Dirac Z_nu = 0 at a Single Anchor: Acceptance Failure and Paths to Resolution
+Author: Jonathan Washburn
+Affiliation: Recognition Science, Recognition Physics Institute; Austin, Texas, USA
+Date: October 5, 2025
+
+Abstract:
+We report a no–go result for closing the light neutrino sector within the Recognition Science mass framework under the current axioms: Dirac neutrinos with vanishing word–charge at the universal anchor (Z_ν = 0), a single common transport, and the formal rung triplet (0, 11, 19). Using the same acceptance test as in the charged sectors (ratio constraint and existence of a single sector yardstick consistent with both oscillation splittings), both normal and inverted orderings fail. Thus, under these assumptions, a parameter‑free closure of the light neutrino sector does not obtain at the anchor. We identify minimal paths forward: relax Z_ν = 0 (neutral‑sector residue), alter the discrete rung triplet (constructor refinement), or introduce nontrivial neutral transport. The charged‑sector structure from Papers 1–3 remains intact; this result isolates the hinge where a neutrino‑sector modification must enter to achieve compatibility with oscillation data at a single anchor.
