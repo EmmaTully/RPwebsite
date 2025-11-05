@@ -1,0 +1,9 @@
+Title: Yang–Mills Mass Gap: Unconditional Lattice Gap and an AF–free Continuum Construction
+Author: Jonathan Washburn
+Affiliation: Recognition Science Institute, Austin, Texas, USA
+
+Abstract:
+We present an unconditional lattice proof of a positive mass gap for pure SU(N) Yang–Mills in four Euclidean dimensions. On finite 4D tori with Wilson action, Osterwalder–Seiler reflection positivity yields a positive self‑adjoint transfer operator; a uniform two‑layer reflection deficit on a fixed physical slab gives an odd‑cone one‑tick contraction with per‑tick rate c_cut > 0, hence a slab‑normalized lower bound γ0 ≥ 8 c_cut, uniform in volume and N ≥ 2.
+
+For the continuum, we give a precise, unconditional AF‑free norm–resolvent convergence (NRC) construction on fixed regions. The inputs are proved in this manuscript: UEI/equicontinuity and the U2 package (isometric embeddings, graph‑defect, and low‑energy projector control), together with a quantitative OS1 commutator/resolvent bound on fixed regions. Continuum mass‑gap statements are derived unconditionally with constants tracked and volume‑uniform on fixed slabs. An alternative Mosco/AF route is recorded in an appendix as a cross‑check only and is not used in the main chain.
+
