@@ -1,0 +1,14 @@
+Title: Darwin as Minimum Description Length: Selection, Variation, and Modularity as Code-Length Optimization
+Author: Jonathan Washburn
+Affiliation: Recognition Science & Recognition Physics Institute; Austin, Texas, USA
+
+Abstract:
+We develop a methods-first theory that identifies fitness with negative description length. For an environment E (a distribution over tasks/stimuli) and an organism g (a compressor–controller with parameters θ_g), we define the evolutionary code length
+L_g = L(model_g) + L(errors | E),
+where L(model_g) is the prefix-free code length to specify the organism's internal model at the precision supported by data, and L(errors | E) is the negative log-likelihood (in bits) of deviations under a preregistered noise model. We show that if replication rates obey r(g) ∝ exp(−β L_g) for resource factor β>0, then the replicator dynamics descend the mean code length (d E[L_g]/dt ≤ 0), and the stationary distribution is π*(g) ∝ exp(−β L_g). Thus, selection is minimum description length (MDL) at population scale.
+
+Variation is not isotropic. We formalize an anisotropic proposal law q(Δ) ∝ exp(−Δ J) for phenotype moves, where J is a symmetric, convex ledger cost that penalizes overhead and imbalance; this yields structured “randomness” concentrated along low-cost directions and predicts repeatable adaptive pathways. We also prove a modularity lower bound: when tasks in E share mutual information M, reusing a module of size b saves at least M−b bits, so selection favors modular architectures whenever reuse beats overhead.
+
+The empirical program is operational and auditable: (i) define a reference machine and measure L_g as L(model) + L(parameters to supported precision) + L(errors | noise); (ii) test the MDL–fitness link, the anisotropy law, and the modularity bound on archival datasets spanning gene regulation, metabolism, and behavior; (iii) preregister noise models, hyperparameters, and pooling rules; (iv) release a one-command reproduction bundle. Falsifiers are explicit: e.g., lineages with persistently larger L_g outcompeting smaller L_g under fixed resource budgets; isotropic variation contradicting the exp(−Δ J) law; and absence of correlation between reuse and environmental mutual information.
+
+Keywords: evolution; fitness; minimum description length; replicator dynamics; modularity; anisotropy; rate–distortion; model selection.
