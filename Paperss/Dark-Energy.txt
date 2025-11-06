@@ -1,0 +1,11 @@
+Title: Information-Limited Gravity: Source-Side Kernel Tests Against Distances, Growth, and Lensing
+
+Author: Jonathan Washburn
+
+Affiliation: Recognition Science, Recognition Physics Institute; Austin, Texas, USA
+
+Date: 
+
+Abstract:
+We present a fixed-constant, no-fit, source-side modification to gravitational sourcing—the information-limited gravity (ILG) kernel—and confront it with cosmological observables that usually motivate a background dark-energy component. The kernel introduces a mild, scale- and time-dependent weight on the Poisson source while leaving the background field equations unchanged. We carry the kernel through growth, lensing, redshift-space distortions, and optical distances from the null congruence, compute the Buchert backreaction, and isolate two single-plot falsifiers. We also state two covariant extensions that could shift background distances without introducing additional fit parameters.
+
