@@ -1,0 +1,11 @@
+Title: Late-time Recognition-Weighted Growth and the Hubble Tension
+
+Author: Jonathan Washburn
+
+Affiliation: Recognition Physics Institute, Austin, TX, USA
+
+Date: 
+
+Abstract:
+Background: Late-time structure probes and CMB inferences yield discrepant values of the Hubble constant under standard GR growth kernels. Objective: Test whether a recognition-based late-time kernel anchored by a global timescale can reconcile low- and high-redshift determinations of H0 without altering early-universe physics. Methods: Introduce a dimensionless ILG kernel w(k,a)=1+φ^{-3/2}(a c/k τ_*)^{α}, propagate through BAO, RSD, weak lensing, supernova, and peculiar-velocity likelihoods using the same nuisance priors as GR. Results: The kernel yields H0=71.8±1.2 km s^{-1} Mpc^{-1} versus a GR baseline 68.8±1.1, improving late-time internal alignment while quantifying the residual tension with Planck; ISW and E_G diagnostics remain within current uncertainties. Conclusions: A recognition‑weighted Poisson source can alleviate the Hubble tension while keeping early‑universe physics untouched, offering a parameter‑fixed alternative to dark‑energy extensions.
+
