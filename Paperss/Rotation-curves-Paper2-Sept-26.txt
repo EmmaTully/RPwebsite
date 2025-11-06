@@ -1,0 +1,14 @@
+Title: Paper II: Rotation Curves Under a Global-Only Policy
+Author: Jonathan Washburn
+Affiliation: Recognition Physics Institute, Austin, TX, USA
+Date: Submitted 2025 January
+
+Abstract:
+We test a strictly global, finite–refresh correction to the baryonic response, encoded by a deterministically computed weight w(r) built from baryonic maps and catalogued photometric geometry only (no kinematic inputs), under a strict global–only policy (single stellar M/L, shared error model, predeclared inner–beam mask). On the SPARC Q=1 subset (N_Q1 = 127), after uniform masks the effective samples are N_ILG = 126 and N_MOND = 125. With identical data vectors and loss, a like‑for‑like MOND (simple nu) baseline attains median chi^2/N = 2.47 and mean 4.65. The ILG benchmark yields median 2.75 and mean 4.23. The 1D proxy is not competitive (median 3.782, mean 10.602).
+
+Series note:
+This manuscript is part of a coordinated companion pair. Paper I defines the fixed, global phenomenology w(r) and its scope; Paper II (this work) tests that w(r) on SPARC under identical masks/error model shared with all baselines. Both are co‑submitted with shared artifacts and a single cover letter.
+
+Keywords:
+gravitation; galaxies: kinematics and dynamics; dark matter; methods: data analysis; galaxies: spiral; galaxies: dwarf
+
