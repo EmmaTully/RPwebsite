@@ -1,0 +1,9 @@
+Title: Zero-Parameter Quantum Gravity from Discrete Recognition Calculus
+Author: Jonathan Washburn
+Affiliation: Independent Research, Austin, Texas, USA
+
+Abstract:
+We derive classical and quantum gravity from a minimal information-theoretic axiom—“a recognition event requires non‑empty data”—with parameter‑fixed, gauge‑rigid displays (dimensionless quantities invariant under admissible units moves). The discrete recognition calculus yields conserved ledger dynamics on graphs, forcing exact integer 1‑forms, a unique convex cost functional J(x)=½(x+1/x)−1, and an 8‑tick minimal period in three dimensions. These results dictate a discrete light‑cone bound Δr ≤ c Δt and a parameter‑free Planck normalization λ_rec = sqrt(ħ G/(π c^3)). Mesh refinement recovers the continuity equation ∂tρ+∇·J=0 and Einstein’s field equations with emergent Lorentz invariance.
+
+The unique scale‑recursion fixed point is the golden ratio φ=(1+√5)/2, proven to be the only positive solution satisfying four independent physical constraints; common alternatives (e, π, √2, √3, √5) fail. Beyond the linearized regime, we present an interacting, BRST‑consistent quantum theory of gravity under the RS bridge: constraint algebra and gauge fixing, FP/BRST sector, and a background‑field renormalization with an RS‑compatible UV mechanism expressed entirely in dimensionless displays. We further construct a nonperturbative gauge‑fixed path integral as a discrete‑exterior‑calculus (DEC) limit that is background independent, and we reproduce black‑hole semiclassics (Hawking temperature and entropy) with the RS normalization. Structural theorems (T2–T7, bridge identities, completeness) are machine‑verified in Lean 4; expanded interacting/UV/nonperturbative/semiclassical results are presented as classical proofs with explicit audits and falsifiers.
+
