@@ -1,0 +1,11 @@
+Title: Bootstrap Origin without Singularity: Emergent Spacetime from a Discrete Conserved Network
+
+Author: Jonathan Washburn
+
+Affiliation: Recognition Science, Recognition Physics Institute; Austin, Texas, USA
+
+Date: October 11, 2025
+
+Abstract:
+We present a singularity-free origin scenario in which spacetime emerges from a discrete, conserved adjacency network. Exact conservation enforces double-entry balance and coarse‑grains to the standard continuity equation, while a minimal update‑cost principle selects an α‑attractor potential with α=φ^2. The resulting dynamics reproduce slow‑roll predictions for n_s and r, and add two parameter‑free signatures: a log‑periodic modulation with cadence fixed by the network microperiod, and an ultraviolet softening at a closure extremum length λ_* = L_P/√π. The onset of macroscopic spacetime is an emergent‑metric phase transition that percolates the network and fixes c=ℓ_0/τ_0. We quantify the comoving position of the spectral knee, the log‑modulation frequency and amplitude in light of current CMB/LSS bounds, and outline an EFT CP sector that yields the observed baryon asymmetry without additional mass scales. All scales and amplitudes descend from (c, ħ, G), making the predictions directly testable with forthcoming CMB, large‑scale‑structure, and gravitational‑wave data.
+
