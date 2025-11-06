@@ -1,0 +1,29 @@
+Title: Recognition Science Baryogenesis: A Parameter-Free Resolution of the Matter-Antimatter Asymmetry
+Author: Jonathan Washburn
+Affiliation: Recognition Science, Recognition Physics Institute, Austin, Texas, USA
+Date: October 14, 2025
+
+Abstract:
+Background. The observed baryon-to-photon ratio, η_B ≈ 6×10^-10, demands efficient CP violation and a controlled departure from equilibrium in the early universe. Standard Model dynamics, even with electroweak sphalerons, underproduces η_B unless additional structure is added.
+
+Methods. This paper derives a parameter-free baryogenesis mechanism from the Recognition Science (RS) framework. RS posits an atomic tick τ_0, an eight-tick minimal cadence in D=3, a unique convex recognition cost J(x)=½(x+x^{-1})−1, and nine ledger parities that flip under conjugation and tick-reversal. In the continuum bridge these ingredients produce a curvature-coupled pseudoscalar background χ with fixed CP-odd strengths λ_CP=φ^{-7} and κ=φ^{-9}. During reheating, the rolling background \dot{χ} sources a baryon chemical potential μ_B=(c_g/M)\dot{χ}, where c_g/M is fixed by the RS mapping to the recognition length λ_rec=√(ħG/(πc^3)).
+
+Results. Using the RS inflaton potential V(χ)=V_0 tanh^2(χ/(√6 φ)) (with α-attractor parameter α=φ^{-2} yielding r≈1.3×10^-3), we find a first-pass prediction η_B≈5.1×10^-10, consistent with CMB/BBN inferences within a 10–20% systematic envelope. The same background predicts parity-odd CMB signatures (TB/EB) with sign fixed by the eight-tick orientation, a handed primordial gravitational-wave spectrum, and null late-time backreaction on background distances.
+
+Conclusions. No free parameters are introduced; all numerical values use SI/CODATA constants. The mechanism admits crisp falsifiers: null CMB parity at predicted sensitivity, inconsistent GW chirality bounds, or EDM limits exceeding the RS floor. Conventions and audit gates follow the RS→Classical Bridge Spec v1.0.
+
+Title: Recognition Science Baryogenesis: A Parameter-Free Resolution of the Matter-Antimatter Asymmetry
+Author: Jonathan Washburn
+Affiliation: Recognition Science, Recognition Physics Institute, Austin, Texas, USA
+Date: October 14, 2025
+
+Abstract:
+Background. The observed baryon-to-photon ratio, η_B ≈ 6×10^{-10}, demands efficient CP violation and a controlled departure from equilibrium in the early universe. Standard Model dynamics, even with electroweak sphalerons, underproduces η_B unless additional structure is added.
+
+Methods. This paper derives a parameter-free baryogenesis mechanism from the Recognition Science (RS) framework. RS posits an atomic tick τ_0, an eight-tick minimal cadence in D=3, a unique convex recognition cost J(x)=½(x+x^{-1})−1, and nine ledger parities that flip under conjugation and tick-reversal. In the continuum bridge these ingredients produce a curvature-coupled pseudoscalar background χ with fixed CP‑odd strengths λ_CP=φ^{-7} and κ=φ^{-9}. During reheating, the rolling background χ̇ sources a baryon chemical potential μ_B=(c_g/M)χ̇, where c_g/M is fixed by the RS mapping to the recognition length λ_rec=√(ℏG/(πc^3)).
+
+Results. Using the RS inflaton potential V(χ)=V_0 tanh^2(χ/(√6 φ)) (with α-attractor parameter α=φ^{-2} yielding r≈1.3×10^{-3}), we find a first-pass prediction η_B≈5.1×10^{-10}, consistent with CMB/BBN inferences within a 10–20% systematic envelope. The same background predicts parity‑odd CMB signatures (TB/EB) with sign fixed by the eight‑tick orientation, a handed primordial gravitational‑wave spectrum, and null late‑time backreaction on background distances.
+
+Conclusions. No free parameters are introduced in the derivations; all numerical values use SI/CODATA constants. The mechanism admits crisp falsifiers: null CMB parity at predicted sensitivity, inconsistent GW chirality bounds, or EDM limits exceeding the RS floor. Conventions and audit gates follow the RS→Classical Bridge Spec v1.0.
+
+
