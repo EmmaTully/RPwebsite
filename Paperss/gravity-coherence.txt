@@ -1,0 +1,9 @@
+Title: Local Collapse and Recognition Action: A Parameter‑Free Equivalence and a Mesoscopic Test
+Author: Jonathan Washburn
+Affiliation: Recognition Science, Recognition Physics Institute, Austin, Texas, USA
+
+Abstract:
+This paper develops a precise, parameter-free bridge between two local selection principles for quantum measurement. On one side is a gravity-driven local-collapse model in which matter and geometry share a product-state constraint; deviations from Schrödinger evolution are quantified by a residual functional S=∫||R|| dt (with R=(i∂t−Ĥ)|Ψ⟩ in the energy gauge), and outcome weights arise from exponential “rate variables” r=e^{−2A} built from an action-like integral A. On the other side is the recognition-calculus program, where a unique local cost J(x)=½(x+1/x)−1 defines a path action C=∫J(r(t)) dt, positive weights w=e^{−C}, and an amplitude bridge 𝒜=e^{−C/2}e^{iφ} that recovers Born’s rule.
+
+The central claim is an explicit identification C = 2A under the same locality assumptions and energy-gauge choice. We show how this mapping reproduces: (i) the geodesic two-branch “short rotation” with ||R||=θ̇ and S=π/2−θs; (ii) multi-outcome measurement weights PI ∝ e^{−2AI}=e^{−CI}; and (iii) the weak-measurement threshold, with A∼1 ⇔ C/2∼1. We then formulate a shared, near-term test on nanogram-scale mechanical superpositions, where both approaches predict coherence loss at the same mass–displacement–time boundary. Finally, we isolate falsifiable differences that would empirically separate the proposed equivalence, and we provide a practical recipe for computing probabilities either from residual-action data or from recognition-window data without introducing any tunable parameters.
+
