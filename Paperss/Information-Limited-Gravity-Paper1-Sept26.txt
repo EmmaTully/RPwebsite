@@ -1,0 +1,11 @@
+Title: Paper I: Information-Limited Phenomenology of Disk Dynamics
+Author: Jonathan Washburn
+Affiliation: Recognition Physics Institute, Austin, TX, USA
+Date: Submitted 2025 January
+
+Abstract:
+We interpret gravity as the world's latency geometry and propose a falsifiable, global-only finite-refresh correction to the baryonic response in slow regimes. This work presents the conceptual foundations, information-theoretic motivation, and broader physical implications of the information-weight law
+  w(r)=λ ξ n(r) (T_dyn/τ_*)^α ζ(r).
+Quantitative validation on galaxy rotation curves is presented in the coordinated companion manuscript (Paper II). Series note: Paper I (this work) defines the fixed, global phenomenology and its scope; Paper II tests that w(r) on SPARC under identical masks/error model shared with all baselines. Both are co-submitted with shared artifacts and a single cover letter.
+
+
