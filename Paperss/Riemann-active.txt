@@ -1,0 +1,14 @@
+Title: A boundary product–certificate proof of the Riemann Hypothesis
+Author: Jonathan Washburn
+Affiliation: Independent Researcher
+Date: September 2025
+
+Abstract:
+We prove the Riemann Hypothesis via a single boundary route. A quantitative product certificate on {Re s > 1/2} yields an almost‑everywhere boundary wedge (P+) for a normalized ratio; Poisson transport and a Cayley transform provide Schur/Herglotz control on zero‑free rectangles; a pinch across putative off‑critical zeros then globalizes the bound and eliminates such zeros. The right‑hand side of the certificate uses only a local Cauchy–Riemann/Green pairing on Whitney boxes together with a Carleson L^2 bound for the Poisson extension. All load‑bearing steps are unconditional; diagnostic numerics are gated and do not enter the inequalities that close (P+) and the globalization.
+
+Keywords:
+Riemann zeta; Hardy/Smirnov spaces; Herglotz/Schur; Carleson measures; Hilbert–Schmidt determinants.
+
+MSC 2020:
+11M26, 30D15, 30C85; secondary 47A12, 47B10.
+
