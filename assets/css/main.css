@@ -790,7 +790,7 @@ a:hover {
     }
     
     .nav-container {
-        padding: 0 var(--space-4) 0 0; /* keep brand flush-left on mobile */
+        padding: 0 var(--space-4);
     }
     
     .nav-menu {
