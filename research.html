@@ -48,22 +48,28 @@
         </nav>
     </header>
 
-    <!-- Research Hero -->
-    <section class="research-hero">
+    <!-- Research Page Header (matches other pages) -->
+    <div class="research-page">
         <div class="container">
-            <div class="research-hero-content">
-                <h1 class="research-hero-title">Research Program</h1>
-                <p class="research-hero-subtitle">Systematic investigation into the logical foundations of reality, consciousness, and computation through the Recognition Physics framework.</p>
-                <div class="research-nav">
-                    <a href="#meta-principle" class="research-nav-link">Meta-Principle</a>
-                    <a href="#foundations" class="research-nav-link">Eight Foundations</a>
-                    <a href="#predictions" class="research-nav-link">Predictions</a>
-                    <a href="#consciousness" class="research-nav-link">Consciousness</a>
-                    <a href="#applications" class="research-nav-link">Applications</a>
-                </div>
+            <div class="breadcrumb">
+                <a href="index.html">HOME</a> | <span>RESEARCH</span>
+            </div>
+            
+            <h1>Research</h1>
+            
+            <div class="research-description">
+                <p>Systematic investigation into the logical foundations of reality, consciousness, and computation through the Recognition Physics framework.</p>
+            </div>
+            
+            <div class="research-nav">
+                <a href="#meta-principle" class="research-nav-link">Meta-Principle</a>
+                <a href="#foundations" class="research-nav-link">Eight Foundations</a>
+                <a href="#predictions" class="research-nav-link">Predictions</a>
+                <a href="#consciousness" class="research-nav-link">Consciousness</a>
+                <a href="#applications" class="research-nav-link">Applications</a>
             </div>
         </div>
-    </section>
+    </div>
 
     <!-- Meta-Principle Section -->
     <section id="meta-principle" class="section research-section">
@@ -431,24 +437,38 @@
     
     <!-- Additional styles for research page -->
     <style>
-        .research-hero {
-            padding: 8rem 0 4rem;
-            background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-light) 100%);
-            color: var(--white);
+        .research-page {
+            padding-top: 6rem;
+            padding-bottom: 2rem;
+            font-family: var(--font-sans);
+        }
+        
+        .breadcrumb {
+            font-size: 0.875rem;
+            color: var(--gray-600);
+            margin-bottom: 1rem;
+        }
+        
+        .breadcrumb a {
+            color: var(--secondary-color);
+            text-decoration: none;
+        }
+        
+        .research-page h1 {
+            font-size: 2.25rem;
+            font-weight: 400;
+            color: var(--gray-900);
+            margin-bottom: 2rem;
             text-align: center;
         }
         
-        .research-hero-title {
-            font-size: 3.5rem;
-            font-weight: 300;
-            margin-bottom: var(--space-4);
-        }
-        
-        .research-hero-subtitle {
-            font-size: 1.25rem;
-            opacity: 0.9;
+        .research-description {
             max-width: 800px;
-            margin: 0 auto var(--space-12);
+            margin: 0 auto 2rem auto;
+            font-size: 1rem;
+            line-height: 1.6;
+            color: var(--gray-700);
+            text-align: center;
         }
         
         .research-nav {
@@ -460,16 +480,18 @@
         
         .research-nav-link {
             padding: var(--space-2) var(--space-4);
-            background: rgba(255, 255, 255, 0.1);
+            background: var(--gray-100);
+            border: 1px solid var(--gray-300);
             border-radius: var(--border-radius);
-            color: var(--white);
+            color: var(--primary-color);
             font-weight: 500;
             transition: var(--transition);
         }
         
         .research-nav-link:hover {
-            background: rgba(255, 255, 255, 0.2);
+            background: var(--primary-color);
             color: var(--white);
+            border-color: var(--primary-color);
         }
         
         .research-section {
