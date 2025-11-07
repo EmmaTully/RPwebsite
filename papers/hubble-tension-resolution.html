@@ -9,17 +9,18 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>
+        // Configure MathJax BEFORE loading the script so inline math is parsed reliably
         window.MathJax = {
             tex: {
-                inlineMath: [['$', '$'], ['\\(', '\\)']],
-                displayMath: [['$$', '$$'], ['\\[', '\\]']],
+                inlineMath: [['\\(', '\\)']],
+                displayMath: [['\\[', '\\]']],
                 processEscapes: true
             }
         };
     </script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 <body>
     <!-- Header -->
@@ -68,27 +69,26 @@
                 <div class="paper-content">
                     <div class="paper-summary">
                         <h2>Summary</h2>
-                        <p>A parameter‑fixed, recognition‑weighted late‑time kernel (ILG) reprocesses BAO, RSD, weak lensing, supernova magnification, and peculiar velocities, improving late‑time internal alignment of $H_0$ without changing early‑universe physics. Diagnostics (ISW, $E_G$) remain within current uncertainties.</p>
+                        <p>A parameter‑fixed, recognition‑weighted late‑time kernel (ILG) reprocesses BAO, RSD, weak lensing, supernova magnification, and peculiar velocities, improving late‑time internal alignment of \(H_0\) without changing early‑universe physics. Diagnostics (ISW, \(E_G\)) remain within current uncertainties.</p>
                     </div>
                     
                     <div class="paper-abstract">
                         <h3>Abstract</h3>
-                        <p><strong>Background.</strong> Late‑time structure probes and CMB inferences yield discrepant values of the Hubble constant when analyzed under standard GR growth kernels. <strong>Objective.</strong> Test whether a recognition‑based late‑time kernel anchored by a global timescale $\\tau_\\star$ can reconcile low‑ and high‑redshift determinations of $H_0$ without altering early‑universe physics. <strong>Methods.</strong> Introduce a dimensionless ILG kernel $w(k,a)=1+\\phi^{-3/2}(a c/k\\tau_\\star)^{\\alpha}$, propagate it through BAO, RSD, weak lensing, supernova, and peculiar‑velocity likelihoods, and quantify the impact on $H_0$ and $\\sigma_8$ using the same nuisance priors as GR. <strong>Results.</strong> Across the late‑time dataset suite, the kernel yields $H_0=71.8\\pm1.2\\,\\mathrm{km\\,s^{-1}\\,Mpc^{-1}}$ versus the GR baseline $68.8\\pm1.1$, aligning late‑time determinations and preserving early‑universe anchors; late‑time ISW and $E_G$ diagnostics remain within current uncertainties. <strong>Conclusions.</strong> A recognition‑weighted Poisson source can alleviate the Hubble tension while keeping the early‑universe sector untouched, offering a parameter‑fixed alternative to dark‑energy extensions.</p>
+                        <p><strong>Background.</strong> Late‑time structure probes and CMB inferences yield discrepant values of the Hubble constant when analyzed under standard GR growth kernels. <strong>Objective.</strong> Test whether a recognition‑based late‑time kernel anchored by a global timescale \(\tau_\star\) can reconcile low‑ and high‑redshift determinations of \(H_0\) without altering early‑universe physics. <strong>Methods.</strong> Introduce a dimensionless ILG kernel \(w(k,a)=1+\phi^{-3/2}(a c/(k\,\tau_\star))^{\alpha}\), propagate it through BAO, RSD, weak lensing, supernova, and peculiar‑velocity likelihoods, and quantify the impact on \(H_0\) and \(\sigma_8\) using the same nuisance priors as GR. <strong>Results.</strong> Across the late‑time dataset suite, the kernel yields \(H_0=71.8\pm1.2\,\mathrm{km\,s^{-1}\,Mpc^{-1}}\) versus the GR baseline \(68.8\pm1.1\), aligning late‑time determinations and preserving early‑universe anchors; late‑time ISW and \(E_G\) diagnostics remain within current uncertainties. <strong>Conclusions.</strong> A recognition‑weighted Poisson source can alleviate the Hubble tension while keeping the early‑universe sector untouched, offering a parameter‑fixed alternative to dark‑energy extensions.</p>
                     </div>
                     
                     <div class="paper-key-findings">
                         <h3>Key Points</h3>
                         <ul>
-                            <li><strong>Parameter‑fixed kernel:</strong> ILG weight $w(k,a)=1+\\phi^{-3/2}(a c/k\\tau_\\star)^{\\alpha}$; no new tuned parameters.</li>
-                            <li><strong>Late‑time reprocessing:</strong> Coherent shifts across BAO/RSD/WL/SN/PV improve late‑time alignment of $H_0$.</li>
-                            <li><strong>Early universe unchanged:</strong> BBN, $r_d$, and primary CMB remain standard.</li>
-                            <li><strong>Diagnostics within bounds:</strong> ISW and $E_G$ changes remain within current observational uncertainties.</li>
+                            <li><strong>Parameter‑fixed kernel:</strong> ILG weight \(w(k,a)=1+\phi^{-3/2}(a c/(k\,\tau_\star))^{\alpha}\); no new tuned parameters.</li>
+                            <li><strong>Late‑time reprocessing:</strong> Coherent shifts across BAO/RSD/WL/SN/PV improve late‑time alignment of \(H_0\).</li>
+                            <li><strong>Early universe unchanged:</strong> BBN, \(r_d\), and primary CMB remain standard.</li>
+                            <li><strong>Diagnostics within bounds:</strong> ISW and \(E_G\) changes remain within current observational uncertainties.</li>
                         </ul>
                     </div>
                 </div>
                 
                 <div class="paper-actions">
-                    <a href="../Paperss/Hubble-Tension-Resolution.pdf" class="btn btn-primary" target="_blank">Download PDF</a>
                     <a href="../Paperss/Hubble-Tension-Resolution.txt" class="btn btn-secondary" target="_blank">Download TXT</a>
                     <a href="../publications.html" class="btn btn-secondary">Back to Publications</a>
                 </div>
