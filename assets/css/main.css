@@ -168,10 +168,9 @@ a:hover {
 }
 
 .nav-container {
-    max-width: none; /* use full viewport width */
-    width: 100%;
-    margin: 0; /* remove centering */
-    padding: 0 var(--space-6) 0 0; /* no left padding so brand hugs the left edge */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--space-6);
     display: flex;
     justify-content: space-between;
     align-items: center;
