@@ -6,6 +6,46 @@
     <title>Paper II: Rotation Curves Under a Global‑Only Policy - Recognition Physics Institute</title>
     <meta name="description" content="Tests a strictly global, finite‑refresh baryonic response using photometric geometry only on SPARC; ILG vs MOND under identical masks and loss.">
     <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']],
+                processEscapes: true
+            }
+        };
+    </script>
+    <style>
+        .paper-page { padding-top: 6rem; padding-bottom: 4rem; font-family: var(--font-sans); }
+        .breadcrumb { font-size: 0.875rem; color: var(--gray-600); margin-bottom: 2rem; }
+        .breadcrumb a { color: var(--secondary-color); text-decoration: none; }
+        .paper-article { max-width: 900px; margin: 0 auto; }
+        .paper-header { text-align: center; margin-bottom: 3rem; padding-bottom: 2rem; border-bottom: 1px solid var(--gray-200); }
+        .paper-meta { display: flex; justify-content: center; gap: 1rem; margin-bottom: 1.5rem; }
+        .paper-status { font-size: 0.75rem; padding: 0.25rem 0.5rem; border-radius: var(--border-radius); font-weight: 500; text-transform: uppercase; letter-spacing: 0.05em; }
+        .paper-title { font-size: 2.5rem; font-weight: 400; color: var(--gray-900); margin-bottom: 1rem; line-height: 1.3; }
+        .paper-authors { font-size: 1.125rem; color: var(--gray-600); font-weight: 500; margin-bottom: 0.5rem; }
+        .paper-affiliation { font-size: 0.875rem; color: var(--gray-500); font-style: italic; }
+        .paper-content { line-height: 1.7; font-size: 1rem; color: var(--gray-700); }
+        .paper-content h2 { font-size: 1.75rem; color: var(--primary-color); margin-top: 2.5rem; margin-bottom: 1rem; }
+        .paper-content h3 { font-size: 1.25rem; color: var(--gray-900); margin-top: 2rem; margin-bottom: 0.75rem; }
+        .paper-content p { margin-bottom: 1.5rem; }
+        .paper-content ul { margin-bottom: 1.5rem; padding-left: 1.5rem; }
+        .paper-content li { margin-bottom: 0.75rem; line-height: 1.6; }
+        .paper-actions { display: flex; justify-content: center; gap: 1rem; margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--gray-200); }
+        .MathJax { font-size: 1.1em !important; }
+        @media (max-width: 768px) {
+            .paper-page { padding-top: 5rem; }
+            .paper-title { font-size: 2rem; }
+            .paper-meta { flex-direction: column; align-items: center; gap: 0.5rem; }
+            .paper-actions { flex-direction: column; align-items: center; }
+        }
+    </style>
 </head>
 <body>
     <header class="site-header">
@@ -18,58 +58,111 @@
                     </a>
                 </div>
                 <div class="nav-menu">
-                    <a href="../index.html">Home</a>
-                    <a href="../publications.html" class="active">Publications</a>
-                    <a href="../team.html">Team</a>
-                    <a href="../contact.html">Contact</a>
+                    <a href="../index.html" class="nav-link">Home</a>
+                    <a href="../research.html" class="nav-link">Research</a>
+                    <a href="../publications.html" class="nav-link">Publications</a>
+                    <a href="../team.html" class="nav-link">Team</a>
+                    <a href="../contact.html" class="nav-link">Contact</a>
+                </div>
+                <div class="nav-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
                 </div>
             </div>
         </nav>
     </header>
 
-    <main class="container paper-summary-container">
-        <nav class="breadcrumb">
-            <a href="../index.html">Home</a> &gt; <a href="../publications.html">Publications</a> &gt; Paper II: Rotation Curves Under a Global‑Only Policy
-        </nav>
-
-        <article class="paper-article">
-            <div class="paper-meta">
-                <span class="paper-status preprint">Research Paper</span>
+    <div class="paper-page">
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="../index.html">HOME</a> | <a href="../publications.html">PUBLICATIONS</a> | <span>ROTATION CURVES (PAPER II)</span>
             </div>
-            <h1 class="paper-title">Paper II: Rotation Curves Under a Global‑Only Policy</h1>
-            <p class="paper-authors">Jonathan Washburn</p>
-            <p class="paper-affiliation">Recognition Physics Institute, Austin, TX, USA</p>
 
-            <section class="abstract-section">
-                <h2>Abstract</h2>
-                <p>
-                    We test a strictly global, finite–refresh correction to the baryonic response, encoded by a deterministically computed weight \(w(r)\) built from baryonic maps and catalogued photometric geometry only (no kinematic inputs), under a strict global–only policy (single stellar \(M/L\), shared error model, predeclared inner–beam mask). On the SPARC Q=1 subset (\(N_{\mathrm{Q1}}=127\)), after uniform masks the effective samples are \(N_{\mathrm{ILG}}=126\) and \(N_{\mathrm{MOND}}=125\). With identical data vectors and loss, a like–for–like MOND (simple \(\nu\)) baseline attains median \(\chi^2/N=2.47\) and mean \(4.65\). The ILG benchmark yields median \(2.75\) and mean \(4.23\). The 1D proxy is not competitive (median \(3.782\), mean \(10.602\)).
-                </p>
-                <p><em>Series note.</em> Paper I defines the fixed, global phenomenology \(w(r)\) and its scope; this paper (Paper II) tests that \(w(r)\) on SPARC under identical masks/error model shared with all baselines.</p>
-            </section>
+            <article class="paper-article">
+                <header class="paper-header">
+                    <div class="paper-meta">
+                        <span class="paper-status preprint">Research Paper</span>
+                    </div>
+                    <h1 class="paper-title">Paper II: Rotation Curves Under a Global‑Only Policy</h1>
+                    <p class="paper-authors">Jonathan Washburn</p>
+                    <p class="paper-affiliation">Recognition Physics Institute — Austin, Texas, USA</p>
+                </header>
 
-            <section class="key-contributions-section">
-                <h2>Key Points</h2>
-                <ul>
-                    <li>Strict global‑only policy: single stellar \(M/L\), shared error model, preregistered inner‑beam mask.</li>
-                    <li>Deterministic \(w(r)\) from photometric geometry only; no kinematic inputs in the predictor.</li>
-                    <li>SPARC Q=1 benchmark with identical data vectors and loss across ILG and MOND.</li>
-                    <li>Comparative results: ILG median/mean ~ 2.75/4.23 vs MOND 2.47/4.65; 1D proxy not competitive.</li>
-                </ul>
-            </section>
+                <div class="paper-content">
+                    <div class="paper-summary">
+                        <h2>Summary</h2>
+                        <p>Tests a strictly global, finite‑refresh baryonic response using photometric geometry only on SPARC, under identical masks/error model shared with all baselines; compares ILG to a like‑for‑like MOND baseline with identical data vectors and loss.</p>
+                    </div>
 
-            <div class="paper-actions">
-                <a href="../Paperss/Rotation-curves-Paper2-Sept-26.txt" class="btn btn-secondary" target="_blank">Download TXT</a>
-                <a href="../publications.html" class="btn btn-secondary">Back to Publications</a>
-            </div>
-        </article>
-    </main>
+                    <div class="paper-abstract">
+                        <h3>Abstract</h3>
+                        <p>We test a strictly global, finite–refresh correction to the baryonic response, encoded by a deterministically computed weight $w(r)$ built from baryonic maps and catalogued photometric geometry only (no kinematic inputs), under a strict global–only policy (single stellar $M/L$, shared error model, predeclared inner–beam mask). On the SPARC Q=1 subset ($N_{\mathrm{Q1}}=127$), after uniform masks the effective samples are $N_{\mathrm{ILG}}=126$ and $N_{\mathrm{MOND}}=125$. With identical data vectors and loss, a like–for–like MOND (simple $\nu$) baseline attains median $\chi^2/N=2.47$ and mean $4.65$. The ILG benchmark yields median $2.75$ and mean $4.23$. The 1D proxy is not competitive (median $3.782$, mean $10.602$). <em>Series note.</em> Paper I defines the fixed, global phenomenology $w(r)$ and its scope; this paper (Paper II) tests that $w(r)$ on SPARC under identical masks/error model shared with all baselines.</p>
+                    </div>
+
+                    <div class="paper-key-findings">
+                        <h3>Key Points</h3>
+                        <ul>
+                            <li>Global‑only policy: single stellar $M/L$, shared error model, preregistered inner‑beam mask.</li>
+                            <li>Deterministic $w(r)$ from photometric geometry only; no kinematic inputs in the predictor.</li>
+                            <li>SPARC Q=1 benchmark with identical data vectors and loss across ILG and MOND.</li>
+                            <li>Comparative results: ILG median/mean ≈ 2.75/4.23 vs MOND 2.47/4.65; 1D proxy not competitive.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="paper-actions">
+                    <a href="../Paperss/Rotation-curves-Paper2-Sept-26.txt" class="btn btn-secondary" target="_blank">Download TXT</a>
+                    <a href="../publications.html" class="btn btn-secondary">Back to Publications</a>
+                </div>
+            </article>
+        </div>
+    </div>
 
     <footer class="site-footer">
         <div class="container">
-            <p>&copy; 2025 Recognition Physics Institute. All rights reserved.</p>
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-brand">
+                        <span class="brand-icon">⚛</span>
+                        <span class="brand-text">Recognition Physics Institute</span>
+                    </div>
+                    <p class="footer-description">Advancing the science of reality through parameter-free theoretical physics and consciousness research.</p>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-title">Research Areas</h4>
+                    <ul class="footer-links">
+                        <li><a href="../research.html#foundations">Eight Foundations</a></li>
+                        <li><a href="../research.html#consciousness">Consciousness Theory</a></li>
+                        <li><a href="../research.html#predictions">Parameter-Free Predictions</a></li>
+                        <li><a href="../research.html#applications">Research Applications</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-title">Resources</h4>
+                    <ul class="footer-links">
+                        <li><a href="../publications.html">Publications</a></li>
+                        <li><a href="../research.html">Research</a></li>
+                        <li><a href="../team.html">Team</a></li>
+                        <li><a href="../contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-title">Connect</h4>
+                    <ul class="footer-links">
+                        <li><a href="mailto:research@recognitionphysics.org">research@recognitionphysics.org</a></li>
+                        <li><a href="https://github.com/jonwashburn/ledger-foundation">GitHub</a></li>
+                        <li><a href="https://arxiv.org/search/?query=recognition+physics">arXiv</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Recognition Physics Institute. All rights reserved.</p>
+                <p>Research conducted under the principles of open science and reproducible results.</p>
+            </div>
         </div>
     </footer>
+    <script src="../assets/js/main.js"></script>
 </body>
 </html>
 
