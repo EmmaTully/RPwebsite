@@ -168,9 +168,10 @@ a:hover {
 }
 
 .nav-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 var(--space-6);
+    max-width: none; /* use full viewport width */
+    width: 100%;
+    margin: 0; /* remove centering */
+    padding: 0 var(--space-6) 0 0; /* no left padding so brand hugs the left edge */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -790,7 +791,7 @@ a:hover {
     }
     
     .nav-container {
-        padding: 0 var(--space-4);
+        padding: 0 var(--space-4) 0 0; /* keep brand flush-left on mobile */
     }
     
     .nav-menu {
