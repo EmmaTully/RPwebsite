@@ -77,6 +77,17 @@ body {
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+}
+
+body.nav-open {
+    overflow: hidden;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
 }
 
 /* Container */
@@ -174,6 +185,7 @@ a:hover {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
 }
 
 .nav-brand a {
@@ -193,6 +205,7 @@ a:hover {
 .nav-menu {
     display: flex;
     gap: var(--space-8);
+    align-items: center;
 }
 
 .nav-link {
@@ -228,6 +241,23 @@ a:hover {
     background-color: var(--gray-900);
     margin: 2px 0;
     transition: var(--transition);
+}
+
+.nav-toggle:focus-visible {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 4px;
+}
+
+.nav-toggle.active span:nth-child(1) {
+    transform: translateY(4px) rotate(45deg);
+}
+
+.nav-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.nav-toggle.active span:nth-child(3) {
+    transform: translateY(-4px) rotate(-45deg);
 }
 
 /* Hero Section */
@@ -394,7 +424,7 @@ a:hover {
 /* Research Highlights */
 .highlights-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: var(--space-8);
 }
 
@@ -533,7 +563,7 @@ a:hover {
 /* Publications Grid */
 .publications-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: var(--space-8);
 }
 
@@ -794,11 +824,34 @@ a:hover {
     }
     
     .nav-menu {
+        position: absolute;
+        top: calc(100% + var(--space-2));
+        left: var(--space-4);
+        right: var(--space-4);
+        background: var(--white);
+        border: 1px solid var(--gray-200);
+        border-radius: var(--border-radius-lg);
+        box-shadow: var(--shadow-lg);
+        padding: var(--space-4);
+        flex-direction: column;
+        gap: var(--space-2);
         display: none;
+    }
+    
+    .nav-menu.active {
+        display: flex;
+    }
+    
+    .nav-link {
+        width: 100%;
+        padding: var(--space-2) 0;
     }
     
     .nav-toggle {
         display: flex;
+        background: none;
+        border: none;
+        padding: 0;
     }
     
     .hero {
@@ -843,4 +896,65 @@ a:hover {
     h1 { font-size: 2rem; }
     h2 { font-size: 1.75rem; }
     h3 { font-size: 1.5rem; }
+}
+
+@media (max-width: 640px) {
+    .hero-title {
+        font-size: 2.25rem;
+    }
+    
+    .latest-header h2 {
+        font-size: 1.75rem;
+    }
+    
+    .publication-meta,
+    .publication-actions {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--space-2);
+    }
+    
+    .publication-actions {
+        width: 100%;
+    }
+    
+    .newsletter-signup {
+        padding: var(--space-6);
+    }
+    
+    .signup-form {
+        flex-direction: column;
+    }
+    
+    .email-input,
+    .signup-form .btn {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .site-header {
+        border-bottom: none;
+    }
+    
+    .hero {
+        padding: var(--space-12) 0 var(--space-10);
+    }
+    
+    .hero-title {
+        font-size: 1.9rem;
+    }
+    
+    .section {
+        padding: var(--space-10) 0;
+    }
+    
+    .highlight-card,
+    .publication-card {
+        padding: var(--space-5);
+    }
+    
+    .site-footer {
+        padding: var(--space-12) 0 var(--space-6);
+    }
 }
