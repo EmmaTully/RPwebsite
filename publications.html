@@ -928,6 +928,9 @@
             justify-content: center;
             gap: var(--space-2);
             flex-wrap: wrap;
+            overflow-x: auto;
+            padding-bottom: var(--space-2);
+            -webkit-overflow-scrolling: touch;
         }
         
         .filter-btn {
@@ -939,6 +942,7 @@
             font-weight: 500;
             cursor: pointer;
             transition: var(--transition);
+            flex: 0 0 auto;
         }
         
         .filter-btn.active,
@@ -970,11 +974,16 @@
             justify-content: space-between;
             align-items: center;
             margin-bottom: var(--space-4);
+            flex-wrap: wrap;
+            gap: var(--space-3);
         }
         
         .publication-downloads {
             display: flex;
             gap: var(--space-3);
+            flex-wrap: wrap;
+            justify-content: flex-end;
+            row-gap: var(--space-2);
         }
         
         .download-link {
@@ -986,6 +995,9 @@
             font-weight: 500;
             text-transform: uppercase;
             letter-spacing: 0.05em;
+            white-space: nowrap;
+            min-width: 120px;
+            text-align: center;
         }
         
         .download-link:hover {
@@ -1029,6 +1041,7 @@
             margin-top: var(--space-4);
             padding-top: var(--space-4);
             border-top: 1px solid var(--gray-200);
+            flex-wrap: wrap;
         }
         
         .metric {
@@ -1038,7 +1051,7 @@
         
         .publications-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: var(--space-6);
         }
         
@@ -1082,6 +1095,7 @@
             display: flex;
             gap: var(--space-3);
             margin-top: var(--space-4);
+            flex-wrap: wrap;
         }
         
         .action-link {
@@ -1130,6 +1144,17 @@
         }
         
         /* Responsive */
+        @media (max-width: 1024px) {
+            .publication-featured {
+                padding: var(--space-6);
+            }
+            
+            .publication-metrics {
+                flex-direction: column;
+                gap: var(--space-2);
+            }
+        }
+        
         @media (max-width: 768px) {
             .publications-page {
                 padding-top: 5rem;
@@ -1152,6 +1177,53 @@
             .thesis-meta {
                 flex-direction: column;
                 gap: var(--space-2);
+            }
+        }
+        
+        @media (max-width: 640px) {
+            .filter-controls {
+                justify-content: flex-start;
+            }
+            
+            .publication-featured {
+                padding: var(--space-6);
+            }
+            
+            .publication-downloads {
+                width: 100%;
+                justify-content: flex-start;
+            }
+            
+            .download-link {
+                flex: 1 1 calc(50% - var(--space-2));
+            }
+            
+            .publication-abstract,
+            .publication-authors {
+                font-size: 0.95rem;
+            }
+            
+            .publication-metrics {
+                gap: var(--space-2);
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .filter-btn {
+                font-size: 0.8rem;
+                padding: var(--space-2) var(--space-3);
+            }
+            
+            .publication-featured {
+                padding: var(--space-5);
+            }
+            
+            .download-link {
+                flex: 1 1 100%;
+            }
+            
+            .publication-title {
+                font-size: 1.125rem;
             }
         }
     </style>

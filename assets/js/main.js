@@ -4,12 +4,68 @@ document.addEventListener('DOMContentLoaded', function() {
     // Mobile Navigation Toggle
     const navToggle = document.querySelector('.nav-toggle');
     const navMenu = document.querySelector('.nav-menu');
+    const navContainer = document.querySelector('.nav-container');
     
     if (navToggle && navMenu) {
-        navToggle.addEventListener('click', function() {
-            navMenu.classList.toggle('active');
-            navToggle.classList.toggle('active');
+        const body = document.body;
+        const navLinks = navMenu.querySelectorAll('a');
+        const toggleKeys = ['Enter', ' ', 'Space', 'Spacebar'];
+
+        navToggle.setAttribute('role', 'button');
+        navToggle.setAttribute('tabindex', '0');
+        navToggle.setAttribute('aria-label', 'Toggle navigation');
+        navToggle.setAttribute('aria-expanded', 'false');
+
+        const closeMenu = () => {
+            if (!navMenu.classList.contains('active')) {
+                return;
+            }
+            navMenu.classList.remove('active');
+            navToggle.classList.remove('active');
+            navToggle.setAttribute('aria-expanded', 'false');
+            body.classList.remove('nav-open');
+        };
+
+        const toggleMenu = () => {
+            const isOpen = navMenu.classList.toggle('active');
+            navToggle.classList.toggle('active', isOpen);
+            navToggle.setAttribute('aria-expanded', String(isOpen));
+            body.classList.toggle('nav-open', isOpen);
+        };
+        
+        navToggle.addEventListener('click', toggleMenu);
+        navToggle.addEventListener('keydown', (event) => {
+            if (toggleKeys.includes(event.key)) {
+                event.preventDefault();
+                toggleMenu();
+            }
         });
+
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                closeMenu();
+            });
+        });
+
+        window.addEventListener('resize', () => {
+            if (window.innerWidth > 768) {
+                closeMenu();
+            }
+        });
+
+        document.addEventListener('keyup', (event) => {
+            if (event.key === 'Escape') {
+                closeMenu();
+            }
+        });
+
+        if (navContainer) {
+            document.addEventListener('click', (event) => {
+                if (!navContainer.contains(event.target)) {
+                    closeMenu();
+                }
+            });
+        }
     }
 
     // Smooth scrolling for anchor links
