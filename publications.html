@@ -936,6 +936,10 @@
             border-color: var(--primary-color);
         }
         
+        .filter-hidden {
+            display: none !important;
+        }
+        
         .publications-list {
             padding: var(--space-20) 0;
         }
@@ -1213,29 +1217,70 @@
     </style>
 
     <script>
-        // Filter functionality
-        document.addEventListener('DOMContentLoaded', function() {
-            const filterBtns = document.querySelectorAll('.filter-btn');
-            const publications = document.querySelectorAll('.publication-card');
+        document.addEventListener('DOMContentLoaded', () => {
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const publicationItems = document.querySelectorAll('[data-category]');
 
-            filterBtns.forEach(btn => {
-                btn.addEventListener('click', () => {
-                    // Remove active class from all buttons
-                    filterBtns.forEach(b => b.classList.remove('active'));
-                    // Add active class to clicked button
-                    btn.classList.add('active');
+            if (!filterButtons.length || !publicationItems.length) {
+                return;
+            }
 
-                    const filter = btn.getAttribute('data-filter');
+            const buildTagList = (item) => {
+                const baseTags = (item.dataset.category || '')
+                    .split(',')
+                    .map(tag => tag.trim())
+                    .filter(Boolean);
 
-                    publications.forEach(pub => {
-                        if (filter === 'all' || pub.getAttribute('data-category') === filter) {
-                            pub.style.display = 'block';
-                        } else {
-                            pub.style.display = 'none';
-                        }
-                    });
+                const statusEl = item.querySelector('.publication-status');
+                const statusTags = statusEl
+                    ? Array.from(statusEl.classList).filter(cls => cls !== 'publication-status')
+                    : [];
+
+                const tags = Array.from(new Set([...baseTags, ...statusTags]));
+                item.dataset.filterTags = tags.join(',');
+                return tags;
+            };
+
+            publicationItems.forEach(buildTagList);
+
+            const applyFilter = (filter) => {
+                const activeFilter = filter || 'all';
+
+                filterButtons.forEach(button => {
+                    const isActive = button.dataset.filter === activeFilter;
+                    button.classList.toggle('active', isActive);
+                    button.setAttribute('aria-pressed', String(isActive));
+                });
+
+                publicationItems.forEach(item => {
+                    const tags = (item.dataset.filterTags || item.dataset.category || '')
+                        .split(',')
+                        .map(tag => tag.trim())
+                        .filter(Boolean);
+
+                    const matches = activeFilter === 'all' || tags.includes(activeFilter);
+                    item.classList.toggle('filter-hidden', !matches);
+                    item.setAttribute('aria-hidden', String(!matches));
+                });
+            };
+
+            filterButtons.forEach(button => {
+                button.setAttribute('aria-pressed', button.classList.contains('active') ? 'true' : 'false');
+
+                button.addEventListener('click', () => {
+                    applyFilter(button.dataset.filter);
+                });
+
+                button.addEventListener('keydown', (event) => {
+                    if (event.key === 'Enter' || event.key === ' ' || event.key === 'Spacebar') {
+                        event.preventDefault();
+                        button.click();
+                    }
                 });
             });
+
+            const defaultFilter = document.querySelector('.filter-btn.active')?.dataset.filter || 'all';
+            applyFilter(defaultFilter);
         });
     </script>
 </body>
