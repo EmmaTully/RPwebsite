@@ -412,10 +412,9 @@
 
     <script>
         // API Configuration
-        // Production: Uses the Recognition AI server
-        const API_URL = 'https://recognition-ai.recognitionphysics.org';
-        // Fallback for local development
-        // const API_URL = 'http://localhost:8000';
+        // Note: Currently using direct B200 server (requires CORS + HTTP)
+        // For production, set up HTTPS proxy at recognition-ai.recognitionphysics.org
+        const API_URL = 'http://150.136.212.96:8000';
 
         let isConnected = false;
 
