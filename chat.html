@@ -412,9 +412,8 @@
 
     <script>
         // API Configuration - Cloudflare Tunnel (HTTPS, no port opening needed)
-        // Note: This URL may change if the server restarts. For permanent URL,
-        // set up a named Cloudflare tunnel with your domain.
-        const API_URL = 'https://pipe-byte-contents-routine.trycloudflare.com';
+        // This tunnel auto-restarts via systemd. URL may change on server reboot.
+        const API_URL = 'https://rolled-maple-impact-directory.trycloudflare.com';
 
         let isConnected = false;
 
