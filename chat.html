@@ -411,10 +411,10 @@
     </footer>
 
     <script>
-        // API Configuration
-        // Note: Currently using direct B200 server (requires CORS + HTTP)
-        // For production, set up HTTPS proxy at recognition-ai.recognitionphysics.org
-        const API_URL = 'http://150.136.212.96:8000';
+        // API Configuration - Cloudflare Tunnel (HTTPS, no port opening needed)
+        // Note: This URL may change if the server restarts. For permanent URL,
+        // set up a named Cloudflare tunnel with your domain.
+        const API_URL = 'https://pipe-byte-contents-routine.trycloudflare.com';
 
         let isConnected = false;
 
