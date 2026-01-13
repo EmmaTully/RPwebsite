@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recognition AI Chat - Recognition Physics Institute</title>
+    <meta name="description" content="Chat with the Recognition AI prototype - exploring physics-based semantic understanding.">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        /* Chat-specific styles */
+        .chat-page {
+            padding: var(--space-12) 0;
+            min-height: calc(100vh - 200px);
+        }
+
+        .chat-header {
+            text-align: center;
+            margin-bottom: var(--space-8);
+        }
+
+        .chat-header h1 {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: var(--space-4);
+        }
+
+        .chat-header p {
+            color: var(--gray-600);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .prototype-badge {
+            display: inline-block;
+            font-size: 0.75rem;
+            padding: 0.25rem 0.75rem;
+            background: var(--warning-color);
+            color: white;
+            border-radius: 2rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-left: 0.5rem;
+            vertical-align: middle;
+        }
+
+        .chat-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: var(--white);
+            border: 1px solid var(--gray-200);
+            border-radius: var(--border-radius-xl);
+            box-shadow: var(--shadow-lg);
+            overflow: hidden;
+        }
+
+        .chat-status {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: var(--space-4) var(--space-6);
+            background: var(--gray-50);
+            border-bottom: 1px solid var(--gray-200);
+        }
+
+        .status-indicator {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.875rem;
+            color: var(--gray-600);
+        }
+
+        .status-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--success-color);
+            animation: pulse 2s infinite;
+        }
+
+        .status-dot.offline {
+            background: var(--warning-color);
+            animation: none;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+
+        .chat-messages {
+            height: 400px;
+            overflow-y: auto;
+            padding: var(--space-6);
+            background: var(--gray-50);
+        }
+
+        .welcome-message {
+            text-align: center;
+            padding: var(--space-8);
+            color: var(--gray-500);
+        }
+
+        .welcome-message h3 {
+            color: var(--gray-700);
+            margin-bottom: var(--space-4);
+        }
+
+        .welcome-features {
+            display: flex;
+            gap: var(--space-4);
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: var(--space-6);
+        }
+
+        .feature-tag {
+            font-size: 0.8rem;
+            padding: 0.25rem 0.75rem;
+            background: var(--white);
+            border: 1px solid var(--gray-300);
+            border-radius: 2rem;
+            color: var(--gray-600);
+        }
+
+        .message {
+            margin-bottom: var(--space-6);
+            animation: fadeIn 0.3s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .message-header {
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: var(--space-2);
+        }
+
+        .message.user .message-header {
+            color: var(--secondary-color);
+        }
+
+        .message.ai .message-header {
+            color: var(--primary-color);
+        }
+
+        .message-content {
+            padding: var(--space-4);
+            border-radius: var(--border-radius-lg);
+            line-height: 1.6;
+        }
+
+        .message.user .message-content {
+            background: var(--white);
+            border: 1px solid var(--gray-200);
+        }
+
+        .message.ai .message-content {
+            background: var(--white);
+            border: 1px solid var(--primary-light);
+            border-left: 3px solid var(--primary-color);
+        }
+
+        .message-metrics {
+            display: flex;
+            gap: var(--space-3);
+            margin-top: var(--space-3);
+            flex-wrap: wrap;
+        }
+
+        .metric-tag {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.7rem;
+            padding: 0.2rem 0.5rem;
+            background: var(--gray-100);
+            border-radius: var(--border-radius);
+            color: var(--gray-600);
+        }
+
+        .metric-tag .value {
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+
+        .wtoken-tags {
+            display: flex;
+            gap: var(--space-2);
+            margin-top: var(--space-3);
+            flex-wrap: wrap;
+        }
+
+        .wtoken-tag {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.75rem;
+            padding: 0.25rem 0.5rem;
+            background: linear-gradient(135deg, rgba(37, 99, 235, 0.1), rgba(245, 158, 11, 0.1));
+            border: 1px solid var(--secondary-color);
+            border-radius: var(--border-radius);
+            color: var(--primary-color);
+        }
+
+        .wtoken-weight {
+            color: var(--gray-500);
+            margin-left: 0.25rem;
+        }
+
+        .chat-input-area {
+            display: flex;
+            gap: var(--space-3);
+            padding: var(--space-4) var(--space-6);
+            background: var(--white);
+            border-top: 1px solid var(--gray-200);
+        }
+
+        .chat-input-area textarea {
+            flex: 1;
+            padding: var(--space-3) var(--space-4);
+            border: 1px solid var(--gray-300);
+            border-radius: var(--border-radius-lg);
+            font-family: var(--font-sans);
+            font-size: 1rem;
+            resize: none;
+            outline: none;
+            transition: var(--transition);
+        }
+
+        .chat-input-area textarea:focus {
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(26, 54, 93, 0.1);
+        }
+
+        .chat-input-area button {
+            padding: var(--space-3) var(--space-6);
+            background: var(--primary-color);
+            color: var(--white);
+            border: none;
+            border-radius: var(--border-radius-lg);
+            font-family: var(--font-sans);
+            font-size: 1rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .chat-input-area button:hover:not(:disabled) {
+            background: var(--primary-dark);
+        }
+
+        .chat-input-area button:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        .error-message {
+            background: rgba(239, 68, 68, 0.1);
+            border: 1px solid var(--error-color);
+            color: var(--error-color);
+            padding: var(--space-4);
+            border-radius: var(--border-radius-lg);
+        }
+
+        .loading-dots {
+            display: inline-flex;
+            gap: 4px;
+        }
+
+        .loading-dots span {
+            width: 6px;
+            height: 6px;
+            background: var(--primary-color);
+            border-radius: 50%;
+            animation: bounce 1.4s infinite;
+        }
+
+        .loading-dots span:nth-child(2) { animation-delay: 0.2s; }
+        .loading-dots span:nth-child(3) { animation-delay: 0.4s; }
+
+        @keyframes bounce {
+            0%, 80%, 100% { transform: translateY(0); }
+            40% { transform: translateY(-6px); }
+        }
+
+        .disclaimer {
+            text-align: center;
+            padding: var(--space-6);
+            color: var(--gray-500);
+            font-size: 0.875rem;
+        }
+
+        .disclaimer a {
+            color: var(--secondary-color);
+            text-decoration: none;
+        }
+
+        .disclaimer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="site-header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-brand">
+                    <a href="/">
+                        <span class="brand-text">Recognition Physics Institute</span>
+                    </a>
+                </div>
+                <div class="nav-menu">
+                    <a href="/" class="nav-link">Home</a>
+                    <a href="publications.html" class="nav-link">Publications</a>
+                    <a href="book.html" class="nav-link">Book</a>
+                    <a href="chat.html" class="nav-link active">Chat</a>
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </div>
+                <div class="nav-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Chat Page Content -->
+    <div class="chat-page">
+        <div class="container">
+            <div class="chat-header">
+                <h1>Recognition AI <span class="prototype-badge">Prototype</span></h1>
+                <p>
+                    Explore a physics-based AI system that uses WTokens (semantic primitives) 
+                    and kernel operations derived from Recognition Science.
+                </p>
+            </div>
+
+            <div class="chat-container">
+                <div class="chat-status">
+                    <div class="status-indicator">
+                        <span class="status-dot" id="status-dot"></span>
+                        <span id="status-text">Connecting...</span>
+                    </div>
+                    <span style="font-size: 0.8rem; color: var(--gray-500);">
+                        Runtime checks · Lean proofs in progress
+                    </span>
+                </div>
+
+                <div class="chat-messages" id="chat-messages">
+                    <div class="welcome-message" id="welcome">
+                        <h3>Welcome</h3>
+                        <p>
+                            This is a research-stage demonstration. Ask a question to see how the 
+                            system projects meaning onto WTokens and enforces σ constraints.
+                        </p>
+                        <div class="welcome-features">
+                            <span class="feature-tag">🎯 20 WTokens</span>
+                            <span class="feature-tag">⚖️ σ Constraint</span>
+                            <span class="feature-tag">🧠 Deliberation</span>
+                            <span class="feature-tag">📜 Audit Trail</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="chat-input-area">
+                    <textarea 
+                        id="input" 
+                        placeholder="Ask a question..." 
+                        rows="1"
+                        onkeydown="handleKeydown(event)"
+                    ></textarea>
+                    <button id="send-btn" onclick="sendMessage()">Send</button>
+                </div>
+            </div>
+
+            <div class="disclaimer">
+                <p>
+                    ⚠️ This is research-stage software. 
+                    <a href="https://github.com/jonwashburn/straight-shot" target="_blank">View source on GitHub</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="footer-logo">Recognition Physics Institute</span>
+                    <p class="footer-tagline">A Theory with Zero Parameters</p>
+                </div>
+                <div class="footer-links">
+                    <a href="publications.html">Publications</a>
+                    <a href="contact.html">Contact</a>
+                    <a href="https://github.com/jonwashburn/straight-shot" target="_blank">GitHub</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Recognition Physics Institute. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // API Configuration
+        // Production: Uses the Recognition AI server
+        const API_URL = 'https://recognition-ai.recognitionphysics.org';
+        // Fallback for local development
+        // const API_URL = 'http://localhost:8000';
+
+        let isConnected = false;
+
+        async function checkStatus() {
+            const dot = document.getElementById('status-dot');
+            const text = document.getElementById('status-text');
+            
+            try {
+                const response = await fetch(`${API_URL}/status`, { 
+                    method: 'GET',
+                    mode: 'cors'
+                });
+                const data = await response.json();
+                
+                isConnected = true;
+                dot.classList.remove('offline');
+                text.textContent = data.model_loaded ? 'Online' : 'Initializing...';
+            } catch (e) {
+                isConnected = false;
+                dot.classList.add('offline');
+                text.textContent = 'Offline';
+            }
+        }
+
+        async function sendMessage() {
+            const input = document.getElementById('input');
+            const text = input.value.trim();
+            if (!text) return;
+
+            const container = document.getElementById('chat-messages');
+            const welcome = document.getElementById('welcome');
+            const sendBtn = document.getElementById('send-btn');
+
+            if (welcome) welcome.style.display = 'none';
+
+            addMessage('user', text);
+            input.value = '';
+            input.style.height = 'auto';
+
+            sendBtn.disabled = true;
+            sendBtn.textContent = 'Thinking...';
+
+            const loadingId = addLoadingMessage();
+
+            try {
+                const response = await fetch(`${API_URL}/query`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    mode: 'cors',
+                    body: JSON.stringify({ text: text, use_consciousness: true })
+                });
+
+                if (!response.ok) throw new Error('API error');
+
+                const data = await response.json();
+                removeMessage(loadingId);
+                addAIMessage(data);
+
+            } catch (e) {
+                removeMessage(loadingId);
+                addErrorMessage('Could not connect to the Recognition AI server. The server may be offline or initializing.');
+            }
+
+            sendBtn.disabled = false;
+            sendBtn.textContent = 'Send';
+        }
+
+        function addMessage(role, content) {
+            const container = document.getElementById('chat-messages');
+            const msg = document.createElement('div');
+            msg.className = `message ${role}`;
+            msg.innerHTML = `
+                <div class="message-header">${role === 'user' ? 'You' : 'Recognition AI'}</div>
+                <div class="message-content">${escapeHtml(content)}</div>
+            `;
+            container.appendChild(msg);
+            container.scrollTop = container.scrollHeight;
+            return msg.id = 'msg-' + Date.now();
+        }
+
+        function addAIMessage(data) {
+            const container = document.getElementById('chat-messages');
+            const msg = document.createElement('div');
+            msg.className = 'message ai';
+
+            const wtokensHtml = data.wtokens.map(wt => 
+                `<span class="wtoken-tag">${wt.name}<span class="wtoken-weight">${Math.round(wt.weight * 100)}%</span></span>`
+            ).join('');
+
+            const modeText = data.consciousness_engaged ? `Deliberation (${data.timelines_explored}×)` : 'Linear';
+
+            msg.innerHTML = `
+                <div class="message-header">Recognition AI</div>
+                <div class="message-content">${escapeHtml(data.response)}</div>
+                <div class="wtoken-tags">${wtokensHtml}</div>
+                <div class="message-metrics">
+                    <span class="metric-tag">σ: <span class="value">${data.sigma.toFixed(4)}</span></span>
+                    <span class="metric-tag">J: <span class="value">${data.j_cost.toFixed(4)}</span></span>
+                    <span class="metric-tag">Mode: <span class="value">${modeText}</span></span>
+                    ${data.verification?.certificate ? `<span class="metric-tag">Audit: <span class="value">${data.verification.certificate}</span></span>` : ''}
+                </div>
+            `;
+            container.appendChild(msg);
+            container.scrollTop = container.scrollHeight;
+        }
+
+        function addLoadingMessage() {
+            const container = document.getElementById('chat-messages');
+            const msg = document.createElement('div');
+            msg.className = 'message ai';
+            msg.id = 'loading-' + Date.now();
+            msg.innerHTML = `
+                <div class="message-header">Recognition AI</div>
+                <div class="message-content">
+                    <div class="loading-dots">
+                        <span></span><span></span><span></span>
+                    </div>
+                </div>
+            `;
+            container.appendChild(msg);
+            container.scrollTop = container.scrollHeight;
+            return msg.id;
+        }
+
+        function addErrorMessage(text) {
+            const container = document.getElementById('chat-messages');
+            const msg = document.createElement('div');
+            msg.className = 'message ai';
+            msg.innerHTML = `
+                <div class="message-header">System</div>
+                <div class="error-message">${escapeHtml(text)}</div>
+            `;
+            container.appendChild(msg);
+            container.scrollTop = container.scrollHeight;
+        }
+
+        function removeMessage(id) {
+            const msg = document.getElementById(id);
+            if (msg) msg.remove();
+        }
+
+        function escapeHtml(text) {
+            const div = document.createElement('div');
+            div.textContent = text;
+            return div.innerHTML;
+        }
+
+        function handleKeydown(e) {
+            if (e.key === 'Enter' && !e.shiftKey) {
+                e.preventDefault();
+                sendMessage();
+            }
+        }
+
+        document.getElementById('input').addEventListener('input', function() {
+            this.style.height = 'auto';
+            this.style.height = Math.min(this.scrollHeight, 120) + 'px';
+        });
+
+        checkStatus();
+        setInterval(checkStatus, 30000);
+    </script>
+</body>
+</html>
